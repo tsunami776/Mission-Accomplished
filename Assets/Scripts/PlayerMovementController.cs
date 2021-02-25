@@ -6,6 +6,7 @@ public class PlayerMovementController : MonoBehaviour
 {
     public float speedV;
     public float speedH;
+    public float speedjump;
     public float acceleration;
     public float maxSpeedForward;
     public float maxSpeedBackward;
@@ -16,6 +17,7 @@ public class PlayerMovementController : MonoBehaviour
         // keyboard input
         float moveV;
         float moveH;
+        float jump;
 
         // set move V
         if (Input.GetKey(KeyCode.W))
@@ -31,6 +33,16 @@ public class PlayerMovementController : MonoBehaviour
         else
         {
             DecelerateV();
+        }
+
+        // jump
+        if (Input.GetKey(KeyCode.Space))
+        {
+            jump = 5f;
+            AccelerateJump(jump * acceleration);
+        }
+        else {
+            DecelerateJump();
         }
 
         // set move H
@@ -50,7 +62,7 @@ public class PlayerMovementController : MonoBehaviour
         }
 
         // move player               
-        Vector3 movement = new Vector3(speedH, 0.0f, speedV);
+        Vector3 movement = new Vector3(speedH, speedjump, speedV);
         transform.Translate(movement);
     }
 
@@ -65,6 +77,20 @@ public class PlayerMovementController : MonoBehaviour
         if (speedV <= maxSpeedBackward)
         {
             speedV = maxSpeedBackward;
+        }
+    }
+
+    // calculate jump
+    private void AccelerateJump(float acceleration)
+    {
+        speedjump += acceleration * Time.fixedDeltaTime;
+        if (speedjump >= maxSpeedForward)
+        {
+            speedjump = maxSpeedForward;
+        }
+        if (speedjump <= maxSpeedBackward)
+        {
+            speedjump = maxSpeedBackward;
         }
     }
 
@@ -92,5 +118,11 @@ public class PlayerMovementController : MonoBehaviour
     private void DecelerateH()
     {
         speedH = 0f;
+    }
+
+    // reset acceleration jump
+    private void DecelerateJump()
+    {
+        speedjump = 0f;
     }
 }
