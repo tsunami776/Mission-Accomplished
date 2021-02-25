@@ -820,6 +820,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 384575563219062657, guid: 86468aae32a49a44dbd0e8fc38a229f6,
+        type: 3}
+      propertyPath: m_Name
+      value: building base
+      objectReference: {fileID: 0}
+    - target: {fileID: 501140629445306352, guid: 86468aae32a49a44dbd0e8fc38a229f6,
+        type: 3}
+      propertyPath: m_Name
+      value: roof
+      objectReference: {fileID: 0}
+    - target: {fileID: 866281105164332190, guid: 86468aae32a49a44dbd0e8fc38a229f6,
+        type: 3}
+      propertyPath: m_Name
+      value: 2nd floor
+      objectReference: {fileID: 0}
     - target: {fileID: 1537374967448826458, guid: 86468aae32a49a44dbd0e8fc38a229f6,
         type: 3}
       propertyPath: m_RootOrder
@@ -878,7 +893,22 @@ PrefabInstance:
     - target: {fileID: 2170183957565221088, guid: 86468aae32a49a44dbd0e8fc38a229f6,
         type: 3}
       propertyPath: m_Name
-      value: vb1
+      value: Victory Base
+      objectReference: {fileID: 0}
+    - target: {fileID: 3515860921137570615, guid: 86468aae32a49a44dbd0e8fc38a229f6,
+        type: 3}
+      propertyPath: m_Name
+      value: glass
+      objectReference: {fileID: 0}
+    - target: {fileID: 4528301848755565419, guid: 86468aae32a49a44dbd0e8fc38a229f6,
+        type: 3}
+      propertyPath: m_Name
+      value: stairs wall
+      objectReference: {fileID: 0}
+    - target: {fileID: 8024307402042855743, guid: 86468aae32a49a44dbd0e8fc38a229f6,
+        type: 3}
+      propertyPath: m_Name
+      value: exterior
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 86468aae32a49a44dbd0e8fc38a229f6, type: 3}
