@@ -1,0 +1,26 @@
+fileFormatVersion: 2
+guid: 2652d5fa9e25821478c3177a26b922c0
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 94073015eacc34c1d8fc6786e43d60ca, type: 3}
+  baseLanguageID: 
+  stringIDs:
+  - Prototype_interact-Start-0
+  - Prototype_interact-Start-1
+  - Prototype_interact-Start-2
+  - Prototype_interact-Tutorial-3
+  - Prototype_interact-Tutorial-4
+  - Prototype_interact-Direct-5
+  - Prototype_interact-reconstruction-6
+  - Prototype_interact-reconstruction-7
+  - Prototype_interact-end-8
+  compilationStatus: 1
+  isSuccesfullyCompiled: 1
+  compilationErrorMessage: 
+  baseLanguage: {instanceID: 0}
+  localizations: []
