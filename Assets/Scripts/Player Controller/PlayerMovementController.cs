@@ -11,59 +11,67 @@ public class PlayerMovementController : MonoBehaviour
     public float maxSpeedForward;
     public float maxSpeedBackward;
 
+    private bool isLocked;
+
+
     // Update is called once per frame
     void Update()
     {
-        // keyboard input
-        float moveV;
-        float moveH;
-        float jump;
+        // if not locked, process moving
+        if (!isLocked)
+        {
+            
+            // keyboard input
+            float moveV;
+            float moveH;
+            float jump;
 
-        // set move V
-        if (Input.GetKey(KeyCode.W))
-        {
-            moveV = 1f;
-            AccelerateV(moveV * acceleration);
-        }
-        else if (Input.GetKey(KeyCode.S))
-        {
-            moveV = -1f;
-            AccelerateV(moveV * acceleration);
-        }
-        else
-        {
-            DecelerateV();
-        }
+            // set move V
+            if (Input.GetKey(KeyCode.W))
+            {
+                moveV = 1f;
+                AccelerateV(moveV * acceleration);
+            }
+            else if (Input.GetKey(KeyCode.S))
+            {
+                moveV = -1f;
+                AccelerateV(moveV * acceleration);
+            }
+            else
+            {
+                DecelerateV();
+            }
 
-        // jump
-        if (Input.GetKey(KeyCode.Space))
-        {
-            jump = 5f;
-            AccelerateJump(jump * acceleration);
-        }
-        else {
-            DecelerateJump();
-        }
+            // jump
+            if (Input.GetKey(KeyCode.Space))
+            {
+                jump = 5f;
+                AccelerateJump(jump * acceleration);
+            }
+            else {
+                DecelerateJump();
+            }
 
-        // set move H
-        if (Input.GetKey(KeyCode.A))
-        {
-            moveH = -1f;
-            AccelerateH(moveH * acceleration);
-        }
-        else if (Input.GetKey(KeyCode.D))
-        {
-            moveH = 1f;
-            AccelerateH(moveH * acceleration);
-        }
-        else
-        {
-            DecelerateH();
-        }
+            // set move H
+            if (Input.GetKey(KeyCode.A))
+            {
+                moveH = -1f;
+                AccelerateH(moveH * acceleration);
+            }
+            else if (Input.GetKey(KeyCode.D))
+            {
+                moveH = 1f;
+                AccelerateH(moveH * acceleration);
+            }
+            else
+            {
+                DecelerateH();
+            }
 
-        // move player               
-        Vector3 movement = new Vector3(speedH, speedjump, speedV);
-        transform.Translate(movement);
+            // move player               
+            Vector3 movement = new Vector3(speedH, speedjump, speedV);
+            transform.Translate(movement);
+        } 
     }
 
     // calculate Vertical Acceleration
@@ -124,5 +132,17 @@ public class PlayerMovementController : MonoBehaviour
     private void DecelerateJump()
     {
         speedjump = 0f;
+    }
+
+    // lock movement
+    public void Lock()
+    {
+        isLocked = true;
+    }
+
+    // unlock movement
+    public void Unlock()
+    {
+        isLocked = false;
     }
 }

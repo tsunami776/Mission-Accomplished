@@ -244,6 +244,7 @@ MonoBehaviour:
   playerCam: {fileID: 4868054911023689706}
   crossHair: {fileID: 2452731055519565348}
   interactableObj: {fileID: 0}
+  missionView: {fileID: 5379863929189672268}
 --- !u!1001 &1930233778336247582
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -356,6 +357,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8599875808515473173, guid: 0d10bdbce1879f04d9f1639fd2e6bced,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 2853382427481253248}
+    - target: {fileID: 8599875808515473173, guid: 0d10bdbce1879f04d9f1639fd2e6bced,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      value: 
+      objectReference: {fileID: 2187474842884394278}
     - target: {fileID: 8603770148936135335, guid: 0d10bdbce1879f04d9f1639fd2e6bced,
         type: 3}
       propertyPath: m_Name
@@ -381,3 +392,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1344c3c82d62a2a41a3576d8abb8e3ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &5379863929189672268 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5791783981824903762, guid: 0d10bdbce1879f04d9f1639fd2e6bced,
+    type: 3}
+  m_PrefabInstance: {fileID: 1930233778336247582}
+  m_PrefabAsset: {fileID: 0}

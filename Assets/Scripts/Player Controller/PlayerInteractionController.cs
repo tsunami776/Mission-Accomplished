@@ -8,13 +8,14 @@ public class PlayerInteractionController : MonoBehaviour
     public Transform playerCam;
     public RawImage crossHair;
     public GameObject interactableObj;
+    public GameObject missionView;
+
+    // Only detect interactable objects in layer 8:"Interactable"
+    private int layerMask = 1 << Config.LAYER_INDEX_INTERACTABLE;
 
     // Update is called once per fixed delta time
     void FixedUpdate()
     {
-        // Only detect interactable objects in layer 8:"Interactable"
-        int layerMask = 1 << Config.LAYER_INDEX_INTERACTABLE;
-        
         // Does the ray intersect any objects in layer 8
         RaycastHit hit;
         if (Physics.Raycast(playerCam.position, playerCam.forward, out hit, Config.INTERACTION_RANGE, layerMask))
@@ -32,6 +33,18 @@ public class PlayerInteractionController : MonoBehaviour
             {
                 interactableObj.GetComponent<Outline>().OutlineColor = Config.INTERACTION_COLOR_SELECTED;
                 interactableObj.GetComponent<ShowNotification>().ShowText();
+
+                // if player hit the interaction key, default='E'
+                if (Input.GetKey(KeyCode.E))
+                {
+                    // if it is Mission Obj: open the mission view
+                    if (interactableObj.CompareTag("MissionObj"))
+                    {
+                        missionView.SetActive(true);
+                        GetComponent<PlayerMovementController>().Lock();
+                        GetComponent<PlayerLookController>().Lock();
+                    }
+                }
             }
         }
         else
