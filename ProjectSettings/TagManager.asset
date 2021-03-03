@@ -5,6 +5,16 @@ TagManager:
   serializedVersion: 2
   tags:
   - MissionObj
+  - CurrentDateText
+  - FoodRateText
+  - WaterCountText
+  - ResourceManager
+  - WaterRateText
+  - TimeManager
+  - FoodCountText
+  - GroundDetector
+  - Terrain
+  - Wall
   layers:
   - Default
   - TransparentFX
