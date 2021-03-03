@@ -20,7 +20,6 @@ public class TimeManager : MonoBehaviour
         // Initialize fields
         currentDate = _startDate;
         currentDateText = GameObject.FindGameObjectWithTag("CurrentDateText").GetComponent<Text>();
-
         resourceManager = GameObject.FindGameObjectWithTag("ResourceManager").GetComponent<ResourceManager>();
     }
 
@@ -33,7 +32,6 @@ public class TimeManager : MonoBehaviour
     public void GoToNextDay()
     {
         currentDate = currentDate.AddDays(1);
-
         resourceManager.UpdateResourceCounts();
     }
 

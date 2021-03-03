@@ -16,7 +16,7 @@ public class PlayerMovementController : MonoBehaviour
 
     //private void Start()
     //{
-        //SceneManager.LoadScene("Ben'sScene", LoadSceneMode.Additive);
+    //SceneManager.LoadScene("Ben'sScene", LoadSceneMode.Additive);
     //}
 
     // Update is called once per frame
@@ -25,7 +25,6 @@ public class PlayerMovementController : MonoBehaviour
         // if not locked, process moving
         if (!isLocked)
         {
-            
             // keyboard input
             float moveV;
             float moveH;
@@ -35,7 +34,7 @@ public class PlayerMovementController : MonoBehaviour
             if (Input.GetKey(KeyCode.W))
             {
                 moveV = 1f;
-                AccelerateV(moveV * acceleration);
+                AccelerateV(moveV * acceleration);  
             }
             else if (Input.GetKey(KeyCode.S))
             {
@@ -82,7 +81,7 @@ public class PlayerMovementController : MonoBehaviour
     // calculate Vertical Acceleration
     private void AccelerateV(float acceleration)
     {
-        speedV += acceleration * Time.fixedDeltaTime;
+        speedV += acceleration * Time.deltaTime;
         if (speedV >= maxSpeedForward)
         {
             speedV = maxSpeedForward;
@@ -96,7 +95,7 @@ public class PlayerMovementController : MonoBehaviour
     // calculate jump
     private void AccelerateJump(float acceleration)
     {
-        speedjump += acceleration * Time.fixedDeltaTime;
+        speedjump += acceleration * Time.deltaTime;
         if (speedjump >= maxSpeedForward)
         {
             speedjump = maxSpeedForward;
@@ -110,7 +109,7 @@ public class PlayerMovementController : MonoBehaviour
     // calculate Horizontal Acceleration
     private void AccelerateH(float acceleration)
     {
-        speedH += acceleration * Time.fixedDeltaTime;
+        speedH += acceleration * Time.deltaTime;
         if (speedH >= maxSpeedForward)
         {
             speedH = maxSpeedForward;
