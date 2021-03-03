@@ -12,12 +12,15 @@ public class PlayerMovementController : MonoBehaviour
     public float maxSpeedForward;
     public float maxSpeedBackward;
 
+    public bool isGrounded;
     private bool isLocked;
+    private MeshCollider groundDetector;
 
-    //private void Start()
-    //{
-    //SceneManager.LoadScene("Ben'sScene", LoadSceneMode.Additive);
-    //}
+    // called once at start
+    private void Start()
+    {
+        groundDetector = GetComponentInChildren<MeshCollider>();
+    }
 
     // Update is called once per frame
     void Update()
@@ -148,5 +151,17 @@ public class PlayerMovementController : MonoBehaviour
     public void Unlock()
     {
         isLocked = false;
+    }
+
+    // ground the character
+    public void Ground()
+    {
+        isGrounded = true;
+    }
+
+    // hover the character
+    public void Hover()
+    {
+        isGrounded = false;
     }
 }
