@@ -277,7 +277,7 @@ MonoBehaviour:
   maxSpeedForward: 0.05
   maxSpeedBackward: -0.05
   accJump: 10
-  gravity: 4
+  gravity: 2.5
   isGrounded: 0
   isJumping: 0
 --- !u!114 &2187474842884394278
