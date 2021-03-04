@@ -1,26 +1,24 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class PlayerMovementController : MonoBehaviour
 {
+    // movement
     public float speedV;
     public float speedH;
-    public float speedjump;
-    public float acceleration;
+    public float accMove;
     public float maxSpeedForward;
     public float maxSpeedBackward;
 
-    public bool isGrounded;
-    private bool isLocked;
-    private MeshCollider groundDetector;
+    // jump
+    public float accJump;
+    public float gravity;
 
-    // called once at start
-    private void Start()
-    {
-        groundDetector = GetComponentInChildren<MeshCollider>();
-    }
+    // flags
+    public bool isGrounded;
+    public bool isJumping;
+    private bool isLocked;
 
     // Update is called once per frame
     void Update()
@@ -31,54 +29,63 @@ public class PlayerMovementController : MonoBehaviour
             // keyboard input
             float moveV;
             float moveH;
-            float jump;
 
             // set move V
             if (Input.GetKey(KeyCode.W))
             {
                 moveV = 1f;
-                AccelerateV(moveV * acceleration);  
+                AccelerateV(moveV * accMove);  
             }
             else if (Input.GetKey(KeyCode.S))
             {
                 moveV = -1f;
-                AccelerateV(moveV * acceleration);
+                AccelerateV(moveV * accMove);
             }
             else
             {
                 DecelerateV();
             }
 
-            // jump
-            if (Input.GetKey(KeyCode.Space))
-            {
-                jump = 5f;
-                AccelerateJump(jump * acceleration);
-            }
-            else {
-                DecelerateJump();
-            }
-
             // set move H
             if (Input.GetKey(KeyCode.A))
             {
                 moveH = -1f;
-                AccelerateH(moveH * acceleration);
+                AccelerateH(moveH * accMove);
             }
             else if (Input.GetKey(KeyCode.D))
             {
                 moveH = 1f;
-                AccelerateH(moveH * acceleration);
+                AccelerateH(moveH * accMove);
             }
             else
             {
                 DecelerateH();
             }
 
-            // move player               
-            Vector3 movement = new Vector3(speedH, speedjump, speedV);
+            // jump
+            if (Input.GetKey(KeyCode.Space))
+            {
+                if (isGrounded && !isJumping)
+                {
+                    isJumping = true;
+                    AccelerateJump();
+                }
+            }
+            else
+            {
+                isJumping = false;
+            }
+
+            // move player
+            Vector3 movement = new Vector3(speedH, 0f, speedV);
             transform.Translate(movement);
-        } 
+        }
+
+        // receive artificial gravity
+        if (!isGrounded)
+        {
+            FreeFall();
+        }
     }
 
     // calculate Vertical Acceleration
@@ -92,20 +99,6 @@ public class PlayerMovementController : MonoBehaviour
         if (speedV <= maxSpeedBackward)
         {
             speedV = maxSpeedBackward;
-        }
-    }
-
-    // calculate jump
-    private void AccelerateJump(float acceleration)
-    {
-        speedjump += acceleration * Time.deltaTime;
-        if (speedjump >= maxSpeedForward)
-        {
-            speedjump = maxSpeedForward;
-        }
-        if (speedjump <= maxSpeedBackward)
-        {
-            speedjump = maxSpeedBackward;
         }
     }
 
@@ -135,10 +128,17 @@ public class PlayerMovementController : MonoBehaviour
         speedH = 0f;
     }
 
-    // reset acceleration jump
-    private void DecelerateJump()
+
+    // calculate jump ccceleration
+    private void AccelerateJump()
     {
-        speedjump = 0f;
+        GetComponent<Rigidbody>().AddForce(new Vector3(0f, accJump, 0f), ForceMode.Impulse);
+    }
+
+    // free fall
+    private void FreeFall()
+    {
+        GetComponent<Rigidbody>().AddForce(new Vector3(0f, -gravity, 0f));
     }
 
     // lock movement
