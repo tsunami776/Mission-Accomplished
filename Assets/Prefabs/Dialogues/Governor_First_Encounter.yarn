@@ -1,0 +1,55 @@
+title: Start
+tags: 
+colorID: 0
+position: -51,-169
+---
+Look at this bastard! Ayub Ali. The cargo going into the city get robbed 8 out of 10 times by people armed by this motherfucker. I know, you Americans put me into this position not for me to suppress these rioters, but as a local person I need to be do things for my people. I want Ayub, dead or alive.
+
+[[You know anything about the guy?|info]]
+[[Sure, but you know what to do when it's done and you start profiting.|greed]]
+[[What's in it for us then? |Oil]]
+[[Sure, let's do it.|next]]
+===
+title: greed
+tags: 
+colorID: 0
+position: 579,-162
+---
+Yeah, yeah. I heard enough of that. You Americans put me in here for the money, and we all know that, I couldn't care less. Just do see it as something you do for your own sake. Also, walk around the city more and see what you Americans did to the people, maybe you can actually help them for once.
+
+[[Fine.|Start]]
+===
+title: Oil
+tags: 
+colorID: 0
+position: 580,87
+---
+Come on, you Americans are here for the oil and we all know that. Just consider this helping your oil logistic chain and doing something positive for the locals as a by-product. Also, if you try to go around the city more maybe you'll finally relate to what you did to them and feel like compensating for once.
+
+[[Alright.|Start]]
+===
+title: info
+tags: 
+colorID: 0
+position: 563,-411
+---
+No clue. Only thing I know is that he supplies ammunitions and mercenaries to nearby militia groups. Perhaps along with drug dealing and human trafficking, all that kind of business. Been tracking the guy for weeks, no results. You could start looking by finding people with his weapons.
+
+[[Anywhere I should start with?|quest]]
+===
+title: quest
+tags: 
+colorID: 0
+position: 166,-551
+---
+Start by getting some mercs with his weapons on your hands. Maybe try getting some captives on your hands first from those lunatics nearby. You'll get the direction tomorrow.
+
+[[I see.|Start]]
+===
+title: next
+tags: 
+colorID: 0
+position: 232,187
+---
+Sounds good. I'll push the related tasks onto your system tomorrow. Remember, we wouldn't last long unless we care for the people, so just try engage with them more.
+===
