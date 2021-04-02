@@ -1,0 +1,51 @@
+fileFormatVersion: 2
+guid: 7baac64ad69686b4a9363a1b0d04207c
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 94073015eacc34c1d8fc6786e43d60ca, type: 3}
+  baseLanguageID: en-US
+  stringIDs:
+  - Retail_Owner_1st_Encounter 2-Start-0
+  - Retail_Owner_1st_Encounter 2-Start-1
+  - Retail_Owner_1st_Encounter 2-Start-2
+  - Retail_Owner_1st_Encounter 2-book-3
+  - Retail_Owner_1st_Encounter 2-book-4
+  - Retail_Owner_1st_Encounter 2-book-5
+  - Retail_Owner_1st_Encounter 2-Biz-6
+  - Retail_Owner_1st_Encounter 2-Biz-7
+  - Retail_Owner_1st_Encounter 2-truth-8
+  - Retail_Owner_1st_Encounter 2-truth-9
+  - Retail_Owner_1st_Encounter 2-truth-10
+  - Retail_Owner_1st_Encounter 2-plans-11
+  - Retail_Owner_1st_Encounter 2-plans-12
+  - Retail_Owner_1st_Encounter 2-plans-13
+  - Retail_Owner_1st_Encounter 2-med-14
+  - Retail_Owner_1st_Encounter 2-med-15
+  - Retail_Owner_1st_Encounter 2-med-16
+  - Retail_Owner_1st_Encounter 2-Deal-17
+  - Retail_Owner_1st_Encounter 2-Deal-18
+  - Retail_Owner_1st_Encounter 2-deall-19
+  - Retail_Owner_1st_Encounter 2-deall-20
+  - Retail_Owner_1st_Encounter 2-Hem-21
+  - Retail_Owner_1st_Encounter 2-Hem-22
+  - Retail_Owner_1st_Encounter 2-Hem-23
+  - Retail_Owner_1st_Encounter 2-Hem-24
+  - Retail_Owner_1st_Encounter 2-non-25
+  - Retail_Owner_1st_Encounter 2-non-26
+  - Retail_Owner_1st_Encounter 2-soldier-27
+  - Retail_Owner_1st_Encounter 2-soldier-28
+  - Retail_Owner_1st_Encounter 2-pawn-29
+  - Retail_Owner_1st_Encounter 2-pawn-30
+  - Retail_Owner_1st_Encounter 2-coward-31
+  - Retail_Owner_1st_Encounter 2-coward-32
+  compilationStatus: 1
+  isSuccesfullyCompiled: 1
+  compilationErrorMessage: 
+  baseLanguage: {fileID: 7128917941130120860, guid: 7baac64ad69686b4a9363a1b0d04207c,
+    type: 3}
+  localizations: []

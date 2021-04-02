@@ -77,12 +77,12 @@ Sure, Sure, take your time. Just don't let me wait too long. A man's gotta live.
 ===
 title: Hem
 tags: 
-colorID: 0
-position: -1244,-617
+colorID: 1
+position: -1247,-620
 ---
 Oh yeah? What do you think of it?
 
-[[Jordan is a brave soldier and a war hero, he should be celebrated more.|brave soldier]]
+[[Jordan is a brave soldier and a war hero, he should be celebrated more.|soldier]]
 [[Jordan is a pawn who has no choice. Blowing up the bridge wouldn't make a difference.|pawn]]
 [[Jordan is a coward. Should've ditched Pablo and do it himself.|coward]]
 ===
@@ -95,10 +95,10 @@ Exactly. You Americans wouldn't be here if you all read it. I bet most of you ha
 
 [[Let's talk business then.|Start]]
 ===
-title: brave soldier
+title: soldier
 tags: 
 colorID: 0
-position: -900,-959
+position: -904,-962
 ---
 Ha. No wonder you are here. To each their own I guess. For me, the story is primarily a tragedy.
 

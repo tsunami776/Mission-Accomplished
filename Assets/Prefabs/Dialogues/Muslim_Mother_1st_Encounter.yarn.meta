@@ -1,0 +1,49 @@
+fileFormatVersion: 2
+guid: c1cac10f44eb9d747a470fa48a6d63a9
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 94073015eacc34c1d8fc6786e43d60ca, type: 3}
+  baseLanguageID: en-US
+  stringIDs:
+  - Muslim_Mother_1st_Encounter-Start-0
+  - Muslim_Mother_1st_Encounter-Start-1
+  - Muslim_Mother_1st_Encounter-progress-2
+  - Muslim_Mother_1st_Encounter-progress-3
+  - Muslim_Mother_1st_Encounter-progress-4
+  - Muslim_Mother_1st_Encounter-progress-5
+  - Muslim_Mother_1st_Encounter-Governor-6
+  - Muslim_Mother_1st_Encounter-Governor-7
+  - Muslim_Mother_1st_Encounter-Governor-8
+  - Muslim_Mother_1st_Encounter-Self-9
+  - Muslim_Mother_1st_Encounter-Self-10
+  - Muslim_Mother_1st_Encounter-Self-11
+  - Muslim_Mother_1st_Encounter-Want-12
+  - Muslim_Mother_1st_Encounter-Want-13
+  - Muslim_Mother_1st_Encounter-Want-14
+  - Muslim_Mother_1st_Encounter-Keep-15
+  - Muslim_Mother_1st_Encounter-Keep-16
+  - Muslim_Mother_1st_Encounter-Keep-17
+  - Muslim_Mother_1st_Encounter-Religion-18
+  - Muslim_Mother_1st_Encounter-Religion-19
+  - Muslim_Mother_1st_Encounter-Religion-20
+  - Muslim_Mother_1st_Encounter-Religion-21
+  - Muslim_Mother_1st_Encounter-Religion-22
+  - Muslim_Mother_1st_Encounter-Yes-23
+  - Muslim_Mother_1st_Encounter-Yes-24
+  - Muslim_Mother_1st_Encounter-Indifferent-25
+  - Muslim_Mother_1st_Encounter-Indifferent-26
+  - Muslim_Mother_1st_Encounter-Agno-27
+  - Muslim_Mother_1st_Encounter-Agno-28
+  - Muslim_Mother_1st_Encounter-Athe-29
+  - Muslim_Mother_1st_Encounter-Athe-30
+  compilationStatus: 1
+  isSuccesfullyCompiled: 1
+  compilationErrorMessage: 
+  baseLanguage: {fileID: 7128917941130120860, guid: c1cac10f44eb9d747a470fa48a6d63a9,
+    type: 3}
+  localizations: []
