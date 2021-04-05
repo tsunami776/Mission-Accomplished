@@ -1,0 +1,35 @@
+fileFormatVersion: 2
+guid: 54a680ce316389649a0a928c3942a94e
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 94073015eacc34c1d8fc6786e43d60ca, type: 3}
+  baseLanguageID: 
+  stringIDs:
+  - Doctor_1st_Encounter-Start-0
+  - Doctor_1st_Encounter-Start-1
+  - Doctor_1st_Encounter-Start-2
+  - Doctor_1st_Encounter-force-3
+  - Doctor_1st_Encounter-force-4
+  - Doctor_1st_Encounter-force-5
+  - Doctor_1st_Encounter-polite-6
+  - Doctor_1st_Encounter-polite-7
+  - Doctor_1st_Encounter-polite-8
+  - Doctor_1st_Encounter-dic-9
+  - Doctor_1st_Encounter-dic-10
+  - Doctor_1st_Encounter-Rec-11
+  - Doctor_1st_Encounter-Rec-12
+  - Doctor_1st_Encounter-help-13
+  - Doctor_1st_Encounter-help-14
+  - Doctor_1st_Encounter-continue-15
+  - Doctor_1st_Encounter-rude-16
+  - Doctor_1st_Encounter-rude-17
+  compilationStatus: 1
+  isSuccesfullyCompiled: 1
+  compilationErrorMessage: 
+  baseLanguage: {instanceID: 0}
+  localizations: []
