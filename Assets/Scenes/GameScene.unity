@@ -81096,12 +81096,12 @@ PrefabInstance:
     - target: {fileID: 2853382427481253248, guid: e6d2b7322309c0d4287f184652e7ff25,
         type: 3}
       propertyPath: maxSpeedForward
-      value: 0.08
+      value: 0.12
       objectReference: {fileID: 0}
     - target: {fileID: 2853382427481253248, guid: e6d2b7322309c0d4287f184652e7ff25,
         type: 3}
       propertyPath: maxSpeedBackward
-      value: -0.08
+      value: -0.12
       objectReference: {fileID: 0}
     - target: {fileID: 4868054911023689706, guid: e6d2b7322309c0d4287f184652e7ff25,
         type: 3}
@@ -81199,7 +81199,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5cb0da2abc39ad443ba2c83a6c3d0729, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  interactionRadius: 12
+  interactionRadius: 30
 --- !u!4 &7422256219478035046 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5732535225932148968, guid: e6d2b7322309c0d4287f184652e7ff25,
