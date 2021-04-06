@@ -22,7 +22,7 @@ namespace Yarn.Unity.Example
             //}
 
             // Detect if we want to start a conversation
-            if (Input.GetKeyDown(KeyCode.R))
+            if (Input.GetKeyDown(KeyCode.E))
             {
                 CheckForNearbyNPC();
             }
@@ -37,7 +37,7 @@ namespace Yarn.Unity.Example
             var allParticipants = new List<NPC>(FindObjectsOfType<NPC>());
             var target = allParticipants.Find(delegate (NPC p) {
                 return string.IsNullOrEmpty(p.talkToNode) == false && // has a conversation node?
-                (p.transform.position - this.transform.position)// is in range?
+                (p.transform.TransformPoint(Vector3.zero) - this.transform.TransformPoint(Vector3.zero))// is in range?
                 .magnitude <= interactionRadius;
             });
             if (target != null)

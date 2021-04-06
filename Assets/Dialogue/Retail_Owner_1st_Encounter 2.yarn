@@ -1,4 +1,4 @@
-title: Start
+title: Retail_Start
 tags: 
 colorID: 0
 position: -264,-305
@@ -64,7 +64,6 @@ position: 367,-315
 ---
 Sounds good. can't wait for those dollars.
 
-[[Bet.|Start]]
 ===
 title: deall
 tags: 
@@ -73,7 +72,6 @@ position: 359,-89
 ---
 Sure, Sure, take your time. Just don't let me wait too long. A man's gotta live.
 
-[[Again, not a promise. |Start]]
 ===
 title: Hem
 tags: 
@@ -93,7 +91,7 @@ position: -682,-14
 ---
 Exactly. You Americans wouldn't be here if you all read it. I bet most of you had no idea what a war looked like before you came here. Anyway, it's all business, nothing I can complain about.
 
-[[Let's talk business then.|Start]]
+[[Let's talk business then.|Retail_Start]]
 ===
 title: soldier
 tags: 
@@ -102,7 +100,7 @@ position: -904,-962
 ---
 Ha. No wonder you are here. To each their own I guess. For me, the story is primarily a tragedy.
 
-[[To each their own it is.|Start]]
+[[To each their own it is.|Retail_Start]]
 ===
 title: pawn
 tags: 
@@ -111,7 +109,7 @@ position: -904,-742
 ---
 Exactly. Now I'm surprised you're even here in Iraq. Guess pawns we both are, aren't we?
 
-[[Yep, Pawns we are.|Start]]
+[[Yep, Pawns we are.|Retail_Start]]
 ===
 title: coward
 tags: 
@@ -120,5 +118,5 @@ position: -905,-511
 ---
 Ha. That's a unique take. To each their own I guess. Hope your individual heroism wouldn't come back punching you in the face then. 
 
-[[You bet it wouldn't.|Start]]
+[[You bet it wouldn't.|Retail_Start]]
 ===

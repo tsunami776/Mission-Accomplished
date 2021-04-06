@@ -1,4 +1,4 @@
-title: Start
+title: Muslim_Start
 tags: 
 colorID: 0
 position: -486,-387
@@ -16,7 +16,6 @@ Sorry, sir. It's nothing important, just some family issues. There's no need for
 
 [[Your new governor told me to care about the people more, so do tell so I can help.|Governor]]
 [[Well, I'm in command here, meaning I am responsible and I definitely need to worry. Please do let me know.|Self]]
-[[Well, good luck then.|Start]]
 ===
 title: Governor
 tags: 
@@ -55,8 +54,6 @@ position: 212,-104
 ---
 Yes. He's taken by a group of militia to the west of the city, anything other than that I'm not sure. I'm sure you'll know better about the surrounding than us, sir. With the battle going on in Fallujah, only Allah if he'll be back...
 
-[[I'll do my best, ma'am, I'll report to you if I find anything.|Start]]
-[[Well, I'll keep an eye out, but not a promise, all right?|Start]]
 ===
 title: Religion
 tags: 

@@ -1,4 +1,4 @@
-title: Start
+title: Governor_Start
 tags: 
 colorID: 0
 position: -51,-169
@@ -17,7 +17,6 @@ position: 579,-162
 ---
 Yeah, yeah. I heard enough of that. You Americans put me in here for the money, and we all know that, I couldn't care less. Just do see it as something you do for your own sake. Also, walk around the city more and see what you Americans did to the people, maybe you can actually help them for once.
 
-[[Fine.|Start]]
 ===
 title: Oil
 tags: 
@@ -26,7 +25,6 @@ position: 580,87
 ---
 Come on, you Americans are here for the oil and we all know that. Just consider this helping your oil logistic chain and doing something positive for the locals as a by-product. Also, if you try to go around the city more maybe you'll finally relate to what you did to them and feel like compensating for once.
 
-[[Alright.|Start]]
 ===
 title: info
 tags: 
@@ -44,7 +42,6 @@ position: 166,-551
 ---
 Start by getting some mercs with his weapons on your hands. Maybe try getting some captives on your hands first from those lunatics nearby. You'll get the direction tomorrow.
 
-[[I see.|Start]]
 ===
 title: next
 tags: 

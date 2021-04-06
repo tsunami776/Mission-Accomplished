@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: e81141fd6a7b5564d85eae0c0b6ad512
+guid: d3f3a7b1cf3861b4fbbd5520373ca8de
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -10,27 +10,27 @@ ScriptedImporter:
   script: {fileID: 11500000, guid: 94073015eacc34c1d8fc6786e43d60ca, type: 3}
   baseLanguageID: en-US
   stringIDs:
-  - Doctor_1st_Encounter-Doctor_Start-0
-  - Doctor_1st_Encounter-Doctor_Start-1
-  - Doctor_1st_Encounter-Doctor_Start-2
-  - Doctor_1st_Encounter-force-3
-  - Doctor_1st_Encounter-force-4
-  - Doctor_1st_Encounter-force-5
-  - Doctor_1st_Encounter-polite-6
-  - Doctor_1st_Encounter-polite-7
-  - Doctor_1st_Encounter-polite-8
-  - Doctor_1st_Encounter-dic-9
-  - Doctor_1st_Encounter-dic-10
-  - Doctor_1st_Encounter-Rec-11
-  - Doctor_1st_Encounter-Rec-12
-  - Doctor_1st_Encounter-help-13
-  - Doctor_1st_Encounter-help-14
-  - Doctor_1st_Encounter-continue-15
-  - Doctor_1st_Encounter-rude-16
-  - Doctor_1st_Encounter-rude-17
+  - Doctor_1st_Encounter 1-Start-0
+  - Doctor_1st_Encounter 1-Start-1
+  - Doctor_1st_Encounter 1-Start-2
+  - Doctor_1st_Encounter 1-force-3
+  - Doctor_1st_Encounter 1-force-4
+  - Doctor_1st_Encounter 1-force-5
+  - Doctor_1st_Encounter 1-polite-6
+  - Doctor_1st_Encounter 1-polite-7
+  - Doctor_1st_Encounter 1-polite-8
+  - Doctor_1st_Encounter 1-dic-9
+  - Doctor_1st_Encounter 1-dic-10
+  - Doctor_1st_Encounter 1-Rec-11
+  - Doctor_1st_Encounter 1-Rec-12
+  - Doctor_1st_Encounter 1-help-13
+  - Doctor_1st_Encounter 1-help-14
+  - Doctor_1st_Encounter 1-continue-15
+  - Doctor_1st_Encounter 1-rude-16
+  - Doctor_1st_Encounter 1-rude-17
   compilationStatus: 1
   isSuccesfullyCompiled: 1
   compilationErrorMessage: 
-  baseLanguage: {fileID: 7128917941130120860, guid: e81141fd6a7b5564d85eae0c0b6ad512,
+  baseLanguage: {fileID: 7128917941130120860, guid: d3f3a7b1cf3861b4fbbd5520373ca8de,
     type: 3}
   localizations: []
