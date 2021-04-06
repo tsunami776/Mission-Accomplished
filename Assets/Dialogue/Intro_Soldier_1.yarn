@@ -1,0 +1,42 @@
+title: Soldier_Start
+tags: 
+colorID: 0
+position: 440,259
+---
+Sir, welcome back! I'm here to inform you that the remote strategizing system has successfully been installed for your office. This means that you from now on you can start to give orders through your computer in the headquarter and they'll be executed by your subdivisions. Do you want me to walk you through how it works?
+
+[[Yes please|Tutorial]]
+[[No, I'll figure it out|Direct]]
+===
+title: Tutorial
+tags: 
+colorID: 0
+position: 728,52
+---
+Great! Once you log into the computer, you'll see all your resources represented in numbers. You'll try to keep the food&water supply above the required amount always, and consumption will be updated every day. Your current number of soldiers is also presented, and you need to allocate them to the missions you receive. When they get back, hopefully they'll be intact, but if they are not, medical supplies will be crucial. You'll need to consult with your medical personnels on how much is needed.
+
+[[What about reconstruction? Are those in the system as well?|reconstruction]]
+===
+title: Direct
+tags: 
+colorID: 0
+position: 728,455
+---
+All right! Looks like you've already had some experience with these tech stuff. You can log on to the computer start looking at your tasks for today then. Good luck sir! You'll be able to inspect the facilities outside the base once you're done. But for today, you'll need to meet up with the new governor in the city to talk through some cooperation issues. So I'll lead you there once you're done.
+===
+title: reconstruction
+tags: 
+colorID: 0
+position: 1053,36
+---
+Yes. For reconstruction, there's a specific page on the computer. You'll see how much money you need for each project. We're currently working on the local hospital, but more may pop up in the future. You'll give orders to combat as well as to reconstruction each day.
+
+[[I see.|end]]
+===
+title: end
+tags: 
+colorID: 0
+position: 1052,276
+---
+You'll be able to inspect the facilities outside the base once you're done. But for today, you'll need to meet up with the new governor in the city to talk through some cooperation issues. So I'll lead you there once you're done.
+===

@@ -1,0 +1,73 @@
+title: Doctor_Start
+tags: 
+colorID: 0
+position: -1193,-353
+---
+Step aside! I'm trying to save people here!
+
+[[I am an officer, you are obliged to respond to my inquiries!|force]]
+[[Sorry, but I need to talk to you for a moment.|polite]]
+===
+title: force
+tags: 
+colorID: 0
+position: -854,-555
+---
+Huh, "Inquiry?" Stop with your nonsense vocabulary. I don't recognize you as an officer. You Americans are the ones who got us in trouble in the first place! Now get lost while I care for MY patients!
+
+[[We are here to liberate you from a dictatorship and that's a fact!|dic]]
+[[Okay, Okay, I'm sorry alright? I'll leave you be with your patients.|Rec]]
+===
+title: polite
+tags: 
+colorID: 0
+position: -859,-188
+---
+No, you don't. If you really care so much, how about you do something constructive for once for this damned place.
+
+[[Yeah that's my point! How can I help? |help]]
+[[Hey, if you need help you'd better not be this rude, old man.|rude]]
+===
+title: dic
+tags: 
+colorID: 0
+position: -510,-742
+---
+Now shut the hell up. Look around you! We didn't have this many injured people before you came here! We were just fine under Saddam and you Americans just have to ruin everything! Oh, if you really want to liberate somebody, how about you spend some money you exploited from our people to fix this damned place so I can treat them better! We'll talk after you do, how about that?
+
+*He continues to work on his patients, ignoring your existence.*
+===
+title: Rec
+tags: 
+colorID: 0
+position: -499,-387
+---
+Yeah, Just go. If you really care so much, then stop inquire this and inquire that. Do something constructive for once, like try to invest in this damned place more so I can work better. Then we'll talk.
+
+[[Fine.|continue]]
+===
+title: help
+tags: 
+colorID: 0
+position: -628,119
+---
+Look at this place! We only have a dozen beds and our medicines and equipments are running short. Start by investing to make this place more like a hospital and then we'll talk. Sound Good?
+
+*He continues to work on his patients, ignoring your existence.*
+===
+title: continue
+tags: 
+colorID: 0
+position: -153,-389
+---
+*He continues to work on his patients, ignoring your existence.*
+===
+title: rude
+tags: 
+colorID: 0
+position: -1058,110
+---
+Ah stop that nonsense. Maybe you Americans should start by leaving this country and then you can talk to me about being rude. We were fine just before you came and ruined everything. If you really care about civility so much, how about you spend some money you exploited from our people to fix this damned place so I can treat them better! We'll talk after you do, how about that?
+
+*He continues to work on his patients, ignoring your existence.*
+===

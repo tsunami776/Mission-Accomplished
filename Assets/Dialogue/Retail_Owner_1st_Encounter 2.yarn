@@ -1,0 +1,124 @@
+title: Start
+tags: 
+colorID: 0
+position: -264,-305
+---
+Yo! Needs something?
+
+[[What are you reading there?|book]]
+[[How's business recently?|Biz]]
+===
+title: book
+tags: 
+colorID: 0
+position: -684,-307
+---
+It's Ernest Hemingway. For Whom the Bell Tolls.
+
+[[Oh, I read that too!|Hem]]
+[[Heard of it, never read it.|non]]
+===
+title: Biz
+tags: 
+colorID: 0
+position: 75,-526
+---
+Ha, what do you expect? With all these fighting going on I can barely buy in anything that's profitable. I just try to get some daily necessities that are easy to get to help people get by I guess.
+
+[[What do you mean profitable stuff?|truth]]
+===
+title: truth
+tags: 
+colorID: 0
+position: 368,-534
+---
+You know. Medical supply could be something people need right now, and off-limits stuff like weapons, not to help people kill but to help them feel safe for now. Drugs, if that's what you're into. When there's a war there would be tons of people trying to be rich with those.
+
+[[I could use some of those, any plans to get any?|plans]]
+[[I wouldn't make money with drugs, but medical supplies sounds legit. Can you get me some?|med]]
+===
+title: plans
+tags: 
+colorID: 0
+position: 660,-683
+---
+Damn. Didn't take you for such a hipster. There's nothing I can do with people robbing and looting everywhere. If you can help me, perhaps I could get some on my hands. I get profit, you and your guys get some fun, sound good?
+
+[[How do I help, then?|med]]
+[[No, I mean the medical supplies|med]]
+===
+title: med
+tags: 
+colorID: 0
+position: 669,-388
+---
+Easy. You get me some soldiers to protect my trade route, and I'll get the stuff. Not exactly sure how much or what can I get on my hands, but every bit helps, right?
+
+[[Deal, I'll get that on my schedule.|Deal]]
+[[I'll look into it. Not a promise.|deall]]
+===
+title: Deal
+tags: 
+colorID: 0
+position: 367,-315
+---
+Sounds good. can't wait for those dollars.
+
+[[Bet.|Start]]
+===
+title: deall
+tags: 
+colorID: 0
+position: 359,-89
+---
+Sure, Sure, take your time. Just don't let me wait too long. A man's gotta live.
+
+[[Again, not a promise. |Start]]
+===
+title: Hem
+tags: 
+colorID: 1
+position: -1247,-620
+---
+Oh yeah? What do you think of it?
+
+[[Jordan is a brave soldier and a war hero, he should be celebrated more.|soldier]]
+[[Jordan is a pawn who has no choice. Blowing up the bridge wouldn't make a difference.|pawn]]
+[[Jordan is a coward. Should've ditched Pablo and do it himself.|coward]]
+===
+title: non
+tags: 
+colorID: 0
+position: -682,-14
+---
+Exactly. You Americans wouldn't be here if you all read it. I bet most of you had no idea what a war looked like before you came here. Anyway, it's all business, nothing I can complain about.
+
+[[Let's talk business then.|Start]]
+===
+title: soldier
+tags: 
+colorID: 0
+position: -904,-962
+---
+Ha. No wonder you are here. To each their own I guess. For me, the story is primarily a tragedy.
+
+[[To each their own it is.|Start]]
+===
+title: pawn
+tags: 
+colorID: 0
+position: -904,-742
+---
+Exactly. Now I'm surprised you're even here in Iraq. Guess pawns we both are, aren't we?
+
+[[Yep, Pawns we are.|Start]]
+===
+title: coward
+tags: 
+colorID: 0
+position: -905,-511
+---
+Ha. That's a unique take. To each their own I guess. Hope your individual heroism wouldn't come back punching you in the face then. 
+
+[[You bet it wouldn't.|Start]]
+===

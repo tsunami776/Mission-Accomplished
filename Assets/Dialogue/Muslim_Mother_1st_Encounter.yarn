@@ -1,0 +1,108 @@
+title: Start
+tags: 
+colorID: 0
+position: -486,-387
+---
+Hello officer. Anything you need?
+
+[[You seem lost. Anything I can do for you?|progress]]
+===
+title: progress
+tags: 
+colorID: 0
+position: -220,-414
+---
+Sorry, sir. It's nothing important, just some family issues. There's no need for you to worry,sir.
+
+[[Your new governor told me to care about the people more, so do tell so I can help.|Governor]]
+[[Well, I'm in command here, meaning I am responsible and I definitely need to worry. Please do let me know.|Self]]
+[[Well, good luck then.|Start]]
+===
+title: Governor
+tags: 
+colorID: 0
+position: -225,-723
+---
+Ah, he's a fine person, the new governor. Only if he could stop the war. I just can't stand looking at my own people killing each other. After my son has gone to join the rebel, I can't stop worrying.
+
+[[Well, if that's what he wanted, you should be glad.|Want]]
+[[I'm sorry for that. I mean, I can keep an eye out for you if you need. Do you know roughly where he is now?|Keep]]
+===
+title: Self
+tags: 
+colorID: 0
+position: -229,-100
+---
+Thank you, good sir. You know, I really couldn't support my family anymore. My husband was a oil field worker, but since the industry got taken over, he lost his job, and we are both getting too old to work. And recently my son got taken away into the rebel force, and I haven't heard from him since. We are surviving with the new government's ration, but if he weren't back soon, I'm not sure how long we might be able to last.
+
+[[What do you mean "taken"?|Want]]
+[[Well, in that case I'll keep an eye out for you. Do you know roughly where he is now?|Keep]]
+===
+title: Want
+tags: 
+colorID: 0
+position: 217,-740
+---
+He didn't want to fight. I'm sure of that. I've always been teaching him to be a good, moderate Muslim. But I'm so confused! If Allah wants him to be a soldier then He definitely has his plan, but why does Allah have to make me suffer like this?
+
+[[Well, if there is a God, then it's his plan for me to rescue him for you.|Religion]]
+[[Well, i'm sure Allah would want you to have your son back for your devotion.|Religion]]
+===
+title: Keep
+tags: 
+colorID: 0
+position: 212,-104
+---
+Yes. He's taken by a group of militia to the west of the city, anything other than that I'm not sure. I'm sure you'll know better about the surrounding than us, sir. With the battle going on in Fallujah, only Allah if he'll be back...
+
+[[I'll do my best, ma'am, I'll report to you if I find anything.|Start]]
+[[Well, I'll keep an eye out, but not a promise, all right?|Start]]
+===
+title: Religion
+tags: 
+colorID: 0
+position: 591,-734
+---
+Well, may I ask you if you believe there is a God, sir?
+
+[[I do. I think there is a plan for everyone on earth.|Yes]]
+[[I do, but I think He, or She, must be indifferent to us mankind.|Indifferent]]
+[[I think we'll never know if there is a God.|Agno]]
+[[I believe there is no God.|Athe]]
+===
+title: Yes
+tags: 
+colorID: 0
+position: 841,-448
+---
+Well, I'd like to believe so. But I just can't make sense of why He would let me suffer so much, and my boy. I wish He would at least let me know how my boy is doing, and where he is.
+
+[[Well, do you at least have some idea of where he is?|Keep]]
+===
+title: Indifferent
+tags: 
+colorID: 0
+position: 586,-450
+---
+I'd like to believe that Allah is not indifferent and He loves me, but I just can't make sense of why I should suffer so much. Wouldn't a indifferent God make everything arbitrary, then? There's no way to determine where my boy is...
+
+[[Well, do you at least have some idea of where he is?|Keep]]
+===
+title: Agno
+tags: 
+colorID: 0
+position: 358,-455
+---
+Well, I do believe that Allah exists, but I just will never know why He would subject me and my little boy to such suffering. Does that mean I'll never find out that my son was protected? That only throw me into more uncertainty.
+
+[[Well, do you at least have some idea of where he is?|Keep]]
+===
+title: Athe
+tags: 
+colorID: 0
+position: 853,-183
+---
+Well, wouldn't that make everything arbitrary, then? There's no way to determine where my boy is... and if he is protected. I do believe that Allah exists and He is protecting my family, but this whole war makes me less certain about... I just can't make sense of why He would subject us to such suffering!
+
+[[Well, do you at least have some idea of where he is?|Keep]]
+===

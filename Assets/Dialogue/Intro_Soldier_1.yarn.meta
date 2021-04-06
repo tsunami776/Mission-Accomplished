@@ -1,0 +1,27 @@
+fileFormatVersion: 2
+guid: 766b1510d7c306d4b91834aef239f3c2
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 94073015eacc34c1d8fc6786e43d60ca, type: 3}
+  baseLanguageID: en-US
+  stringIDs:
+  - Intro_Soldier_1-Soldier_Start-0
+  - Intro_Soldier_1-Soldier_Start-1
+  - Intro_Soldier_1-Soldier_Start-2
+  - Intro_Soldier_1-Tutorial-3
+  - Intro_Soldier_1-Tutorial-4
+  - Intro_Soldier_1-Direct-5
+  - Intro_Soldier_1-reconstruction-6
+  - Intro_Soldier_1-reconstruction-7
+  - Intro_Soldier_1-end-8
+  compilationStatus: 1
+  isSuccesfullyCompiled: 1
+  compilationErrorMessage: 
+  baseLanguage: {fileID: 7128917941130120860, guid: 766b1510d7c306d4b91834aef239f3c2,
+    type: 3}
+  localizations: []

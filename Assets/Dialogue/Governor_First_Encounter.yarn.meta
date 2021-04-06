@@ -1,0 +1,32 @@
+fileFormatVersion: 2
+guid: 05e5018a09aab254db2752d5fb81fb9c
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 94073015eacc34c1d8fc6786e43d60ca, type: 3}
+  baseLanguageID: en-US
+  stringIDs:
+  - Governor_First_Encounter-Start-0
+  - Governor_First_Encounter-Start-1
+  - Governor_First_Encounter-Start-2
+  - Governor_First_Encounter-Start-3
+  - Governor_First_Encounter-Start-4
+  - Governor_First_Encounter-greed-5
+  - Governor_First_Encounter-greed-6
+  - Governor_First_Encounter-Oil-7
+  - Governor_First_Encounter-Oil-8
+  - Governor_First_Encounter-info-9
+  - Governor_First_Encounter-info-10
+  - Governor_First_Encounter-quest-11
+  - Governor_First_Encounter-quest-12
+  - Governor_First_Encounter-next-13
+  compilationStatus: 1
+  isSuccesfullyCompiled: 1
+  compilationErrorMessage: 
+  baseLanguage: {fileID: 7128917941130120860, guid: 05e5018a09aab254db2752d5fb81fb9c,
+    type: 3}
+  localizations: []
