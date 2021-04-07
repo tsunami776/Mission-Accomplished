@@ -1,0 +1,36 @@
+fileFormatVersion: 2
+guid: 7a1074f2558e3e74d906b1952cf1ff8c
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 94073015eacc34c1d8fc6786e43d60ca, type: 3}
+  baseLanguageID: 
+  stringIDs:
+  - Doctor_Mission1_complete-Start-0
+  - Doctor_Mission1_complete-Start-1
+  - Doctor_Mission1_complete-Start-2
+  - Doctor_Mission1_complete-Americans-3
+  - Doctor_Mission1_complete-Americans-4
+  - Doctor_Mission1_complete-Americans-5
+  - Doctor_Mission1_complete-patients-6
+  - Doctor_Mission1_complete-patients-7
+  - Doctor_Mission1_complete-patients-8
+  - Doctor_Mission1_complete-end-9
+  - Doctor_Mission1_complete-end-10
+  - Doctor_Mission1_complete-Fin-11
+  - Doctor_Mission1_complete-Saddam-12
+  - Doctor_Mission1_complete-Saddam-13
+  - Doctor_Mission1_complete-Saddam-14
+  - Doctor_Mission1_complete-Dic-15
+  - Doctor_Mission1_complete-Dic-16
+  - Doctor_Mission1_complete-Ref-17
+  - Doctor_Mission1_complete-Ref-18
+  compilationStatus: 1
+  isSuccesfullyCompiled: 1
+  compilationErrorMessage: 
+  baseLanguage: {instanceID: 0}
+  localizations: []

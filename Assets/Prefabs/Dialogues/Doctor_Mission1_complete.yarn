@@ -1,0 +1,74 @@
+title: Start
+tags: 
+colorID: 0
+position: -1199,-299
+---
+Hi. I didn't think you'd be devoted to our cause. Now that we have better equipments, we can work much better for the people. It's not much, but you don't seem to be the same as the other Americans.
+
+[[What do you mean by "other Americans?"|Americans]]
+[[Sure. How are your patients doing?|patients]]
+===
+title: Americans
+tags: 
+colorID: 0
+position: -894,-970
+---
+Well, people in this country suffered for years since the invasion. No matter how you see Saddam, I think people are better off then than now. Sure, they were not free in your definition, but at least they knew their purposes and were able to sustain themselves. I hated Americans, I guess I still do, but at least we could finally do something to help the people.
+
+[[We have no choice, you and me both. How are the patients?|patients]]
+[[Well, What do you think of Saddam?|Saddam]]
+===
+title: patients
+tags: 
+colorID: 0
+position: -906,-128
+---
+Well, with the better tools comes bigger responsibilities I suppose. People are flowing into the city to get cared for, and we are pretty packed. Honestly we could use some more hands and resources.
+
+[[I got you. I'll allocate some to your hospital later. The people need them.|end]]
+[[I'll see what I can do. With the combat going on we are pretty short of stuff too.|end]]
+===
+title: end
+tags: 
+colorID: 0
+position: -489,-137
+---
+Sir, I want to apologize for my rudeness last time. I didn't think an American could genuinely care about our casualties. Just treat this place as your own in the future, we'll take care of a limited number of your soldiers as a return of favor.
+
+[[Thank you. I'll let you know if I need that. Until then just focus on your own people.|Fin]]
+===
+title: Fin
+tags: 
+colorID: 0
+position: -128,-129
+---
+Thank you, sir.
+===
+title: Saddam
+tags: 
+colorID: 0
+position: -409,-964
+---
+Well, I didn't worship the guy, though some did. He was not the worst president either. He was just an all right leader who did both good things and bad things, that's all. I didn't care much for elections either, why do we have to elect somebody if the current one is working fine?
+
+[[Well, a dictatorship is ultimately oppressive.|Dic]]
+[[You have a point. We need some self-reflections.|Ref]]
+===
+title: Dic
+tags: 
+colorID: 0
+position: -734,-636
+---
+Well, that's your definition I guess. I know nothing about politics. I only know that under Saddam, there weren't so many dead people and people I need to keep alive.
+
+[[How are them?|patients]]
+===
+title: Ref
+tags: 
+colorID: 0
+position: -495,-422
+---
+I don't know. I know nothing about politics. I only know that under Saddam, there weren't so many dead people and people I need to keep alive.
+
+[[How are them?|patients]]
+===

@@ -1,0 +1,49 @@
+fileFormatVersion: 2
+guid: a3bd134c343f84041bc32e2fdd4fb48f
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 94073015eacc34c1d8fc6786e43d60ca, type: 3}
+  baseLanguageID: 
+  stringIDs:
+  - Muslim_Mother_1st_Encounter_fixed-Start-0
+  - Muslim_Mother_1st_Encounter_fixed-Start-1
+  - Muslim_Mother_1st_Encounter_fixed-progress-2
+  - Muslim_Mother_1st_Encounter_fixed-progress-3
+  - Muslim_Mother_1st_Encounter_fixed-progress-4
+  - Muslim_Mother_1st_Encounter_fixed-progress-5
+  - Muslim_Mother_1st_Encounter_fixed-Governor-6
+  - Muslim_Mother_1st_Encounter_fixed-Governor-7
+  - Muslim_Mother_1st_Encounter_fixed-Governor-8
+  - Muslim_Mother_1st_Encounter_fixed-Self-9
+  - Muslim_Mother_1st_Encounter_fixed-Self-10
+  - Muslim_Mother_1st_Encounter_fixed-Self-11
+  - Muslim_Mother_1st_Encounter_fixed-Want-12
+  - Muslim_Mother_1st_Encounter_fixed-Want-13
+  - Muslim_Mother_1st_Encounter_fixed-Want-14
+  - Muslim_Mother_1st_Encounter_fixed-Keep-15
+  - Muslim_Mother_1st_Encounter_fixed-Keep-16
+  - Muslim_Mother_1st_Encounter_fixed-Keep-17
+  - Muslim_Mother_1st_Encounter_fixed-Religion-18
+  - Muslim_Mother_1st_Encounter_fixed-Religion-19
+  - Muslim_Mother_1st_Encounter_fixed-Religion-20
+  - Muslim_Mother_1st_Encounter_fixed-Religion-21
+  - Muslim_Mother_1st_Encounter_fixed-Religion-22
+  - Muslim_Mother_1st_Encounter_fixed-Yes-23
+  - Muslim_Mother_1st_Encounter_fixed-Yes-24
+  - Muslim_Mother_1st_Encounter_fixed-Indifferent-25
+  - Muslim_Mother_1st_Encounter_fixed-Indifferent-26
+  - Muslim_Mother_1st_Encounter_fixed-Agno-27
+  - Muslim_Mother_1st_Encounter_fixed-Agno-28
+  - Muslim_Mother_1st_Encounter_fixed-Athe-29
+  - Muslim_Mother_1st_Encounter_fixed-Athe-30
+  - Muslim_Mother_1st_Encounter_fixed-End-31
+  compilationStatus: 1
+  isSuccesfullyCompiled: 1
+  compilationErrorMessage: 
+  baseLanguage: {instanceID: 0}
+  localizations: []
