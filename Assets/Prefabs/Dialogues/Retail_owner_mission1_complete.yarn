@@ -1,0 +1,82 @@
+title: Start
+tags: 
+colorID: 0
+position: -1395,-488
+---
+Yo! How's it going! You need anything from the store? Meds, alcohol, tobacco, we got them all today!
+
+[[Don't get too exited, this escort mission would sustain you only for a while before the surroundings get messy again.|caution]]
+===
+title: caution
+tags: 
+colorID: 0
+position: -987,-710
+---
+How can I not be excited? I'm one step closer to my ticket to America!
+
+[[Wait, you never mentioned that you plan to go to America?|Plan]]
+===
+title: Plan
+tags: 
+colorID: 0
+position: -741,-713
+---
+What, I'm not good enough for your country now?
+
+[[Well, you are pretty smart, I'd give you that.|Smart]]
+[[How long would that take with this dusty store?|Dusty]]
+===
+title: Smart
+tags: 
+colorID: 0
+position: -439,-883
+---
+You bet your ass I am! Otherwise I wouldn't be able to get you to help me. I have another smart job, wanna hear it?
+
+[[Please tell!|Yep]]
+[[I don't have a good feeling about this, but go on.|Yep]]
+===
+title: Dusty
+tags: 
+colorID: 0
+position: -443,-511
+---
+You're damn right it's gonna take ages! This is why I have another business job to offer. Interested?
+
+[[Please tell!|Yep]]
+[[I don't have a good feeling about this, but go on.|Yep]]
+===
+title: Yep
+tags: 
+colorID: 0
+position: 19,-760
+---
+Drugs. Amphetamines. They are not strong drugs but not so commonplace as tobacco either. I got some relations with dealers in the east. If you could be a little negligent tomorrow with your defense in the east, I could get hold of some and make big money. If you do, I'll cut you 25%. Sound good?
+
+[[Sounds like a good deal to me.|Accept]]
+[[No way, don't you care about your people?|No]]
+===
+title: Accept
+tags: 
+colorID: 0
+position: 231,-359
+---
+Yes! I know you wouldn't say no. Just try to ignore allocate fewer soldiers on the eastern front, and next week you'll be counting money!
+===
+title: No
+tags: 
+colorID: 0
+position: 336,-755
+---
+Come on, they are soft core drugs. Help you focus. College students use Amphetamine! People wouldn't hurt much, I make my ticket to America, you get extra financial support, win-win-win! it's a triple win!
+
+[[Fine, no promise, but I'll consider it.|Accept]]
+[[No, I have my principles. Drugs are off-limit.|Refuse]]
+===
+title: Refuse
+tags: 
+colorID: 0
+position: 602,-480
+---
+Fine! Just leave me here taking ages to save my money you privileged saint. Anyway, contact me if you need anything, or if you change your mind.
+===

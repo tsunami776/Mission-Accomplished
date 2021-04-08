@@ -1,0 +1,38 @@
+fileFormatVersion: 2
+guid: d5e8181c8c423ae47829b5167a80e3b9
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 94073015eacc34c1d8fc6786e43d60ca, type: 3}
+  baseLanguageID: 
+  stringIDs:
+  - Retail_owner_mission1_complete-Start-0
+  - Retail_owner_mission1_complete-Start-1
+  - Retail_owner_mission1_complete-caution-2
+  - Retail_owner_mission1_complete-caution-3
+  - Retail_owner_mission1_complete-Plan-4
+  - Retail_owner_mission1_complete-Plan-5
+  - Retail_owner_mission1_complete-Plan-6
+  - Retail_owner_mission1_complete-Smart-7
+  - Retail_owner_mission1_complete-Smart-8
+  - Retail_owner_mission1_complete-Smart-9
+  - Retail_owner_mission1_complete-Dusty-10
+  - Retail_owner_mission1_complete-Dusty-11
+  - Retail_owner_mission1_complete-Dusty-12
+  - Retail_owner_mission1_complete-Yep-13
+  - Retail_owner_mission1_complete-Yep-14
+  - Retail_owner_mission1_complete-Yep-15
+  - Retail_owner_mission1_complete-Accept-16
+  - Retail_owner_mission1_complete-No-17
+  - Retail_owner_mission1_complete-No-18
+  - Retail_owner_mission1_complete-No-19
+  - Retail_owner_mission1_complete-Refuse-20
+  compilationStatus: 1
+  isSuccesfullyCompiled: 1
+  compilationErrorMessage: 
+  baseLanguage: {instanceID: 0}
+  localizations: []
