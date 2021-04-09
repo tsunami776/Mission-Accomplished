@@ -1,6 +1,7 @@
 fileFormatVersion: 2
 guid: 24f22b038d584445ba4f43344cc5733d
 ScriptedImporter:
+<<<<<<< Updated upstream:Assets/Yarn Samples/Yarn Spinner/1.2.7/Space/Dialogue/Ship.yarn.meta
   fileIDToRecycleName:
     4900000: Strings
     11400000: Program
@@ -10,6 +11,16 @@ ScriptedImporter:
   assetBundleVariant: 
   script: {fileID: 11500000, guid: 94073015eacc34c1d8fc6786e43d60ca, type: 3}
   baseLanguageID: en-AU
+=======
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {instanceID: 0}
+  baseLanguageID: 
+>>>>>>> Stashed changes:Assets/Samples/Yarn Spinner/1.2.7/Space/Dialogue/Ship.yarn.meta
   stringIDs:
   - line:5837f2
   - line:ship9
@@ -26,7 +37,12 @@ ScriptedImporter:
   compilationStatus: 0
   isSuccesfullyCompiled: 1
   compilationErrorMessage: 
+<<<<<<< Updated upstream:Assets/Yarn Samples/Yarn Spinner/1.2.7/Space/Dialogue/Ship.yarn.meta
   baseLanguage: {fileID: 4900000, guid: 24f22b038d584445ba4f43344cc5733d, type: 3}
   localizations:
   - languageName: de
     text: {fileID: 4900000, guid: c7ccc37b05d57b5449cdae7c315d1646, type: 3}
+=======
+  baseLanguage: {instanceID: 0}
+  localizations: []
+>>>>>>> Stashed changes:Assets/Samples/Yarn Spinner/1.2.7/Space/Dialogue/Ship.yarn.meta
