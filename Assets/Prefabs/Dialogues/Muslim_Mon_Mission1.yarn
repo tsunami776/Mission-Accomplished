@@ -1,0 +1,78 @@
+title: Start
+tags: 
+colorID: 0
+position: -989,-403
+---
+Oh. Hello sir!
+
+[[How's your son?|son]]
+===
+title: son
+tags: 
+colorID: 0
+position: -656,-623
+---
+He seems a bit traumatized be the battles, but he's getting better since he got back. However, he seems not willing to stay here anymore, he says this country has given him too much to bear.
+
+[[Well, where does he want to go?|Immi]]
+[[Just stay here, you guys are safe with our protection. I've proven it to you, haven't I?|stay]]
+===
+title: Immi
+tags: 
+colorID: 0
+position: -314,-468
+---
+He's been trying to get paperwork to escape to Jordan as refugees. I think we'll be just fine here with people like you, but he seems to be triggered by this place. I think if it'll be better for him, then perhaps it's for the best if we leave.
+
+[[Well, it'll be pretty hard with current situation, but I'll look into it, all right?|Plan]]
+===
+title: stay
+tags: 
+colorID: 0
+position: -318,-852
+---
+I would say staying here is pretty good, but my son says it's not safe since he betrayed the people who kidnapped him, and they may go after him. Also, he's having some panic attacks since he got back, and difficulties sleeping. He says he'd better leave this place that gives him cues for stress.
+
+[[Well, tell your son there's no need to worry, we'll take care of you guys and it's pretty safe here. We'll try get some doctors for him.|Med]]
+[[Well, where does he want to escape to then?|Immi]]
+===
+title: Med
+tags: 
+colorID: 0
+position: 17,-853
+---
+That's good to hear. I'll talk to him more later. If we can get some help for his mental distress it would be really nice of you.
+
+[[No problem, ma'am. It's called PTSD, and it's pretty common. We'll help him easily so don't worry.|end]]
+===
+title: end
+tags: 
+colorID: 0
+position: 344,-865
+---
+Thank you sir. I suppose he is  overreacting. My poor boy ...
+===
+title: Plan
+tags: 
+colorID: 0
+position: 12,-489
+---
+Yes, sir. He said if we can be protected while escaping west it'll be the best since he's afraid that there'd be people looking for him.
+
+[[I see. I'll try to send a few of my guys and perhaps allocate some money and resources for your trip.|highqual]]
+[[I'll try to get some people to help, but other than that I may not be able to do, ma'am.|lowqual]]
+===
+title: highqual
+tags: 
+colorID: 0
+position: 340,-630
+---
+Thank you so much, sir! This way we can get to Jordan safely. May Allah bless your kind soul.
+===
+title: lowqual
+tags: 
+colorID: 0
+position: 350,-262
+---
+Thank you, sir! This way we'll be less dangerous on our road. May Allah bless your kind soul.
+===

@@ -1,0 +1,35 @@
+fileFormatVersion: 2
+guid: 54f2be7c3792911429ceb4276785d9d8
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 94073015eacc34c1d8fc6786e43d60ca, type: 3}
+  baseLanguageID: 
+  stringIDs:
+  - Muslim_Mon_Mission1-Start-0
+  - Muslim_Mon_Mission1-Start-1
+  - Muslim_Mon_Mission1-son-2
+  - Muslim_Mon_Mission1-son-3
+  - Muslim_Mon_Mission1-son-4
+  - Muslim_Mon_Mission1-Immi-5
+  - Muslim_Mon_Mission1-Immi-6
+  - Muslim_Mon_Mission1-stay-7
+  - Muslim_Mon_Mission1-stay-8
+  - Muslim_Mon_Mission1-stay-9
+  - Muslim_Mon_Mission1-Med-10
+  - Muslim_Mon_Mission1-Med-11
+  - Muslim_Mon_Mission1-end-12
+  - Muslim_Mon_Mission1-Plan-13
+  - Muslim_Mon_Mission1-Plan-14
+  - Muslim_Mon_Mission1-Plan-15
+  - Muslim_Mon_Mission1-highqual-16
+  - Muslim_Mon_Mission1-lowqual-17
+  compilationStatus: 1
+  isSuccesfullyCompiled: 1
+  compilationErrorMessage: 
+  baseLanguage: {instanceID: 0}
+  localizations: []
