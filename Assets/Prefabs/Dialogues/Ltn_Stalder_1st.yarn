@@ -1,0 +1,54 @@
+title: Start
+tags: 
+colorID: 0
+position: -1085,-383
+---
+Hi. What's the matter?
+
+[[I have a favor to ask, sir.|pol]]
+[[I want my team to help with the Fallujah battle, sir. I need to get to the other side.|NON]]
+===
+title: pol
+tags: 
+colorID: 0
+position: -781,-191
+---
+What is it?
+
+[[My team need to get to the other side to Al Anbar across Fallujah.|go]]
+===
+title: NON
+tags: 
+colorID: 0
+position: -456,-451
+---
+That's funny. Why are you interested in going to the front line? Is it not comfortable sitting in office and let your boys do some petty work?
+
+[[I need Ayub Ali, sir. The war dealer. I just found that he's on the other side of Fallujah.|need]]
+===
+title: go
+tags: 
+colorID: 0
+position: -453,-195
+---
+You think I can decide to win the battle if I want to? This is a war, kid. Not a video game.
+
+[[Well, my team can help you with it, if you need.|need]]
+[[I know. Just give me a plan and I'll carry it out.|need]]
+===
+title: need
+tags: 
+colorID: 0
+position: -114,-393
+---
+Ok, listen up. My current plan is to flank the enemy on the north side, where their supply chain is. If you really want to end the battle so much, prepare some of your people to flank them next week with my guys. We could use some extra hands. I'll tell people to push the details to you later. How much you want to send is your call.
+
+[[Got it, sir. I'll help as much as I can.|end]]
+===
+title: end
+tags: 
+colorID: 0
+position: 199,-403
+---
+All right. I'll see your guys on the battlefield then. Don't get too optimistic, it's gonna be a hard fight.
+===

@@ -1,0 +1,30 @@
+fileFormatVersion: 2
+guid: d06c7b5658ab35843ac2ba64a76f29e3
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 94073015eacc34c1d8fc6786e43d60ca, type: 3}
+  baseLanguageID: 
+  stringIDs:
+  - Ltn_Stalder_1st-Start-0
+  - Ltn_Stalder_1st-Start-1
+  - Ltn_Stalder_1st-Start-2
+  - Ltn_Stalder_1st-pol-3
+  - Ltn_Stalder_1st-pol-4
+  - Ltn_Stalder_1st-NON-5
+  - Ltn_Stalder_1st-NON-6
+  - Ltn_Stalder_1st-go-7
+  - Ltn_Stalder_1st-go-8
+  - Ltn_Stalder_1st-go-9
+  - Ltn_Stalder_1st-need-10
+  - Ltn_Stalder_1st-need-11
+  - Ltn_Stalder_1st-end-12
+  compilationStatus: 1
+  isSuccesfullyCompiled: 1
+  compilationErrorMessage: 
+  baseLanguage: {instanceID: 0}
+  localizations: []
