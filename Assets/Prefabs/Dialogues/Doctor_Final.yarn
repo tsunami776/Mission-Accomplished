@@ -1,0 +1,44 @@
+title: Start
+tags: 
+colorID: 0
+position: -1114,-616
+---
+Hello sir! We just received your additional supply! It's great that we are now able to care for the influx of refugees swimmingly.
+
+[[Glad to hear that. I told you it's also my responsibility, so I have to support you.|GO]]
+===
+title: GO
+tags: 
+colorID: 0
+position: -858,-613
+---
+Sir, I heard that you are going to search for Ayub Ali, is that right?
+
+[[Yes, why?|good]]
+[[Who told you that?|gov]]
+===
+title: good
+tags: 
+colorID: 0
+position: -611,-777
+---
+Well, I know that if he's captured, the insurgency would calm for a bit. I'll make sure to make more spaces for your soldiers before the operation. Make sure to send them to me before you go and find Ayub, consider this your payback for your contribution.
+
+[[That would be very helpful! We'll try to secure our peace together then. |end]]
+===
+title: gov
+tags: 
+colorID: 0
+position: -624,-508
+---
+The new governor promised to capture Ayub, and I though you must have been involved, since you seem to be here for the people. I'll make sure to make more spaces for your soldiers before the operation. Make sure to send them to me before you go and find Ayub, consider this your payback for your contribution.
+
+[[That would be very helpful! We'll try to secure our peace together then. |end]]
+===
+title: end
+tags: 
+colorID: 0
+position: -313,-628
+---
+My pleasure, sir. I'm sure we will.
+===

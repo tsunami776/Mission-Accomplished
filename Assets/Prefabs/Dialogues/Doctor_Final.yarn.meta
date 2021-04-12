@@ -1,0 +1,27 @@
+fileFormatVersion: 2
+guid: f8345ebbf29f1fd4ca66ceb6c7b90720
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 94073015eacc34c1d8fc6786e43d60ca, type: 3}
+  baseLanguageID: 
+  stringIDs:
+  - Doctor_Final-Start-0
+  - Doctor_Final-Start-1
+  - Doctor_Final-GO-2
+  - Doctor_Final-GO-3
+  - Doctor_Final-GO-4
+  - Doctor_Final-good-5
+  - Doctor_Final-good-6
+  - Doctor_Final-gov-7
+  - Doctor_Final-gov-8
+  - Doctor_Final-end-9
+  compilationStatus: 1
+  isSuccesfullyCompiled: 1
+  compilationErrorMessage: 
+  baseLanguage: {instanceID: 0}
+  localizations: []
