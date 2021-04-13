@@ -40,6 +40,7 @@ public class PlayerInteractionController : MonoBehaviour
                     // if it is Mission Obj: open the mission view
                     if (interactableObj.CompareTag("MissionObj"))
                     {
+                        GameController.GC.UpdateMissionState_Player();
                         missionView.SetActive(true);
                         GetComponent<PlayerMovementController>().Lock();
                         GetComponent<PlayerLookController>().Lock();
