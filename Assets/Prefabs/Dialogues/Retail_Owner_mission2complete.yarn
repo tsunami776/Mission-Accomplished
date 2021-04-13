@@ -1,0 +1,35 @@
+title: Start
+tags: 
+colorID: 0
+position: -670,-584
+---
+Yo! The bringer of dollars is here!
+
+[[Haha, how's your preparation for leaving for US?|OPT]]
+[[Don't. I still am not sure about dealing drugs.|PES]]
+===
+title: OPT
+tags: 
+colorID: 0
+position: -400,-776
+---
+Oh you know, there's no hurry. I plan to stay here a couple more months to settle my business, maybe find someone else to run this store for me. But other than that I think I'm in a pretty good shape for leaving, financially.
+
+[[Great! But how are those drugs? Have they caused any trouble?|PES]]
+===
+title: PES
+tags: 
+colorID: 0
+position: -395,-441
+---
+Come on, they are just mild stimulant drugs, people drink coffee anyways so I don't see those drugs being an issue. It's a win-win-win, just like what I told you last time.
+
+[[Alright then. I believe you. What's your plan next?|next]]
+===
+title: next
+tags: 
+colorID: 0
+position: -27,-457
+---
+Well, I'll stay here as long as you need me, but soon after that I'll leave for the US. If we're lucky I guess I'll see you there probably.
+===
