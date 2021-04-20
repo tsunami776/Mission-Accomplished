@@ -30,7 +30,7 @@ public class Timer : MonoBehaviour
         // update date
         if (currentTime % Config.TIME_ONEDAY >= -0.1f && currentTime % Config.TIME_ONEDAY <= 0.1f && !updateLock)
         {
-            Debug.Log("Go Next Day");
+            //Debug.Log("Go Next Day");
             GameController.GC.GoToNextDay();
             updateLock = true;
             StartCoroutine(UnlockUpdate());
