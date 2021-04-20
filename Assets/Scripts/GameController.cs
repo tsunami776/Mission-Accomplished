@@ -1,6 +1,8 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 /*
  * When using functions from this singleton, please call the static obj "GameController.GC.FunctionName" in your scripts directly, 
@@ -11,6 +13,11 @@ public class GameController : MonoBehaviour
 {
     // singleton Game Controller
     public static GameController GC;
+
+    // date and time
+    private DateTime _startDate = new DateTime(2005, 1, 1);
+    private DateTime currentDate;
+    public Text currentDateText;
 
     // all missions
     public int missionTotalNumber;
@@ -25,7 +32,7 @@ public class GameController : MonoBehaviour
     private List<int> missionFailed;
 
     // date hold all items/resources
-
+    private ResourceManager resourceManager;
 
     // intialize singleton
     private void Awake()
@@ -39,6 +46,11 @@ public class GameController : MonoBehaviour
     // start
     private void Start()
     {
+        // initializing date and time
+        currentDate = _startDate;
+        currentDateText.text = currentDate.ToShortDateString();
+        resourceManager = GameObject.FindGameObjectWithTag("ResourceManager").GetComponent<ResourceManager>();
+
         // initializing state lists
         allMissions = new List<GameObject>();
         missionUnlocked = new List<int>();
@@ -46,6 +58,15 @@ public class GameController : MonoBehaviour
         missionComplete = new List<int>();
         missionSuccessful = new List<int>();
         missionFailed = new List<int>();
+    }
+
+    // go to the next day
+    public void GoToNextDay()
+    {
+        currentDate = currentDate.AddDays(1);
+        currentDateText.text = currentDate.ToShortDateString();
+        resourceManager.currentDate = currentDate;
+        resourceManager.UpdateResourceCounts();
     }
 
     // lock a mission

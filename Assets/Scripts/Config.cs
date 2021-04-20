@@ -18,4 +18,11 @@ public class Config
 
     // Layer Index
     public const int LAYER_INDEX_INTERACTABLE = 8;
+
+    // Modifier
+    public const float MODIFIER_TIMER = 1f;
+
+    // Time
+    public const float TIME_ONEDAY = 180f;
+    public const float TIME_DAY_UPDATE_DELAY = 1f;
 }
