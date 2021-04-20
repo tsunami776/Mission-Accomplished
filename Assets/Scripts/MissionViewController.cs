@@ -10,9 +10,13 @@ public class MissionViewController : MonoBehaviour
     public int missionCount;
     
     // template mission and text
-    public GameObject missionTemp;
-    public GameObject missionField;
-    public Text missionText;
+    [SerializeField] private GameObject missionTemp;
+    [SerializeField] private GameObject missionField;
+    [SerializeField] private Text missionText;
+
+    // mission tracker
+    [SerializeField] private MissionTrackerController MTC;
+    
 
     // update all mission info from the Game Controller
     public void UpdateMissionView()
@@ -55,6 +59,9 @@ public class MissionViewController : MonoBehaviour
         Vector3 newPos = new Vector3(tempPos.x, tempPos.y + (missionCount - 1) * (-60f), tempPos.z);
         newMission.GetComponent<RectTransform>().localPosition = newPos;
         newMission.GetComponent<Image>().color = Config.MISSION_COLOR_ONGOING;
+
+        // update the mission tracker
+        MTC.TrackerStartNewMission(whichMission.ToString(), 55f);
     }
 
     public void NewCompleteMission(int whichMission)

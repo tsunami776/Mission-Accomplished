@@ -34,12 +34,12 @@ public class PlayerMovementController : MonoBehaviour
             if (Input.GetKey(KeyCode.W))
             {
                 moveV = 1f;
-                AccelerateV(moveV * accMove);  
+                AccelerateV(moveV * accMove * Time.deltaTime);  
             }
             else if (Input.GetKey(KeyCode.S))
             {
                 moveV = -1f;
-                AccelerateV(moveV * accMove);
+                AccelerateV(moveV * accMove * Time.deltaTime);
             }
             else
             {
@@ -50,12 +50,12 @@ public class PlayerMovementController : MonoBehaviour
             if (Input.GetKey(KeyCode.A))
             {
                 moveH = -1f;
-                AccelerateH(moveH * accMove);
+                AccelerateH(moveH * accMove * Time.deltaTime);
             }
             else if (Input.GetKey(KeyCode.D))
             {
                 moveH = 1f;
-                AccelerateH(moveH * accMove);
+                AccelerateH(moveH * accMove * Time.deltaTime);
             }
             else
             {
@@ -91,7 +91,7 @@ public class PlayerMovementController : MonoBehaviour
     // calculate Vertical Acceleration
     private void AccelerateV(float acceleration)
     {
-        speedV += acceleration * Time.deltaTime;
+        speedV += acceleration;
         if (speedV >= maxSpeedForward)
         {
             speedV = maxSpeedForward;
@@ -105,7 +105,7 @@ public class PlayerMovementController : MonoBehaviour
     // calculate Horizontal Acceleration
     private void AccelerateH(float acceleration)
     {
-        speedH += acceleration * Time.deltaTime;
+        speedH += acceleration;
         if (speedH >= maxSpeedForward)
         {
             speedH = maxSpeedForward;

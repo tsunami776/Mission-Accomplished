@@ -23,8 +23,8 @@ public class PlayerLookController : MonoBehaviour
         if (!isLocked)
         {
             // mouse input
-            float lookV = Input.GetAxis("Mouse Y") * mouseSensitive;
-            float lookH = Input.GetAxis("Mouse X") * mouseSensitive;
+            float lookV = Input.GetAxis("Mouse Y") * mouseSensitive * Time.deltaTime * 100f;
+            float lookH = Input.GetAxis("Mouse X") * mouseSensitive * Time.deltaTime * 100f;
 
             // rotate player
             transform.Rotate(new Vector3(0f, lookH, 0f));
