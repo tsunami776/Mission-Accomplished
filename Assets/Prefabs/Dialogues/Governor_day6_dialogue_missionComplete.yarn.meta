@@ -1,0 +1,26 @@
+fileFormatVersion: 2
+guid: 17208c2f62697334abb4b8ad00e1c269
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 94073015eacc34c1d8fc6786e43d60ca, type: 3}
+  baseLanguageID: 
+  stringIDs:
+  - Governor_day6_dialogue_missionComplete-Start-0
+  - Governor_day6_dialogue_missionComplete-Start-1
+  - Governor_day6_dialogue_missionComplete-ask-2
+  - Governor_day6_dialogue_missionComplete-ask-3
+  - Governor_day6_dialogue_missionComplete-SOl-4
+  - Governor_day6_dialogue_missionComplete-SOl-5
+  - Governor_day6_dialogue_missionComplete-SOl-6
+  - Governor_day6_dialogue_missionComplete-go-7
+  - Governor_day6_dialogue_missionComplete-arro-8
+  compilationStatus: 1
+  isSuccesfullyCompiled: 1
+  compilationErrorMessage: 
+  baseLanguage: {instanceID: 0}
+  localizations: []

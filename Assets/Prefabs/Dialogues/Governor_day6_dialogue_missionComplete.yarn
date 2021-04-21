@@ -1,0 +1,42 @@
+title: Start
+tags: 
+colorID: 0
+position: -466,-340
+---
+It's you. You found Ayub yet?
+
+[[That's why I came. I found the guy, on my way to capture him.|ask]]
+===
+title: ask
+tags: 
+colorID: 0
+position: -187,-351
+---
+Good, so why are you here then?
+
+[[I need your help. Bastard got protected by a whole army retreated from Fallujah.|SOl]]
+===
+title: SOl
+tags: 
+colorID: 0
+position: 97,-362
+---
+Fine. If I can see Ayub dead or arrested, then you bet I'll send you more soldiers. But remember, make it count, clear.
+
+[[Yes, sir. I'll not disappoint you.|go]]
+[[I will, consider him captured.|arro]]
+===
+title: go
+tags: 
+colorID: 0
+position: 411,-228
+---
+Good attitude. Go. I'm expecting to see him next week.
+===
+title: arro
+tags: 
+colorID: 0
+position: 421,-555
+---
+Good. Don't be too optimistic, I want this to be the end of it.
+===

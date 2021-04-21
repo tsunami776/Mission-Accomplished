@@ -1,0 +1,20 @@
+fileFormatVersion: 2
+guid: df3ec85e07a163d47984cb219f122d99
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 94073015eacc34c1d8fc6786e43d60ca, type: 3}
+  baseLanguageID: 
+  stringIDs:
+  - Doctor_mission2_inProgress-Start-0
+  - Doctor_mission2_inProgress-Start-1
+  - Doctor_mission2_inProgress-enen-2
+  compilationStatus: 1
+  isSuccesfullyCompiled: 1
+  compilationErrorMessage: 
+  baseLanguage: {instanceID: 0}
+  localizations: []

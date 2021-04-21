@@ -1,0 +1,16 @@
+title: Start
+tags: 
+colorID: 0
+position: -829,-297
+---
+Hi officer. How can I help you? Or have you got something for the new patients?
+
+[[Not yet, but I will help them, I promise.|enen]]
+===
+title: enen
+tags: 
+colorID: 0
+position: -342,-294
+---
+That's good to hear. I'm sure you will.
+===

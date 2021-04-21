@@ -1,0 +1,20 @@
+fileFormatVersion: 2
+guid: 7646463a0485f7641a35b356e2a69a1b
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 94073015eacc34c1d8fc6786e43d60ca, type: 3}
+  baseLanguageID: 
+  stringIDs:
+  - Muslim_Mother_mission1_inProgress-Start-0
+  - Muslim_Mother_mission1_inProgress-Start-1
+  - Muslim_Mother_mission1_inProgress-end-2
+  compilationStatus: 1
+  isSuccesfullyCompiled: 1
+  compilationErrorMessage: 
+  baseLanguage: {instanceID: 0}
+  localizations: []

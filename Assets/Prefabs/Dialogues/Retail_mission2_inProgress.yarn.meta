@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: 265f6cd5a9388084dbd5d958645eccf7
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 94073015eacc34c1d8fc6786e43d60ca, type: 3}
+  baseLanguageID: 
+  stringIDs:
+  - Retail_mission2_inProgress-Start-0
+  - Retail_mission2_inProgress-Start-1
+  - Retail_mission2_inProgress-Start-2
+  - Retail_mission2_inProgress-aa-3
+  compilationStatus: 1
+  isSuccesfullyCompiled: 1
+  compilationErrorMessage: 
+  baseLanguage: {instanceID: 0}
+  localizations: []

@@ -1,0 +1,16 @@
+title: Start
+tags: 
+colorID: 0
+position: -155,-291
+---
+Hello officer, any information about my son yet?
+
+[[No, but I'll keep looking, I promise.|end]]
+===
+title: end
+tags: 
+colorID: 0
+position: 148,-299
+---
+My poor boy... I hope he's OK. Please, officer, please bring him back.
+===

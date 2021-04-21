@@ -1,0 +1,16 @@
+title: Start
+tags: 
+colorID: 0
+position: -1017,-233
+---
+Yo, you ready to secure the trade routes yet? Can't wait to get rich here!
+
+[[Relax, I'll do what I promised to do.|fine]]
+===
+title: fine
+tags: 
+colorID: 0
+position: -537,-257
+---
+Fine, fine. Just don't make me wait to long!
+===
