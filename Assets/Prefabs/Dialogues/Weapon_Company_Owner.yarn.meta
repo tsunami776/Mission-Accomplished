@@ -1,0 +1,44 @@
+fileFormatVersion: 2
+guid: 9458baa1fe9db8c42afd878ef82ad85f
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 94073015eacc34c1d8fc6786e43d60ca, type: 3}
+  baseLanguageID: 
+  stringIDs:
+  - Weapon_Company_Owner-Start-0
+  - Weapon_Company_Owner-Start-1
+  - Weapon_Company_Owner-Start-2
+  - Weapon_Company_Owner-who-3
+  - Weapon_Company_Owner-who-4
+  - Weapon_Company_Owner-are-5
+  - Weapon_Company_Owner-are-6
+  - Weapon_Company_Owner-are-7
+  - Weapon_Company_Owner-are-8
+  - Weapon_Company_Owner-not-9
+  - Weapon_Company_Owner-not-10
+  - Weapon_Company_Owner-not-11
+  - Weapon_Company_Owner-not-12
+  - Weapon_Company_Owner-doubt-13
+  - Weapon_Company_Owner-doubt-14
+  - Weapon_Company_Owner-doubt-15
+  - Weapon_Company_Owner-doubt-16
+  - Weapon_Company_Owner-conditions-17
+  - Weapon_Company_Owner-conditions-18
+  - Weapon_Company_Owner-back-19
+  - Weapon_Company_Owner-back-20
+  - Weapon_Company_Owner-back-21
+  - Weapon_Company_Owner-law-22
+  - Weapon_Company_Owner-law-23
+  - Weapon_Company_Owner-law-24
+  - Weapon_Company_Owner-Deal-25
+  - Weapon_Company_Owner-endbad-26
+  compilationStatus: 1
+  isSuccesfullyCompiled: 1
+  compilationErrorMessage: 
+  baseLanguage: {instanceID: 0}
+  localizations: []

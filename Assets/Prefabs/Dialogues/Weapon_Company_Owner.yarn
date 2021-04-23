@@ -1,0 +1,95 @@
+title: Start
+tags: 
+colorID: 0
+position: -856,-236
+---
+Hello commander, how's your day?
+
+[[Who are you? Why are you sitting in my desk?|who]]
+[[Are you the guy Ayub was talking about? To get him out?|are]]
+===
+title: who
+tags: 
+colorID: 0
+position: -555,-83
+---
+I can sit anywhere I want, because I am the owner of the place and you are not, not really. I'm here because you are in my way, so I have a favor to ask of you.
+
+[[You are the one that Ayub said would get him out?|are]]
+===
+title: are
+tags: 
+colorID: 0
+position: -569,-420
+---
+I have no interest in that guy, but he is of use for me. The majority of my weapons go through his hands to flow into Iraq. I get the money, he gets to feed his people, win-win. But now you just have to ruin everything, don't you?
+
+[[I won't let him go. He'll not get away with his crimes.|not]]
+[[Well, is it true that he's using all the money he gets from you to benefit his people?|doubt]]
+[[Okay. What are your conditions?|conditions]]
+===
+title: not
+tags: 
+colorID: 0
+position: -262,-629
+---
+Oh, but it is not up to you. If you won't let him go, I'll find another way eventually. If you do want to cooperate, we'll offer you a gift to accompany your trip back to America.
+
+[[Okay, what's your offer?|conditions]]
+[[How do I know you'll send me back in one piece?|back]]
+[[No, I'll not release a criminal, I'll send him to face the law.|law]]
+===
+title: doubt
+tags: 
+colorID: 0
+position: -278,79
+---
+Sure. He's a smart guy. He knows his position and know what's best. If cooperating with me can secure his livelihood and his charity, then why not? Now, officer, the same choice is on your hands. If you choose correctly, you get to go back home with my gift.
+
+[[Okay, what's your offer?|conditions]]
+[[How do I know you'll send me back in one piece?|back]]
+[[No, I'll not release a criminal, I'll send him to face the law.|law]]
+===
+title: conditions
+tags: 
+colorID: 0
+position: 55,257
+---
+It's easy. You let Ayub go, and I'll send you back to the US where you'll have enough money to live a pretty affluent rest of your life, better than if you be a soldier all the way till retirement. You gets that, I continue my business, and Ayub gets to keep his little utopian fantasy. What do you say?
+
+[[Sounds legit. Deal.|Deal]]
+===
+title: back
+tags: 
+colorID: 0
+position: -36,-420
+---
+Like I said, I own this place, and the all mighty dollar can do everything. With that, not only am I able to send you home, I can also make you a hero after you leave. Just make the clever choice here.
+
+[[Sure, what's your offer then?|conditions]]
+[[No way, this is a scam. I'll send Ayub to the law enforcementy.|law]]
+===
+title: law
+tags: 
+colorID: 0
+position: 317,-662
+---
+You can do that if you want. Like I said, I have enough ways to get this done. Your struggle won't mean anything. You think you are so righteous, coming here to liberate the people and instill democracy. But people like me are the real reason you are here. I can make you a hero, or I can make you a traitor. Think twice. Your last chance. Yes, or no?
+
+[[Fine, what's your condition?|conditions]]
+[[Sorry, I insist on the rule of law.|endbad]]
+===
+title: Deal
+tags: 
+colorID: 0
+position: 423,254
+---
+Smart choice. I wish you a good life back in the states.
+===
+title: endbad
+tags: 
+colorID: 0
+position: 658,-670
+---
+Fine, I'll do it some other way then. Like I said, I don't really need you.
+===
