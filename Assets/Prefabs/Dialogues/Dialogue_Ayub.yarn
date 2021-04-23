@@ -1,0 +1,92 @@
+title: Start
+tags: 
+colorID: 0
+position: -870,-613
+---
+I am not guilty! And you have no right to detain me here!
+
+[[Not guilty? Do you realize how many people are suffering because of your weapons sold to the rebels?|weapons]]
+[[Not guilty? Ask yourself how much money you make off of people suffering from war!|money]]
+===
+title: weapons
+tags: 
+colorID: 0
+position: -574,-792
+---
+I am not the reason people are suffering, and you know damn well who's responsible. Stop pretending to be the savior while you are the ones who caused trouble in the first place! If your God allows you to commit such vicious crimes then it must be a Godless and indifferent world, then how dare you accuse me of immorality when morality doesn't exist anyway.
+
+[[And you are the one facilitating the violence! Stop pretending to be a saint while you make tons of money off of a war!|money]]
+===
+title: money
+tags: 
+colorID: 0
+position: -582,-406
+---
+*He shows his empty hands to you*
+Money? I don't make any money, you see? I can barely afford to eat in the current situation. I am the one selling weapons, that's true, but I'm not a evil capitalist making money out of war like you Americans!
+
+[[Liar. You supply weapon and mercenaries to all the surrounding insurgencies, stats say you are making thousands every day!|nod]]
+[[Where did the money go, then? Are you telling me that it just vanished all of a sudden?|nod]]
+===
+title: nod
+tags: 
+colorID: 0
+position: -248,-392
+---
+What part of my sentence do you not understand, you pig? I don't make the money, my workers do. They've got families to feed. I have escort soldiers all across Iraq for my supplies, or else I'd be dead a long time ago. They all get shares in the business to do what they please. I'm just one of them.
+
+[[So what do they do with the money? There must be a lot.|Migrate]]
+[[What are you doing with your share, then?|Ayub]]
+===
+title: Migrate
+tags: 
+colorID: 0
+position: 45,-403
+---
+Some of them use the money to escape the country. Some decide to stay,so they use the money to feed themselves and their families. There are refugees, people who lost their family members in the war, injured ex-soldiers, you name it. I'm keeping them alive, while you constantly try to kill them, that's' the difference.
+
+[[And you? Why don't you leave the place if you hate it so much?|Ayub]]
+===
+title: Ayub
+tags: 
+colorID: 0
+position: 43,-28
+---
+Me? I don't want to leave my country, because I love it. I am doing something good, although you definitely won't agree. I don't need money for myself, not really. No matter who wins the war, it's always the people who suffer. I feed them, I keep them alive. So call me a criminal all you want, but I am not guilty. If you think I am, just draw a gun to kill me before it's too late.
+
+[[What do you mean "too late?" You are captured, and your persecution is on the way.|pers]]
+[[*Draw the gun and kill him*|gun]]
+===
+title: pers
+tags: 
+colorID: 0
+position: 382,-167
+---
+Ha. It seems as though you have no clue. You don't run the place, and neither do I. The real powerful people do, and you will see. You'll be visited soon and you will change your mind. 
+
+[[Let's see about that. I'll not let you get away.|talk]]
+[[*Draw the gun and kill him*|gun]]
+===
+title: end
+tags: 
+colorID: 0
+position: 680,226
+---
+He falls on the ground. You felt proud to eliminate a criminal, but you may face repercussions for your action.
+===
+title: talk
+tags: 
+colorID: 0
+position: 701,-182
+---
+Oh, but you will. Soon, And I'll be walking in broad daylight all over again. I sold myself to the big rich guys, and they will keep me alive.
+===
+title: gun
+tags: 
+colorID: 0
+position: 364,232
+---
+That's what I thought. Shoot, coward, you are just going to kill a man.
+
+[[Open fire|end]]
+===

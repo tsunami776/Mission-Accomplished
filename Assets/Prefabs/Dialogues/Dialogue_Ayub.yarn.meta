@@ -1,0 +1,41 @@
+fileFormatVersion: 2
+guid: 73dc56ecc6ac9524ba40e7a33eeb81ff
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 94073015eacc34c1d8fc6786e43d60ca, type: 3}
+  baseLanguageID: 
+  stringIDs:
+  - Dialogue_Ayub-Start-0
+  - Dialogue_Ayub-Start-1
+  - Dialogue_Ayub-Start-2
+  - Dialogue_Ayub-weapons-3
+  - Dialogue_Ayub-weapons-4
+  - Dialogue_Ayub-money-5
+  - Dialogue_Ayub-money-6
+  - Dialogue_Ayub-money-7
+  - Dialogue_Ayub-money-8
+  - Dialogue_Ayub-nod-9
+  - Dialogue_Ayub-nod-10
+  - Dialogue_Ayub-nod-11
+  - Dialogue_Ayub-Migrate-12
+  - Dialogue_Ayub-Migrate-13
+  - Dialogue_Ayub-Ayub-14
+  - Dialogue_Ayub-Ayub-15
+  - Dialogue_Ayub-Ayub-16
+  - Dialogue_Ayub-pers-17
+  - Dialogue_Ayub-pers-18
+  - Dialogue_Ayub-pers-19
+  - Dialogue_Ayub-end-20
+  - Dialogue_Ayub-talk-21
+  - Dialogue_Ayub-gun-22
+  - Dialogue_Ayub-gun-23
+  compilationStatus: 1
+  isSuccesfullyCompiled: 1
+  compilationErrorMessage: 
+  baseLanguage: {instanceID: 0}
+  localizations: []
