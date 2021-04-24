@@ -106,7 +106,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 1
   m_VolumeTrigger: {fileID: 0}
-  m_RenderPostProcessing: 0
+  m_RenderPostProcessing: 1
   m_Antialiasing: 0
   m_AntialiasingQuality: 2
   m_StopNaN: 0
@@ -483,6 +483,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: NewUnlockedMission
+      objectReference: {fileID: 0}
+    - target: {fileID: 3256008347020077365, guid: 0d10bdbce1879f04d9f1639fd2e6bced,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 0.9150943
+      objectReference: {fileID: 0}
+    - target: {fileID: 3256008347020077365, guid: 0d10bdbce1879f04d9f1639fd2e6bced,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 0.99236584
       objectReference: {fileID: 0}
     - target: {fileID: 4313452438431670606, guid: 0d10bdbce1879f04d9f1639fd2e6bced,
         type: 3}
@@ -946,7 +956,7 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: ba880ced67e10fc4cad1256b6a0b38d2,
         type: 3}
       propertyPath: m_Name
-      value: mainCharacter
+      value: Avatar
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ba880ced67e10fc4cad1256b6a0b38d2, type: 3}

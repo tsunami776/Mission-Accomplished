@@ -18,6 +18,7 @@ public class GameController : MonoBehaviour
     private DateTime _startDate = new DateTime(2005, 1, 1);
     private DateTime currentDate;
     public Text currentDateText;
+    public Material skyboxMat;
 
     // all missions
     public int missionTotalNumber;
@@ -50,6 +51,7 @@ public class GameController : MonoBehaviour
         currentDate = _startDate;
         currentDateText.text = currentDate.ToShortDateString();
         resourceManager = GameObject.FindGameObjectWithTag("ResourceManager").GetComponent<ResourceManager>();
+        skyboxMat = RenderSettings.skybox;
 
         // initializing state lists
         allMissions = new List<GameObject>();

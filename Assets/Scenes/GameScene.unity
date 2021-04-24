@@ -15,18 +15,18 @@ RenderSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 9
   m_Fog: 1
-  m_FogColor: {r: 0.7075472, g: 0.6032693, b: 0.32707372, a: 1}
+  m_FogColor: {r: 0.254717, g: 0.23250067, b: 0.17061232, a: 1}
   m_FogMode: 3
   m_FogDensity: 0.0037
   m_LinearFogStart: 0
   m_LinearFogEnd: 300
-  m_AmbientSkyColor: {r: 0.212, g: 0.227, b: 0.259, a: 1}
+  m_AmbientSkyColor: {r: 0.01851191, g: 0.13903634, b: 0.49056602, a: 1}
   m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
   m_AmbientIntensity: 1
-  m_AmbientMode: 0
+  m_AmbientMode: 3
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 2100000, guid: 2720cf27d53679e408eb5bcd595f5f1b, type: 2}
+  m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -6415,6 +6415,7 @@ GameObject:
   m_Component:
   - component: {fileID: 171295974}
   - component: {fileID: 171295975}
+  - component: {fileID: 171295976}
   m_Layer: 0
   m_Name: GameController
   m_TagString: Untagged
@@ -6449,9 +6450,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentDateText: {fileID: 955417886}
+  skyboxMat: {fileID: 0}
   missionTotalNumber: 5
   allMissions: []
   MVC: {fileID: 755613515}
+--- !u!114 &171295976
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 171295973}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d37f6c441cf920a40ba309fd51ba7715, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DirectionalLight: {fileID: 1729539250}
+  Preset: {fileID: 11400000, guid: 60ef8c4dc7bd05a438d307832da8fe14, type: 2}
+  TimeOfDay: 0
 --- !u!1 &171699291 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1581855900514808, guid: 6811ff5a27904be4389b97500b5ed210,
@@ -69054,7 +69071,7 @@ Light:
   serializedVersion: 10
   m_Type: 1
   m_Shape: 0
-  m_Color: {r: 1, g: 0.94075817, b: 0.8207547, a: 1}
+  m_Color: {r: 0.20754719, g: 0.20754719, b: 0.20754719, a: 1}
   m_Intensity: 0.8
   m_Range: 10
   m_SpotAngle: 30
@@ -69111,7 +69128,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1729539249}
-  m_LocalRotation: {x: 0.3428782, y: -0.529831, z: 0.24706425, w: 0.7353047}
+  m_LocalRotation: {x: -0.061628457, y: 0.70441604, z: 0.70441604, w: 0.061628457}
   m_LocalPosition: {x: 0, y: 92.62, z: -5.04}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -84809,6 +84826,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2110011433, guid: e6d2b7322309c0d4287f184652e7ff25, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5732535225932148968, guid: e6d2b7322309c0d4287f184652e7ff25,
         type: 3}
       propertyPath: m_RootOrder
@@ -84868,6 +84889,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: MyCharacter
+      objectReference: {fileID: 0}
+    - target: {fileID: 8724125241493692031, guid: e6d2b7322309c0d4287f184652e7ff25,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e6d2b7322309c0d4287f184652e7ff25, type: 3}

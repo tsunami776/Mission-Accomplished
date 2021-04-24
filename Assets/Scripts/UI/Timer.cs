@@ -7,12 +7,14 @@ public class Timer : MonoBehaviour
     private float currentTime;
     private RectTransform RectTF;
     private bool updateLock;
+    private LightingManager LM;
 
     // Start 
     private void Start()
     {
         RectTF = GetComponent<RectTransform>();
         updateLock = true;
+        LM = GameObject.Find("GameController").GetComponent<LightingManager>();
         StartCoroutine(UnlockUpdate());
     }
 
@@ -23,11 +25,13 @@ public class Timer : MonoBehaviour
         currentTime += Time.fixedDeltaTime;
 
         // rotate clock pointer
-        RectTF.Rotate(0f, 0f, -Time.fixedDeltaTime * Config.MODIFIER_TIMER);
+        float change = -Time.fixedDeltaTime * Config.MODIFIER_TIMER;
+        RectTF.Rotate(0f, 0f, change * 2); // clock round is 12 hours
 
-        print(currentTime % 180f);
+        // update the skybox and lightning corresponding to the current time
+        LM.UpdateTime(change);
 
-        // update date
+        // update date per round
         if (currentTime % Config.TIME_ONEDAY >= -0.1f && currentTime % Config.TIME_ONEDAY <= 0.1f && !updateLock)
         {
             //Debug.Log("Go Next Day");

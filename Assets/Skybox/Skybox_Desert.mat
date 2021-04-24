@@ -51,5 +51,5 @@ Material:
     - _Exposure: 1
     - _Rotation: 0
     m_Colors:
-    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _Color: {r: -0, g: -0, b: -0, a: -2}
     - _Tint: {r: 0.44722322, g: 0.53378206, b: 0.7075472, a: 0.5}
