@@ -23,6 +23,10 @@ public class Config
     public const float MODIFIER_TIMER = 1f;
 
     // Time
-    public const float TIME_ONEDAY = 180f;
+    public const float TIME_ONEDAY = 360f;
     public const float TIME_DAY_UPDATE_DELAY = 1f;
+    public const float TIME_DAY_TRANSITION_OFFSET = -25f;
+    public const float TIME_ANIMATION_TRANSITION_FRAME = 0.02f;
+    public const float TIME_ANIMATION_TRANSITION_DELAY = 1f;
+    public const float TIME_ANIMATION_TRANSCAM = 5f;
 }

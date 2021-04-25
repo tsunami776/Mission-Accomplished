@@ -14,11 +14,14 @@ public class GameController : MonoBehaviour
     // singleton Game Controller
     public static GameController GC;
 
+    // player character
+    public GameObject player;
+    public Transform spawn;
+
     // date and time
     private DateTime _startDate = new DateTime(2005, 1, 1);
-    private DateTime currentDate;
-    public Text currentDateText;
-    public Material skyboxMat;
+    public DateTime currentDate;
+    public Timer timer;
 
     // all missions
     public int missionTotalNumber;
@@ -47,11 +50,13 @@ public class GameController : MonoBehaviour
     // start
     private void Start()
     {
+        // initializing player intial variables
+        spawn.position = player.transform.position;
+        spawn.rotation = player.transform.rotation;
+
         // initializing date and time
         currentDate = _startDate;
-        currentDateText.text = currentDate.ToShortDateString();
         resourceManager = GameObject.FindGameObjectWithTag("ResourceManager").GetComponent<ResourceManager>();
-        skyboxMat = RenderSettings.skybox;
 
         // initializing state lists
         allMissions = new List<GameObject>();
@@ -66,7 +71,6 @@ public class GameController : MonoBehaviour
     public void GoToNextDay()
     {
         currentDate = currentDate.AddDays(1);
-        currentDateText.text = currentDate.ToShortDateString();
         resourceManager.currentDate = currentDate;
         resourceManager.UpdateResourceCounts();
     }

@@ -1,14 +1,27 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using UnityEngine;
 
 [ExecuteAlways]
 public class LightingManager : MonoBehaviour
 {
-    //Scene References
+    // References
     [SerializeField] private Light DirectionalLight;
     [SerializeField] private LightingPreset Preset;
-    //Variables
+    [SerializeField] private GameObject canvas_Interation;
+    [SerializeField] private GameObject canvas_Management;
+    [SerializeField] private GameObject canvas_Transition;
+    [SerializeField] private GameObject playerCam_Main;
+    [SerializeField] private GameObject playerCam_MiniMap;
+    [SerializeField] private GameObject[] transitionCams;
+
+    // Variables
     [SerializeField, Range(0, 24)] private float TimeOfDay;
 
+    void Start()
+    {
+        // day time offset
+        TimeOfDay = -Config.TIME_ONEDAY * 0.2f;
+    }
 
     public void UpdateTime(float change)
     {
@@ -28,6 +41,63 @@ public class LightingManager : MonoBehaviour
         }
     }
 
+    public void DayTransition()
+    {
+        StartCoroutine(transCharacter());
+    }
+
+    IEnumerator transCharacter()
+    {
+        canvas_Transition.SetActive(true);
+        canvas_Transition.GetComponent<TransitionPlayer>().TransAnime_Forward();
+        yield return new WaitForSecondsRealtime(Config.TIME_ANIMATION_TRANSITION_DELAY);
+        UpdateTime(Config.TIME_DAY_TRANSITION_OFFSET);
+        StartCoroutine(transCams());
+    }
+
+    IEnumerator transCams()
+    {
+        // freeze the character
+        GameController.GC.player.GetComponent<PlayerMovementController>().Lock();
+        GameController.GC.player.GetComponent<PlayerLookController>().Lock();
+
+        // turn off the player character UI
+        canvas_Interation.SetActive(false);
+        canvas_Management.SetActive(false);
+        playerCam_Main.SetActive(false);
+        playerCam_MiniMap.SetActive(false);
+
+        // turn on one of the random transition cam
+        int index = Random.Range(0, transitionCams.Length);
+        transitionCams[index].SetActive(true);
+
+
+        /* 
+         * wait for some time
+         */
+        yield return new WaitForSecondsRealtime(Config.TIME_ANIMATION_TRANSCAM);
+        /* 
+         * wait for some time
+         */
+
+
+        // reset all player UI
+        transitionCams[index].GetComponentInChildren<TransitionCam>().TransAnime_Forward(canvas_Transition);
+        yield return new WaitForSecondsRealtime(Config.TIME_ANIMATION_TRANSITION_DELAY);
+        TimeOfDay = -Config.TIME_ONEDAY * 0.2f;
+        canvas_Interation.SetActive(true);
+        canvas_Management.SetActive(true);
+        playerCam_Main.SetActive(true);
+        playerCam_MiniMap.SetActive(true);
+
+        // respawn the player
+        GameController.GC.player.transform.position = GameController.GC.spawn.position;
+        GameController.GC.player.transform.rotation= GameController.GC.spawn.rotation;
+
+        // restore player control
+        GameController.GC.player.GetComponent<PlayerMovementController>().Unlock();
+        GameController.GC.player.GetComponent<PlayerLookController>().Unlock();
+    }
 
     private void UpdateLighting(float timePercent)
     {
