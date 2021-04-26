@@ -37,7 +37,7 @@ public class Timer : MonoBehaviour
         }
         
         // update date per round
-        if (RectTF.rotation.eulerAngles.z % 360f >= -0.1f && RectTF.rotation.eulerAngles.z % 360f <= 0.1f && !updateLock)
+        if (RectTF.rotation.eulerAngles.z % 360f >= -0.001f && RectTF.rotation.eulerAngles.z % 360f <= 0.001f && !updateLock)
         {
             //Debug.Log("Go Next Day");
             GameController.GC.GoToNextDay();
