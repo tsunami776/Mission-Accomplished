@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -34,7 +34,7 @@ public class PlayerMovementController : MonoBehaviour
             if (Input.GetKey(KeyCode.W))
             {
                 moveV = 1f;
-                AccelerateV(moveV * accMove * Time.deltaTime);  
+                AccelerateV(moveV * accMove * Time.deltaTime);
             }
             else if (Input.GetKey(KeyCode.S))
             {
