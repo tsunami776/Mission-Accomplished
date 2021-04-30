@@ -18,12 +18,12 @@ public class footsteps : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Player.velocity.x != 0 || Player.velocity.y != 0 || Player.velocity.z != 0)
+        if (GameObject.Find("MyCharacter").GetComponent<PlayerMovementController>().speedV != 0)
             {
                 ismoving = true;
-            }else{
+        }else{
                 ismoving = false;
-            }
+        }
         
         if (ismoving){
             if(!footstepSound.isPlaying){
