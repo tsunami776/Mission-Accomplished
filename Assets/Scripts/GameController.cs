@@ -23,9 +23,10 @@ public class GameController : MonoBehaviour
     public DateTime currentDate;
     public Timer timer;
 
-    // all missions
+    // all missions & NPCs
     public int missionTotalNumber;
     public List<GameObject> allMissions;
+    public GameObject[] allNPCs;
     public MissionViewController MVC;
 
     // mission states
@@ -60,6 +61,7 @@ public class GameController : MonoBehaviour
 
         // initializing state lists
         allMissions = new List<GameObject>();
+        allNPCs = GameObject.FindGameObjectsWithTag("NPC");
         missionUnlocked = new List<int>();
         missionOngoing = new List<int>();
         missionComplete = new List<int>();

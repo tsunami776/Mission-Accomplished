@@ -32,7 +32,10 @@ public class PlayerInteractionController : MonoBehaviour
             if (interactableObj != null)
             {
                 interactableObj.GetComponent<Outline>().OutlineColor = Config.INTERACTION_COLOR_SELECTED;
-                interactableObj.GetComponent<ShowNotification>().ShowText();
+                if (interactableObj.GetComponent<ShowNotification>() != null)
+                {
+                    interactableObj.GetComponent<ShowNotification>().ShowText();
+                }
 
                 // if player hit the interaction key, default='E'
                 if (Input.GetKey(KeyCode.E))
@@ -57,7 +60,10 @@ public class PlayerInteractionController : MonoBehaviour
             if (interactableObj != null)
             {
                 interactableObj.GetComponent<Outline>().OutlineColor = Config.INTERACTION_COLOR_DEFAULT;
-                interactableObj.GetComponent<ShowNotification>().HideText();
+                if (interactableObj.GetComponent<ShowNotification>() != null)
+                {
+                    interactableObj.GetComponent<ShowNotification>().HideText();
+                }
                 interactableObj = null;
             }
         }
