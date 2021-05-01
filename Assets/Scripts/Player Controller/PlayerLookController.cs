@@ -4,9 +4,13 @@ using UnityEngine;
 
 public class PlayerLookController : MonoBehaviour
 {
-    public GameObject playerCam;
-    public GameObject miniMapDirIndicator;
-    
+    // references
+    [SerializeField] private GameObject playerCam;
+    [SerializeField] private GameObject miniMapDirIndicator;
+    [SerializeField] private GameObject globalMiniMap;
+    [SerializeField] private GameObject crossHair;
+
+    // values
     private float mouseSensitive;
     private float CamVRotation = 0f;
     private bool isLocked;
@@ -36,6 +40,20 @@ public class PlayerLookController : MonoBehaviour
 
             // rotate mini map N,S,W,E
             miniMapDirIndicator.transform.Rotate(new Vector3(0f, 0f, lookH));
+
+            // Press 'Tab' to enlarge the minimap to see all
+            if (Input.GetKey(KeyCode.Tab))
+            {
+                //Debug.Log("Enlarge Minimap");
+                globalMiniMap.SetActive(true);
+                crossHair.SetActive(false);
+            }
+            else 
+            {
+                //Debug.Log("Minimap Closed");
+                globalMiniMap.SetActive(false);
+                crossHair.SetActive(true);
+            }
         }
     }
 

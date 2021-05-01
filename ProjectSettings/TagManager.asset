@@ -10,9 +10,10 @@ TagManager:
   - WaterCountText
   - ResourceManager
   - WaterRateText
-  - TimeManager
   - FoodCountText
   - GroundDetector
+  - NPC
+  - MissionIndicator
   layers:
   - Default
   - TransparentFX
@@ -24,7 +25,7 @@ TagManager:
   - 
   - Interactable
   - Title
-  - 
+  - Indicator
   - 
   - 
   - 
