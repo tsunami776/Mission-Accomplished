@@ -29532,12 +29532,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 0}
---- !u!1 &672956053 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 99817539525189729, guid: e6d2b7322309c0d4287f184652e7ff25,
-    type: 3}
-  m_PrefabInstance: {fileID: 7422256219478035036}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &673362180 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1613191722551200, guid: 39d86d8ecf9464d4780d9c26cc361ca1,
@@ -91544,16 +91538,6 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2187474842884394278, guid: e6d2b7322309c0d4287f184652e7ff25,
-        type: 3}
-      propertyPath: crossHair
-      value: 
-      objectReference: {fileID: 672956053}
-    - target: {fileID: 2187474842884394278, guid: e6d2b7322309c0d4287f184652e7ff25,
-        type: 3}
-      propertyPath: GlobalMiniMap
-      value: 
-      objectReference: {fileID: 1649193071}
     - target: {fileID: 2187474842884394278, guid: e6d2b7322309c0d4287f184652e7ff25,
         type: 3}
       propertyPath: globalMiniMap
