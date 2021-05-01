@@ -1,0 +1,34 @@
+title: Start
+tags: 
+colorID: 0
+position: -967,-276
+---
+Todays Report:
+
+[[national news|national]]
+[[local reports|local]]
+[[finish the report|leave]]
+===
+title: national
+tags: 
+colorID: 0
+position: -629,-93
+---
+National: As more and more refugees seek shelters in America-controlled areas, residential facilities, medical personnels and resources are in dire need, and the US sector is now trying to allocate more resources for the local security and medical facilities to accommodate the soldiers and civilians injured from battle of Fallujah that is ongoing with dozens of casualties each day.
+
+[[...|Start]]
+===
+title: local
+tags: 
+colorID: 0
+position: -626,-492
+---
+An operation yesterday by the local military force has eliminated a nearby insurgency post, with the leader captured and the insurgency force evacuating the previous post. This is another victory for the US-led efforts to secure the people in Baghdad, and an indication of progress of the counter-terrorist war.
+===
+title: leave
+tags: 
+colorID: 0
+position: -964,101
+---
+You've finished today's report.
+===

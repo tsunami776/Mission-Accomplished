@@ -1,0 +1,34 @@
+title: Start
+tags: 
+colorID: 0
+position: -967,-276
+---
+Todays Report:
+
+[[national news|national]]
+[[local reports|local]]
+[[finish the report|leave]]
+===
+title: national
+tags: 
+colorID: 0
+position: -627,-91
+---
+As Al-Qeada continues to stir chaos in Iraq, Shia Muslims is finding their situation more and more insufferable. Large numbers of Shia refugees have been flowing into the newly established areas controlled by the United States and their provisional governments. This is a test for the competency of the new government to accommodate those in need.
+
+[[...|Start]]
+===
+title: local
+tags: 
+colorID: 0
+position: -621,-490
+---
+ War dealer Ayub Ali is still on the run. He has been selling ammos and mercenaries to both the insurgency forces and the persecuted Shias. Weapons acquired from the dealer has been found all throughout the surrounding region. He remains the primary target of interest for your faction of troops to de-escalate the conflicts nearby.
+===
+title: leave
+tags: 
+colorID: 0
+position: -962,102
+---
+You've finished today's report.
+===
