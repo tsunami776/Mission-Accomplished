@@ -8,7 +8,7 @@ public class PlayerInteractionController : MonoBehaviour
     public Transform playerCam;
     public RawImage crossHair;
     public GameObject interactableObj;
-    public GameObject missionView;
+    public GameObject computerView;
 
     // Only detect interactable objects in layer 8:"Interactable"
     private int layerMask = 1 << Config.LAYER_INDEX_INTERACTABLE;
@@ -44,7 +44,7 @@ public class PlayerInteractionController : MonoBehaviour
                     if (interactableObj.CompareTag("MissionObj"))
                     {
                         GameController.GC.UpdateMissionState_Player();
-                        missionView.SetActive(true);
+                        computerView.SetActive(true);
                         GetComponent<PlayerMovementController>().Lock();
                         GetComponent<PlayerLookController>().Lock();
                     }
