@@ -29,4 +29,14 @@ public class Config
     public const float TIME_ANIMATION_TRANSITION_FRAME = 0.02f;
     public const float TIME_ANIMATION_TRANSITION_DELAY = 1f;
     public const float TIME_ANIMATION_TRANSCAM = 5f;
+
+    // Default Setting
+    public const float DEFAULT_INTI_FOOD = 10;
+    public const float DEFAULT_INTI_WATER = 5;
+    public const float DEFAULT_INTI_FUND = 1000;
+    public const float DEFAULT_INTI_TROOP = 200;
+    public const float DEFAULT_GROWTH_FOOD = 10;
+    public const float DEFAULT_GROWTH_WATER = 5;
+    public const float DEFAULT_GROWTH_FUND = 500;
+    public const float DEFAULT_GROWTH_TROOP = 100;
 }

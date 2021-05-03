@@ -21,6 +21,7 @@ public class GameController : MonoBehaviour
     // date and time
     private DateTime _startDate = new DateTime(2005, 1, 1);
     public DateTime currentDate;
+    [SerializeField] private Text TopBar_Date;
     public Timer timer;
 
     // all missions & NPCs
@@ -36,8 +37,24 @@ public class GameController : MonoBehaviour
     private List<int> missionSuccessful;
     private List<int> missionFailed;
 
-    // date hold all items/resources
-    private ResourceManager resourceManager;
+    // all items/resources
+    [SerializeField] private Text foodCountText;
+    [SerializeField] private Text waterCountText;
+    [SerializeField] private Text fundCountText;
+    [SerializeField] private Text troopCountText;
+    [SerializeField] private Text foodGrowthText;
+    [SerializeField] private Text waterGrowthText;
+    [SerializeField] private Text fundGrowthText;
+    [SerializeField] private Text troopGrowthText;
+    [HideInInspector] public float foodCount;
+    [HideInInspector] public float waterCount;
+    [HideInInspector] public float fundCount;
+    [HideInInspector] public float troopCount;
+    [HideInInspector] public float foodGrowth;
+    [HideInInspector] public float waterGrowth;
+    [HideInInspector] public float fundGrowth;
+    [HideInInspector] public float troopGrowth;
+
 
     // intialize singleton
     private void Awake()
@@ -55,9 +72,18 @@ public class GameController : MonoBehaviour
         spawn.position = player.transform.position;
         spawn.rotation = player.transform.rotation;
 
-        // initializing date and time
+        // initializing date
         currentDate = _startDate;
-        resourceManager = GameObject.FindGameObjectWithTag("ResourceManager").GetComponent<ResourceManager>();
+
+        // initializing all resources
+        foodCount = Config.DEFAULT_INTI_FOOD;
+        waterCount = Config.DEFAULT_INTI_WATER;
+        fundCount = Config.DEFAULT_INTI_FUND;
+        troopCount = Config.DEFAULT_INTI_TROOP;
+        foodGrowth = Config.DEFAULT_GROWTH_FOOD;
+        waterGrowth = Config.DEFAULT_GROWTH_WATER;
+        fundGrowth = Config.DEFAULT_GROWTH_FUND;
+        troopGrowth = Config.DEFAULT_GROWTH_TROOP;
 
         // initializing state lists
         allMissions = new List<GameObject>();
@@ -67,14 +93,77 @@ public class GameController : MonoBehaviour
         missionComplete = new List<int>();
         missionSuccessful = new List<int>();
         missionFailed = new List<int>();
+
+        // update topbar info UI
+        UpdateTopBar();
     }
 
-    // go to the next day
+    // go to the next day and calculate new resources
     public void GoToNextDay()
     {
         currentDate = currentDate.AddDays(1);
-        resourceManager.currentDate = currentDate;
-        resourceManager.UpdateResourceCounts();
+        foodCount += foodGrowth;
+        waterCount += waterGrowth;
+        fundCount += fundGrowth;
+        troopCount += troopGrowth;
+    }
+
+    // update top bar info
+    public void UpdateTopBar()
+    {
+        // update date
+        TopBar_Date.text = "Date: " + currentDate.ToShortDateString();
+
+        // update resource count
+        foodCountText.text = foodCount.ToString();
+        waterCountText.text = waterCount.ToString();
+        fundCountText.text = fundCount.ToString();
+        troopCountText.text = troopCount.ToString();
+
+        // update resource growth
+        if (foodGrowth > 0)
+        {
+            foodGrowthText.color = Color.green;
+            foodGrowthText.text = "(+" + foodGrowth.ToString() + ")";
+        }
+        else
+        {
+            foodGrowthText.color = Color.red;
+            foodGrowthText.text = "(-" + foodGrowth.ToString() + ")";
+        }
+
+        if (waterGrowth > 0)
+        {
+            waterGrowthText.color = Color.green;
+            waterGrowthText.text = "(+" + waterGrowth.ToString() + ")";
+        }
+        else
+        {
+            waterGrowthText.color = Color.red;
+            waterGrowthText.text = "(-" + waterGrowth.ToString() + ")";
+        }
+
+        if (fundGrowth > 0)
+        {
+            fundGrowthText.color = Color.green;
+            fundGrowthText.text = "(+" + fundGrowth.ToString() + ")";
+        }
+        else
+        {
+            fundGrowthText.color = Color.red;
+            fundGrowthText.text = "(-" + fundGrowth.ToString() + ")";
+        }
+
+        if (troopGrowth > 0)
+        {
+            troopGrowthText.color = Color.green;
+            troopGrowthText.text = "(+" + troopGrowth.ToString() + ")";
+        }
+        else
+        {
+            troopGrowthText.color = Color.red;
+            troopGrowthText.text = "(-" + troopGrowth.ToString() + ")";
+        }
     }
 
     // lock a mission
