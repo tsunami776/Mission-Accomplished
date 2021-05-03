@@ -5537,7 +5537,7 @@ PrefabInstance:
     - target: {fileID: 5841484076024649129, guid: 17b17aeb4490cd743bcc98111a872986,
         type: 3}
       propertyPath: m_TagString
-      value: MissionObj
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 5841484076024649131, guid: 17b17aeb4490cd743bcc98111a872986,
         type: 3}
@@ -23903,7 +23903,7 @@ PrefabInstance:
     - target: {fileID: 5841484076024649129, guid: 17b17aeb4490cd743bcc98111a872986,
         type: 3}
       propertyPath: m_TagString
-      value: MissionObj
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 5841484076024649131, guid: 17b17aeb4490cd743bcc98111a872986,
         type: 3}
@@ -33820,7 +33820,7 @@ GameObject:
   - component: {fileID: 779673543}
   - component: {fileID: 779673542}
   m_Layer: 10
-  m_Name: MissionIndicator
+  m_Name: NPC Minimap Indicator
   m_TagString: MissionIndicator
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -35804,7 +35804,7 @@ GameObject:
   - component: {fileID: 827133851}
   - component: {fileID: 827133850}
   m_Layer: 10
-  m_Name: MissionIndicator
+  m_Name: NPC Minimap Indicator
   m_TagString: MissionIndicator
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -46037,7 +46037,7 @@ PrefabInstance:
     - target: {fileID: 4332436624933760168, guid: 0f4a9207d5f9ea54aa9fe0d1571cf5b5,
         type: 3}
       propertyPath: m_TagString
-      value: NPC
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 4332436624933760170, guid: 0f4a9207d5f9ea54aa9fe0d1571cf5b5,
         type: 3}
@@ -60485,7 +60485,7 @@ GameObject:
   - component: {fileID: 1410598587}
   - component: {fileID: 1410598586}
   m_Layer: 10
-  m_Name: MissionIndicator
+  m_Name: NPC Minimap Indicator
   m_TagString: MissionIndicator
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -62125,7 +62125,7 @@ GameObject:
   - component: {fileID: 1438374776}
   - component: {fileID: 1438374775}
   m_Layer: 10
-  m_Name: MissionIndicator
+  m_Name: NPC Minimap Indicator
   m_TagString: MissionIndicator
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -74947,7 +74947,7 @@ PrefabInstance:
     - target: {fileID: 4332436624933760168, guid: 0f4a9207d5f9ea54aa9fe0d1571cf5b5,
         type: 3}
       propertyPath: m_TagString
-      value: MissionObj
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 4332436624933760170, guid: 0f4a9207d5f9ea54aa9fe0d1571cf5b5,
         type: 3}
@@ -84895,7 +84895,7 @@ GameObject:
   - component: {fileID: 1988202141}
   - component: {fileID: 1988202140}
   m_Layer: 10
-  m_Name: MissionIndicator
+  m_Name: NPC Minimap Indicator
   m_TagString: MissionIndicator
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -86929,7 +86929,7 @@ PrefabInstance:
     - target: {fileID: 4332436624933760168, guid: 0f4a9207d5f9ea54aa9fe0d1571cf5b5,
         type: 3}
       propertyPath: m_TagString
-      value: MissionObj
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 4332436624933760170, guid: 0f4a9207d5f9ea54aa9fe0d1571cf5b5,
         type: 3}
@@ -91403,6 +91403,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2110011433, guid: e6d2b7322309c0d4287f184652e7ff25, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2187474842884394278, guid: e6d2b7322309c0d4287f184652e7ff25,
         type: 3}
       propertyPath: globalMiniMap
@@ -91467,6 +91471,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: MyCharacter
+      objectReference: {fileID: 0}
+    - target: {fileID: 8724125241493692031, guid: e6d2b7322309c0d4287f184652e7ff25,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e6d2b7322309c0d4287f184652e7ff25, type: 3}
