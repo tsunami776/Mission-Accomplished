@@ -1,0 +1,26 @@
+fileFormatVersion: 2
+guid: 742418ea311d54a488615f7fcb780194
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 94073015eacc34c1d8fc6786e43d60ca, type: 3}
+  baseLanguageID: 
+  stringIDs:
+  - Day5_reports-Start-0
+  - Day5_reports-Start-1
+  - Day5_reports-Start-2
+  - Day5_reports-Start-3
+  - Day5_reports-national-4
+  - Day5_reports-national-5
+  - Day5_reports-local-6
+  - Day5_reports-local-7
+  - Day5_reports-leave-8
+  compilationStatus: 1
+  isSuccesfullyCompiled: 1
+  compilationErrorMessage: 
+  baseLanguage: {instanceID: 0}
+  localizations: []

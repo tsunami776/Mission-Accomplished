@@ -1,0 +1,36 @@
+title: Start
+tags: 
+colorID: 0
+position: -1301,-288
+---
+Todays Report:
+
+[[national news|national]]
+[[local reports|local]]
+[[finish the report|leave]]
+===
+title: national
+tags: 
+colorID: 0
+position: -640,-107
+---
+National: The Battle of Fallujah seems to be coming to an end. American troops seem to have taken home another triumph against the insurgency force. As some terrorist soldiers managed to escape to Al Anbar, where their provisional government resides, the America effort is considering its future strategies to uproot the insurgency from its roots.
+
+[[...|Start]]
+===
+title: local
+tags: 
+colorID: 0
+position: -637,-507
+---
+Local: The safety and abundance of the city continue to develop, and the facilities in the city including the food, water and medical system continue to thrive under the new government. The Governor promises that further betterment of the city is on its way and he would ensure the safety and wellbeing of the refugees with the help from the US occupation.
+
+[[...|Start]]
+===
+title: leave
+tags: 
+colorID: 0
+position: -964,101
+---
+You've finished today's report.
+===

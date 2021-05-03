@@ -1,0 +1,36 @@
+title: Start
+tags: 
+colorID: 0
+position: -967,-276
+---
+Todays Report:
+
+[[national news|national]]
+[[local reports|local]]
+[[finish the report|leave]]
+===
+title: national
+tags: 
+colorID: 0
+position: -638,-103
+---
+National: Refugees are fleeing from the surroundings of the Battle of Fallujah that continues to be in a stalemate. The guerrilla forces of the insurgency is making it harder for the American troops to win easily with their larger force. The commander of the battle, Ltn. Stalder, is looking for more reinforcement.
+
+[[...|Start]]
+===
+title: local
+tags: 
+colorID: 0
+position: -633,-502
+---
+Local: as new people are coming into the city, resources for medication, food supply and daily necessities are required for further development of the shelter. Reconstruction remain the primary goal for the current administration. Though some measures has been taken, the development of the city remains quite limited.
+
+[[...|Start]]
+===
+title: leave
+tags: 
+colorID: 0
+position: -964,101
+---
+You've finished today's report.
+===

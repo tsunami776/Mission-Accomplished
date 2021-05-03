@@ -1,0 +1,36 @@
+title: Start
+tags: 
+colorID: 0
+position: -1301,-288
+---
+Todays Report:
+
+[[national news|national]]
+[[local reports|local]]
+[[finish the report|leave]]
+===
+title: national
+tags: 
+colorID: 0
+position: -643,-108
+---
+National: The US forces in Fallujah is slowly but surely finishing up the effort to take care of the aftermath of the battle. Refugees are relocated into safe shelters and the weapons are confiscated by the authority to prevent further chaos by rebels acquiring those weapons.the captives will be send into the formal legal system to be trialed and receive their penalty accordingly.
+
+[[...|Start]]
+===
+title: local
+tags: 
+colorID: 0
+position: -639,-508
+---
+Local: The city braces for another wave of influx of refugees with the end of the Battle of Fallujah. It is another test for the development level of the city to be able to accommodate them with enough housing, food, water and medical supplies. We're recording higher levels of emigration out of Baghdad as well as the intensity gets lower and their plans to escape the nation become more realistic.
+
+[[...|Start]]
+===
+title: leave
+tags: 
+colorID: 0
+position: -964,101
+---
+You've finished today's report.
+===

@@ -1,0 +1,36 @@
+title: Start
+tags: 
+colorID: 0
+position: -1301,-288
+---
+Todays Report:
+
+[[national news|national]]
+[[local reports|local]]
+[[finish the report|leave]]
+===
+title: national
+tags: 
+colorID: 0
+position: -644,-109
+---
+National: : the Al Anbar governorate, losing its strategic barrier, braces for the full attack by the Anti-insurgency force. Shia minorities who were persecuted by insurgency near Fallujah are now well refuged in the areas of US occupation to receive medical care. The uproot of Al Anbar, if successful, will be one major step toward stability.
+
+[[...|Start]]
+===
+title: local
+tags: 
+colorID: 0
+position: -639,-510
+---
+Local: The city seems to be doing well in the face of the increasing number of refugees. Though pressured, the local doctors gives their praises to the administration for allocating enough resources for their effort to treat the patients, declaring that the provisional government to be "humanitarian."
+
+[[...|Start]]
+===
+title: leave
+tags: 
+colorID: 0
+position: -964,101
+---
+You've finished today's report.
+===

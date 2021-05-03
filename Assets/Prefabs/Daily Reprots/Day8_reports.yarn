@@ -1,0 +1,36 @@
+title: Start
+tags: 
+colorID: 0
+position: -1301,-288
+---
+Todays Report:
+
+[[national news|national]]
+[[local reports|local]]
+[[finish the report|leave]]
+===
+title: national
+tags: 
+colorID: 0
+position: -644,-109
+---
+National: : The operation of the US into Al Anbar goes into a stalemate, yet some symbolic victory was achieved such as capturing a wanted war monger named Ayub Ali, who allegedly has been selling illegal weapons to insurgency forces. He is to be put in court to receive the corresponding penalties for his assist to the efforts to de-stabilize around the Baghdad city.
+
+[[...|Start]]
+===
+title: local
+tags: 
+colorID: 0
+position: -641,-511
+---
+Local: The infamous war dealer, Ayub Ali, has been captured. He has been providing weapons to the rebel forces around the city that has created great disturbances. Now that one of the root causes for instability is tackled, the city can have a relative moment of peace to care for its citizens and focus on its own wellbeing and development. Ayub will soon be tried and penalized correspondingly.
+
+[[...|Start]]
+===
+title: leave
+tags: 
+colorID: 0
+position: -964,101
+---
+You've finished today's report.
+===
