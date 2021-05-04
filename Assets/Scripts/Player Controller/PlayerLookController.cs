@@ -9,6 +9,7 @@ public class PlayerLookController : MonoBehaviour
     [SerializeField] private GameObject miniMapDirIndicator;
     [SerializeField] private GameObject crossHair;
     [SerializeField] private GameObject globalMiniMap;
+    private PlayerInteractionController PIC;
 
     // values
     private Vector3 initialPosition;
@@ -20,6 +21,7 @@ public class PlayerLookController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        PIC = GetComponent<PlayerInteractionController>();
         initialPosition = playerCam.transform.localPosition;
         mouseSensitive = Config.MOUSE_SENSITIVE;
     }
@@ -64,11 +66,13 @@ public class PlayerLookController : MonoBehaviour
                 if (!isTPS)
                 {
                     playerCam.transform.localPosition = new Vector3(initialPosition.x + Config.OFFSET_CAM_FPS_TO_TPS_X, initialPosition.y + Config.OFFSET_CAM_FPS_TO_TPS_Y, initialPosition.z + Config.OFFSET_CAM_FPS_TO_TPS_Z);
+                    PIC.interactionRange = Config.INTERACTION_RANGE_TPS;
                     isTPS = true;
                 }
                 else
                 {
                     playerCam.transform.localPosition = initialPosition;
+                    PIC.interactionRange = Config.INTERACTION_RANGE_FPS;
                     isTPS = false;
                 }
             }

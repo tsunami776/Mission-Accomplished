@@ -635,7 +635,8 @@ GameObject:
   - component: {fileID: 2187474842884394278}
   - component: {fileID: 5427225681375088120}
   - component: {fileID: 7422256219478035038}
-  m_Layer: 0
+  - component: {fileID: 4738266154661807076}
+  m_Layer: 2
   m_Name: MyCharacter
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -704,10 +705,10 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.4035465
-  m_Height: 2.9171207
+  m_Radius: 0.6555643
+  m_Height: 2.917121
   m_Direction: 1
-  m_Center: {x: 0.01950976, y: 1.3938473, z: -0.01388828}
+  m_Center: {x: 0.011509194, y: 1.3938472, z: -0.025889147}
 --- !u!54 &342982963
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -774,6 +775,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d17832b169eea94498ee9de3ba4a73ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  interactionRange: 0
   playerCam: {fileID: 4868054911023689706}
   crossHair: {fileID: 2452731055519565348}
   interactableObj: {fileID: 0}
@@ -791,6 +793,37 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactionRadius: 20
+--- !u!114 &4738266154661807076
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6822954540116933865}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a79441f348de89743a2939f4d699eac1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_RenderShadows: 1
+  m_RequiresDepthTextureOption: 2
+  m_RequiresOpaqueTextureOption: 2
+  m_CameraType: 0
+  m_Cameras: []
+  m_RendererIndex: -1
+  m_VolumeLayerMask:
+    serializedVersion: 2
+    m_Bits: 1
+  m_VolumeTrigger: {fileID: 0}
+  m_RenderPostProcessing: 0
+  m_Antialiasing: 0
+  m_AntialiasingQuality: 2
+  m_StopNaN: 0
+  m_Dithering: 0
+  m_ClearDepth: 1
+  m_RequiresDepthTexture: 0
+  m_RequiresColorTexture: 0
+  m_Version: 2
 --- !u!1 &7253455420434881653
 GameObject:
   m_ObjectHideFlags: 0

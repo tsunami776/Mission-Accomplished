@@ -6,7 +6,8 @@ public class Config
     public const float MOUSE_SENSITIVE = 2f;
 
     // Interaction
-    public const float INTERACTION_RANGE = 8f;
+    public const float INTERACTION_RANGE_FPS = 8f;
+    public const float INTERACTION_RANGE_TPS = 15f;
 
     // Color
     public static Color32 INTERACTION_COLOR_DEFAULT = new Color32(255, 255, 255, 255);

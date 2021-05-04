@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class PlayerInteractionController : MonoBehaviour
 {
+    [HideInInspector] public float interactionRange;
     public Transform playerCam;
     public RawImage crossHair;
     public GameObject interactableObj;
@@ -13,15 +14,21 @@ public class PlayerInteractionController : MonoBehaviour
     // Only detect interactable objects in layer 8:"Interactable"
     private int layerMask = 1 << Config.LAYER_INDEX_INTERACTABLE;
 
+    private void Start()
+    {
+        interactionRange = Config.INTERACTION_RANGE_FPS;
+    }
+
     // Update is called once per fixed delta time
     void FixedUpdate()
     {
         // Does the ray intersect any objects in layer 8
         RaycastHit hit;
-        if (Physics.Raycast(playerCam.position, playerCam.forward, out hit, Config.INTERACTION_RANGE, layerMask))
-        {
-            // Debug.DrawRay(playerCam.position, playerCam.forward * hit.distance, Color.yellow);
+        //Debug.DrawRay(playerCam.position, playerCam.forward * interactionRange, Color.yellow);
 
+
+        if (Physics.Raycast(playerCam.position, playerCam.forward, out hit, interactionRange, layerMask))
+        {
             // Highlight Crosshair color
             crossHair.color = Config.INTERACTION_COLOR_SELECTED;
 
