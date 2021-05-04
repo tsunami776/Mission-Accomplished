@@ -153,7 +153,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 666150441760080875}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.338, y: 1.72, z: -0.37}
+  m_LocalPosition: {x: -0.368, y: 1.544, z: -0.37}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 5732535225932148968}
@@ -337,7 +337,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2766604288711375034}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -1.025, z: 0}
+  m_LocalPosition: {x: -0.33, y: -0.884, z: -0.54}
   m_LocalScale: {x: 0.5, y: 0.1, z: 0.5}
   m_Children: []
   m_Father: {fileID: 5732535225932148968}
@@ -597,6 +597,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5732535225932148968}
+  - component: {fileID: 2674547392212844548}
   - component: {fileID: 3638851753666135921}
   - component: {fileID: 803716231566329766}
   - component: {fileID: 342982963}
@@ -621,7 +622,7 @@ Transform:
   m_GameObject: {fileID: 6822954540116933865}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.24, y: 1.526316, z: 1.2433221}
+  m_LocalScale: {x: 1.8, y: 1.8, z: 1.8}
   m_Children:
   - {fileID: 4868054911023689706}
   - {fileID: 7795762771120292875}
@@ -636,6 +637,25 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &2674547392212844548
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6822954540116933865}
+  m_Enabled: 1
+  m_Avatar: {fileID: 9000000, guid: d53c9d39f1a70bd439bf267a6566a7ee, type: 3}
+  m_Controller: {fileID: 9100000, guid: 67e19193e8ef65f4e9b3194f08191819, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!33 &3638851753666135921
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -686,11 +706,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84b09b29664dc5d4592ccb9057dbbb88, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speedV: 0
-  speedH: 0
-  accMove: 0.2
-  maxSpeedForward: 0.24
-  maxSpeedBackward: -0.24
+  speedV: 25
+  speedH: 25
   accJump: 10
   gravity: 2.5
   isGrounded: 0
@@ -1360,6 +1377,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Avatar
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: ba880ced67e10fc4cad1256b6a0b38d2,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ba880ced67e10fc4cad1256b6a0b38d2, type: 3}

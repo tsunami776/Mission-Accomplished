@@ -13,21 +13,18 @@ public class GroundDetector : MonoBehaviour
         down = new Vector3(0f, -1f, 0f);
     }
 
-    /*void FixedUpdate()
+    void FixedUpdate()
     {
         // Does the ray intersect any objects in layer 8
         RaycastHit hit;
-        if (Physics.Raycast(transform.position, down, out hit, Config.INTERACTION_RANGE))
+        if (Physics.Raycast(transform.position, down, out hit, 1f))
         {
-            Debug.DrawRay(transform.position, down * hit.distance, Color.yellow);
-
-            print(hit.distance);
+            if (0.10f < hit.distance && 0.105f > hit.distance)
+            {
+                PMC.Ground();
+            }
         }
-        else
-        {
-
-        }
-    }*/
+    }
 
     // detect if character is grounded
     private void OnTriggerEnter(Collider other)
