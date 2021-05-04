@@ -327,7 +327,7 @@ GameObject:
   - component: {fileID: 2293292939571992156}
   - component: {fileID: 5457760835460882902}
   m_Layer: 5
-  m_Name: QuantityText
+  m_Name: CountText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -557,7 +557,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0.94825906, b: 0.6415094, a: 0.8235294}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.8235294}
   m_RaycastTarget: 1
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -585,7 +585,7 @@ GameObject:
   - component: {fileID: 142509193339551215}
   - component: {fileID: 2683687736485797882}
   m_Layer: 5
-  m_Name: QuantityText
+  m_Name: CountText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -662,6 +662,7 @@ GameObject:
   - component: {fileID: 7068520396684263837}
   - component: {fileID: 2888480774029455158}
   - component: {fileID: 7909981038809638164}
+  - component: {fileID: 2573819709687698760}
   m_Layer: 5
   m_Name: GrowthText
   m_TagString: Untagged
@@ -731,6 +732,19 @@ MonoBehaviour:
   m_Text: '(+15)
 
 '
+--- !u!114 &2573819709687698760
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4518986284490055913}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 83a774727b825af4ebc59a49804ac955, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  whichResource: 1
 --- !u!1 &5834823793942704232
 GameObject:
   m_ObjectHideFlags: 0
@@ -819,6 +833,7 @@ GameObject:
   - component: {fileID: 245911017701001627}
   - component: {fileID: 1862230599980139995}
   - component: {fileID: 8591772615167095873}
+  - component: {fileID: 3564745722203271190}
   m_Layer: 5
   m_Name: GrowthText
   m_TagString: Untagged
@@ -888,6 +903,19 @@ MonoBehaviour:
   m_Text: '(+500)
 
 '
+--- !u!114 &3564745722203271190
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5888458992148853960}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 83a774727b825af4ebc59a49804ac955, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  whichResource: 2
 --- !u!1 &6826873863117633510
 GameObject:
   m_ObjectHideFlags: 0
@@ -899,6 +927,7 @@ GameObject:
   - component: {fileID: 7390906674092667985}
   - component: {fileID: 3187303151061497970}
   - component: {fileID: 5100935303728018646}
+  - component: {fileID: 2373590197893697563}
   m_Layer: 5
   m_Name: GrowthText
   m_TagString: Untagged
@@ -968,6 +997,19 @@ MonoBehaviour:
   m_Text: '(+100)
 
 '
+--- !u!114 &2373590197893697563
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6826873863117633510}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 83a774727b825af4ebc59a49804ac955, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  whichResource: 3
 --- !u!1 &6928712027045813519
 GameObject:
   m_ObjectHideFlags: 0
@@ -980,7 +1022,7 @@ GameObject:
   - component: {fileID: 1374558405155634270}
   - component: {fileID: 2827816926350107677}
   m_Layer: 5
-  m_Name: QuantityText
+  m_Name: CountText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1217,7 +1259,7 @@ GameObject:
   - component: {fileID: 151969845795286082}
   - component: {fileID: 151039268268075459}
   m_Layer: 5
-  m_Name: QuantityText
+  m_Name: CountText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1453,6 +1495,7 @@ GameObject:
   - component: {fileID: 5918878479691729779}
   - component: {fileID: 2608841371617626656}
   - component: {fileID: 5507613762074137124}
+  - component: {fileID: 4979657682760700609}
   m_Layer: 5
   m_Name: GrowthText
   m_TagString: Untagged
@@ -1522,3 +1565,16 @@ MonoBehaviour:
   m_Text: '(+5)
 
 '
+--- !u!114 &4979657682760700609
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9173595991980280730}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 83a774727b825af4ebc59a49804ac955, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  whichResource: 0

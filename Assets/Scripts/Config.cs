@@ -21,6 +21,15 @@ public class Config
 
     // Modifier
     public const float MODIFIER_TIMER = 1f;
+    public const float MODIFIER_CONSTRUCTION_1 = 0.0002f;
+    public const float MODIFIER_CONSTRUCTION_2 = 0.0003f;
+    public const float MODIFIER_CONSTRUCTION_3 = 0.0005f;
+    public const float MODIFIER_AMPLIFIER_FUND_1 = 1f;
+    public const float MODIFIER_AMPLIFIER_FUND_2 = 0.4f;
+    public const float MODIFIER_AMPLIFIER_FUND_3 = 0.5f;
+    public const float MODIFIER_AMPLIFIER_PERSONNEL_1 = 0.2f;
+    public const float MODIFIER_AMPLIFIER_PERSONNEL_2 = 2f;
+    public const float MODIFIER_AMPLIFIER_PERSONNEL_3 = 1f;
 
     // Time
     public const float TIME_ONEDAY = 360f;
@@ -29,6 +38,8 @@ public class Config
     public const float TIME_ANIMATION_TRANSITION_FRAME = 0.02f;
     public const float TIME_ANIMATION_TRANSITION_DELAY = 1f;
     public const float TIME_ANIMATION_TRANSCAM = 5f;
+    public const float TIME_ANIMATION_MISSION_COMPLETE_POPUP = 1f;
+    public const float TIME_SUSTAIN_MISSION_COMPLETE_POPUP = 2f;
 
     // Default Setting
     public const float DEFAULT_INTI_FOOD = 10;
@@ -39,4 +50,16 @@ public class Config
     public const float DEFAULT_GROWTH_WATER = 5;
     public const float DEFAULT_GROWTH_FUND = 500;
     public const float DEFAULT_GROWTH_TROOP = 100;
+    public const float DEFAULT_REWARD_WATER_PROJECT_1 = 5;
+    public const float DEFAULT_REWARD_FOOD_PROJECT_2 = 5;
+    public const float DEFAULT_REWARD_FUND_PROJECT_2 = 200;
+    public const float DEFAULT_REWARD_TROOP_PROJECT_3 = 50;
+
+    // String
+    public const string STRING_CONSTRUCTION_NAME_1 = "Water Treatment";
+    public const string STRING_CONSTRUCTION_REWARD_1 = "Water Growth Rate +5";
+    public const string STRING_CONSTRUCTION_NAME_2 = "Transportation Construction";
+    public const string STRING_CONSTRUCTION_REWARD_2 = "Food Growth Rate +5   Fund Growth Rate +200";
+    public const string STRING_CONSTRUCTION_NAME_3 = "Housing Repair";
+    public const string STRING_CONSTRUCTION_REWARD_3 = "Troop Growth Rate +50";
 }

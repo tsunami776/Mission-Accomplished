@@ -7,8 +7,8 @@ public class PlayerLookController : MonoBehaviour
     // references
     [SerializeField] private GameObject playerCam;
     [SerializeField] private GameObject miniMapDirIndicator;
-    [SerializeField] private GameObject globalMiniMap;
     [SerializeField] private GameObject crossHair;
+    [SerializeField] private GameObject globalMiniMap;
 
     // values
     private float mouseSensitive;
