@@ -91412,25 +91412,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2110011433, guid: e6d2b7322309c0d4287f184652e7ff25, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 2187474842884394278, guid: e6d2b7322309c0d4287f184652e7ff25,
         type: 3}
       propertyPath: globalMiniMap
       value: 
       objectReference: {fileID: 1649193071}
-    - target: {fileID: 2853382427481253248, guid: e6d2b7322309c0d4287f184652e7ff25,
-        type: 3}
-      propertyPath: accJump
-      value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: 2853382427481253248, guid: e6d2b7322309c0d4287f184652e7ff25,
-        type: 3}
-      propertyPath: gravity
-      value: 4
-      objectReference: {fileID: 0}
     - target: {fileID: 5732535225932148968, guid: e6d2b7322309c0d4287f184652e7ff25,
         type: 3}
       propertyPath: m_RootOrder
@@ -91444,7 +91430,7 @@ PrefabInstance:
     - target: {fileID: 5732535225932148968, guid: e6d2b7322309c0d4287f184652e7ff25,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 22.6
+      value: 20.71
       objectReference: {fileID: 0}
     - target: {fileID: 5732535225932148968, guid: e6d2b7322309c0d4287f184652e7ff25,
         type: 3}
@@ -91490,11 +91476,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: MyCharacter
-      objectReference: {fileID: 0}
-    - target: {fileID: 8724125241493692031, guid: e6d2b7322309c0d4287f184652e7ff25,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e6d2b7322309c0d4287f184652e7ff25, type: 3}

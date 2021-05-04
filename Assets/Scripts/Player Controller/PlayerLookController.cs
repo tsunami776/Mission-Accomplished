@@ -11,13 +11,16 @@ public class PlayerLookController : MonoBehaviour
     [SerializeField] private GameObject globalMiniMap;
 
     // values
+    private Vector3 initialPosition;
     private float mouseSensitive;
     private float CamVRotation = 0f;
     private bool isLocked;
+    private bool isTPS;
 
     // Start is called before the first frame update
     void Start()
     {
+        initialPosition = playerCam.transform.localPosition;
         mouseSensitive = Config.MOUSE_SENSITIVE;
     }
 
@@ -53,6 +56,21 @@ public class PlayerLookController : MonoBehaviour
                 //Debug.Log("Minimap Closed");
                 globalMiniMap.SetActive(false);
                 crossHair.SetActive(true);
+            }
+
+            // Press T to switch between FPS / TPS
+            if (Input.GetKeyDown(KeyCode.T))
+            {
+                if (!isTPS)
+                {
+                    playerCam.transform.localPosition = new Vector3(initialPosition.x + Config.OFFSET_CAM_FPS_TO_TPS_X, initialPosition.y + Config.OFFSET_CAM_FPS_TO_TPS_Y, initialPosition.z + Config.OFFSET_CAM_FPS_TO_TPS_Z);
+                    isTPS = true;
+                }
+                else
+                {
+                    playerCam.transform.localPosition = initialPosition;
+                    isTPS = false;
+                }
             }
         }
     }

@@ -19,7 +19,7 @@ public class GroundDetector : MonoBehaviour
         RaycastHit hit;
         if (Physics.Raycast(transform.position, down, out hit, 1f))
         {
-            if (0.10f < hit.distance && 0.105f > hit.distance)
+            if (0.102f < hit.distance && 0.11f > hit.distance)
             {
                 PMC.Ground();
             }
