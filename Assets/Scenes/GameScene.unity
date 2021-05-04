@@ -91423,33 +91423,18 @@ PrefabInstance:
       objectReference: {fileID: 1649193071}
     - target: {fileID: 2853382427481253248, guid: e6d2b7322309c0d4287f184652e7ff25,
         type: 3}
-      propertyPath: speedH
-      value: 25
+      propertyPath: accJump
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 2853382427481253248, guid: e6d2b7322309c0d4287f184652e7ff25,
         type: 3}
-      propertyPath: speedV
-      value: 25
+      propertyPath: gravity
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 5732535225932148968, guid: e6d2b7322309c0d4287f184652e7ff25,
         type: 3}
       propertyPath: m_RootOrder
       value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 5732535225932148968, guid: e6d2b7322309c0d4287f184652e7ff25,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1.8
-      objectReference: {fileID: 0}
-    - target: {fileID: 5732535225932148968, guid: e6d2b7322309c0d4287f184652e7ff25,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1.8
-      objectReference: {fileID: 0}
-    - target: {fileID: 5732535225932148968, guid: e6d2b7322309c0d4287f184652e7ff25,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1.8
       objectReference: {fileID: 0}
     - target: {fileID: 5732535225932148968, guid: e6d2b7322309c0d4287f184652e7ff25,
         type: 3}

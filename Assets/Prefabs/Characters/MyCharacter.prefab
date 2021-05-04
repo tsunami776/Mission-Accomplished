@@ -708,8 +708,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speedV: 25
   speedH: 25
-  accJump: 10
-  gravity: 2.5
+  accJump: 9
+  gravity: 4
   isGrounded: 0
   isJumping: 0
 --- !u!114 &2187474842884394278
