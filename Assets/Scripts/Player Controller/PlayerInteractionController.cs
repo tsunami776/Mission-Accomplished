@@ -5,12 +5,14 @@ using UnityEngine.UI;
 
 public class PlayerInteractionController : MonoBehaviour
 {
+    [SerializeField] private GunController gun;
+
     [HideInInspector] public float interactionRange;
     public Transform playerCam;
     public RawImage crossHair;
     public GameObject interactableObj;
     public GameObject missionView;
-
+    
     // Only detect interactable objects in layer 8:"Interactable"
     private int layerMask = 1 << Config.LAYER_INDEX_INTERACTABLE;
 
@@ -26,7 +28,7 @@ public class PlayerInteractionController : MonoBehaviour
         RaycastHit hit;
         //Debug.DrawRay(playerCam.position, playerCam.forward * interactionRange, Color.yellow);
 
-
+        // detect and interact with objs
         if (Physics.Raycast(playerCam.position, playerCam.forward, out hit, interactionRange, layerMask))
         {
             // Highlight Crosshair color
@@ -73,6 +75,36 @@ public class PlayerInteractionController : MonoBehaviour
                 }
                 interactableObj = null;
             }
+        }
+
+        // shoot
+        if (Input.GetMouseButton(0))
+        {
+            gun.GunShoot();
+        }
+
+        // mid aim
+        if (Input.GetMouseButton(1))
+        {
+            crossHair.gameObject.SetActive(false);
+            gun.GunAim_FPS();
+        }
+        else 
+        {
+            crossHair.gameObject.SetActive(true);
+            gun.GunDisAim_FPS();
+        }
+
+        // switch gun in
+        if (Input.GetKey(KeyCode.Alpha2))
+        {
+            gun.GunSwitchIn();
+        }
+
+        // switch gun out
+        if (Input.GetKey(KeyCode.Alpha1))
+        {
+            gun.GunSwitchOut();
         }
     }
 }

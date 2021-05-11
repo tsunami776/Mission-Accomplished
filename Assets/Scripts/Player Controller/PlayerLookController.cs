@@ -5,23 +5,25 @@ using UnityEngine;
 public class PlayerLookController : MonoBehaviour
 {
     // references
+    [SerializeField] private GunController gunPartsController;
+    [SerializeField] private GameObject gunParts;
     [SerializeField] private GameObject playerCam;
     [SerializeField] private GameObject miniMapDirIndicator;
-    [SerializeField] private GameObject crossHair;
+    [SerializeField] private GameObject gun;
     [SerializeField] private GameObject globalMiniMap;
-    private PlayerInteractionController PIC;
+    public GameObject crossHair;
 
     // values
     private Vector3 initialPosition;
     private float mouseSensitive;
-    private float CamVRotation = 0f;
+    private float CamVRotation;
     private bool isLocked;
-    private bool isTPS;
+    public bool isAiming;
+    public bool isTPS;
 
     // Start is called before the first frame update
     void Start()
     {
-        PIC = GetComponent<PlayerInteractionController>();
         initialPosition = playerCam.transform.localPosition;
         mouseSensitive = Config.MOUSE_SENSITIVE;
     }
@@ -57,7 +59,10 @@ public class PlayerLookController : MonoBehaviour
             {
                 //Debug.Log("Minimap Closed");
                 globalMiniMap.SetActive(false);
-                crossHair.SetActive(true);
+                if (!isAiming)
+                {
+                    crossHair.SetActive(true);
+                }
             }
 
             // Press T to switch between FPS / TPS
@@ -66,17 +71,26 @@ public class PlayerLookController : MonoBehaviour
                 if (!isTPS)
                 {
                     playerCam.transform.localPosition = new Vector3(initialPosition.x + Config.OFFSET_CAM_FPS_TO_TPS_X, initialPosition.y + Config.OFFSET_CAM_FPS_TO_TPS_Y, initialPosition.z + Config.OFFSET_CAM_FPS_TO_TPS_Z);
-                    PIC.interactionRange = Config.INTERACTION_RANGE_TPS;
+                    GetComponent<PlayerInteractionController>().interactionRange = Config.INTERACTION_RANGE_TPS;
                     isTPS = true;
+
+                    // switch gun out
+                    gunParts.SetActive(false);
                 }
                 else
                 {
                     playerCam.transform.localPosition = initialPosition;
-                    PIC.interactionRange = Config.INTERACTION_RANGE_FPS;
+                    GetComponent<PlayerInteractionController>().interactionRange = Config.INTERACTION_RANGE_FPS;
                     isTPS = false;
+
+                    // switch gun in
+                    gunParts.SetActive(true);
                 }
             }
         }
+
+        // adjust view of field along Gun's X coordinate
+        playerCam.GetComponent<Camera>().fieldOfView = Config.DEFAULT_INTI_MAIN_CAM_VIEW - (Config.OFFSET_FPS_MID_AIM_ZOOM * ((-Config.OFFSET_FPS_MID_AIM_X - gun.transform.localPosition.x) / -Config.OFFSET_FPS_MID_AIM_X));
     }
 
     // lock movement
@@ -89,5 +103,17 @@ public class PlayerLookController : MonoBehaviour
     public void Unlock()
     {
         isLocked = false;
+    }
+
+    // gun shoot recoil rotation
+    public void RecoilVertical(float amount)
+    {
+        CamVRotation -= amount;
+    }
+
+    // unlock movement
+    public void Aiming(bool flag)
+    {
+        isAiming = flag;
     }
 }

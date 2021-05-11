@@ -28,7 +28,6 @@ public class GameController : MonoBehaviour
     public int missionTotalNumber;
     public List<GameObject> allMissions;
     public GameObject[] allNPCs;
-    public MissionViewController MVC;
 
     // mission states
     private List<int> missionUnlocked;
@@ -189,7 +188,6 @@ public class GameController : MonoBehaviour
     public void UpdateMissionState_Player(/* parameter: whichNPCs */)
     {
         // tell player to update the mission view and dynamic mission tracker
-        MVC.UpdateMissionView();
         Debug.Log("NPC Mission States Updated");
     }
 

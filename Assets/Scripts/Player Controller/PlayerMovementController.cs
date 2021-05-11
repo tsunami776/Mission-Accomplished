@@ -1,9 +1,10 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerMovementController : MonoBehaviour
 {
+    // gun controller
+    [SerializeField] GunController gun;
+
     // animator
     private Animator animator;
 
@@ -31,7 +32,6 @@ public class PlayerMovementController : MonoBehaviour
     private void Start()
     {
         animator = GetComponent<Animator>();
-        
     }
 
     // Update is called once per frame
@@ -86,9 +86,39 @@ public class PlayerMovementController : MonoBehaviour
                 isJumping = false;
             }
 
+            // aim/shoot slow down moving
+            if (GetComponent<PlayerLookController>().isAiming)
+            {
+                moveV *= Config.MODIFIER_GUN_AIM_SLOWDOWN;
+                moveH *= Config.MODIFIER_GUN_AIM_SLOWDOWN;
+            }
+            if (gun.isShooting)
+            {
+                moveV *= Config.MODIFIER_GUN_SHOOT_SLOWDOWN;
+                moveH *= Config.MODIFIER_GUN_SHOOT_SLOWDOWN;
+            }
+
             // move player
             Vector3 movement = new Vector3(moveH, 0f, moveV);
             transform.Translate(movement);
+
+            // play gun move animation
+            if (movement.magnitude > 0)
+            {
+                isMoving = true;
+                if (!gun.isShooting)
+                {
+                    gun.GunMove();
+                }
+            }
+            else
+            {
+                isMoving = false;
+                if (!gun.isShooting)
+                {
+                    gun.GunStatic();
+                }
+            }
 
             // rotate avatar
             float rotationDeg = 0f;
@@ -116,7 +146,6 @@ public class PlayerMovementController : MonoBehaviour
             // set animator and audio
             if (Mathf.Abs(moveH) > 0.01f || Mathf.Abs(moveV) > 0.01f)
             {
-                isMoving = true;
                 animator.SetBool("isMoving", true);
                 if (!footstepSound.isPlaying)
                 {
@@ -125,7 +154,6 @@ public class PlayerMovementController : MonoBehaviour
             }
             else
             {
-                isMoving = true;
                 animator.SetBool("isMoving", false);
                 footstepSound.Stop();
             }
@@ -135,32 +163,6 @@ public class PlayerMovementController : MonoBehaviour
         if (!isGrounded)
         {
             FreeFall();
-        }
-    }
-
-    // rotate avatar coroutine
-    private void smoothRotateAvatar(float rotationDeg)
-    {
-        float smoothRotation = avatar.transform.localEulerAngles.y;
-        while (!(rotationDeg - 1f < avatar.transform.localEulerAngles.y && avatar.transform.localEulerAngles.y < rotationDeg + 1f))
-        {
-            avatar.transform.localEulerAngles = new Vector3(0f, smoothRotation, 0f);
-            if (rotationDeg > 0)
-            {
-                smoothRotation += 1 / rotationDeg;
-                if (smoothRotation > 180f)
-                {
-                    smoothRotation -= 180f;
-                }
-            }
-            else if (rotationDeg < 0)
-            {
-                smoothRotation -= 1 / rotationDeg;
-                if (smoothRotation < -180f)
-                {
-                    smoothRotation += 180f;
-                }
-            }
         }
     }
 
