@@ -68,9 +68,12 @@ public class Config
     public const float TIME_MISSION_TIME_3 = 260f;
     public const float TIME_MISSION_TIME_4 = 150f;
     public const float TIME_GUN_SHOOT_INTERVAL = 0.1f;
+    public const float TIME_GUN_EMPTY_INTERVAL = 0.3f;
+    public const float TIME_GUN_RELOAD = 3f;
     public const float TIME_CAM_SHOOT_RECOIL_TIMESTEP = 5f;
     public const float TIME_SHELL_LAST = 3f;
     public const float TIME_FPS_MID_AIM_ZOOM_TIMESTEP = 0.1f;
+    public const float TIME_COLOR_DECREASE = 0.6f;
 
     // String
     public const string STRING_CONSTRUCTION_NAME_1 = "Water Treatment";
@@ -106,4 +109,6 @@ public class Config
     public const float DEFAULT_REWARD_FOOD_PROJECT_2 = 5;
     public const float DEFAULT_REWARD_FUND_PROJECT_2 = 200;
     public const float DEFAULT_REWARD_TROOP_PROJECT_3 = 50;
+    public static int[] DEFAULT_MAX_ONE_CLIP = new int[] { 30 };
+    public static int[] DEFAULT_MAX_TOTAL_AMMO = new int[] { 300 };
 }

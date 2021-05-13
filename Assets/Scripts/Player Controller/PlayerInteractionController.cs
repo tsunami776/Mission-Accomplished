@@ -6,6 +6,8 @@ using UnityEngine.UI;
 public class PlayerInteractionController : MonoBehaviour
 {
     [SerializeField] private GunController gun;
+    [SerializeField] private GameObject gunParts;
+    [SerializeField] private GameObject[] toolSlots;
 
     [HideInInspector] public float interactionRange;
     public Transform playerCam;
@@ -98,12 +100,30 @@ public class PlayerInteractionController : MonoBehaviour
         // switch gun in
         if (Input.GetKey(KeyCode.Alpha2))
         {
+            toolSlots[1].SetActive(true);
+            for (int i = 0; i < toolSlots.Length; i++)
+            {
+                if (i == 1)
+                {
+                    continue;
+                }
+                toolSlots[i].SetActive(false);
+            }
             gun.GunSwitchIn();
         }
 
         // switch gun out
         if (Input.GetKey(KeyCode.Alpha1))
         {
+            toolSlots[0].SetActive(true);
+            for (int i = 0; i < toolSlots.Length; i++)
+            {
+                if (i == 0)
+                {
+                    continue;
+                }
+                toolSlots[i].SetActive(false);
+            }
             gun.GunSwitchOut();
         }
     }

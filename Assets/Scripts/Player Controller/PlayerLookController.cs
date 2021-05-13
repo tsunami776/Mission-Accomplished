@@ -9,8 +9,9 @@ public class PlayerLookController : MonoBehaviour
     [SerializeField] private GameObject gunParts;
     [SerializeField] private GameObject playerCam;
     [SerializeField] private GameObject miniMapDirIndicator;
-    [SerializeField] private GameObject gun;
+    [SerializeField] private GameObject toolSlot;
     [SerializeField] private GameObject globalMiniMap;
+    [SerializeField] private GameObject gun;
     public GameObject crossHair;
 
     // values
@@ -74,7 +75,8 @@ public class PlayerLookController : MonoBehaviour
                     GetComponent<PlayerInteractionController>().interactionRange = Config.INTERACTION_RANGE_TPS;
                     isTPS = true;
 
-                    // switch gun out
+                    // disable gun
+                    toolSlot.SetActive(false);
                     gunParts.SetActive(false);
                 }
                 else
@@ -83,7 +85,8 @@ public class PlayerLookController : MonoBehaviour
                     GetComponent<PlayerInteractionController>().interactionRange = Config.INTERACTION_RANGE_FPS;
                     isTPS = false;
 
-                    // switch gun in
+                    // enable gun
+                    toolSlot.SetActive(true);
                     gunParts.SetActive(true);
                 }
             }
