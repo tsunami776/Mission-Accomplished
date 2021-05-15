@@ -6,7 +6,8 @@ public class PlayerMovementController : MonoBehaviour
     [SerializeField] GunController gun;
 
     // animator
-    private Animator animator;
+    private Animator characterAnimator;
+    [SerializeField] private Animator camAnimator;
 
     // movement
     public float speedV;
@@ -18,6 +19,7 @@ public class PlayerMovementController : MonoBehaviour
 
     // flags
     public bool isMoving;
+    public bool isSpriting;
     public bool isGrounded;
     public bool isJumping;
     private bool isLocked;
@@ -31,7 +33,7 @@ public class PlayerMovementController : MonoBehaviour
 
     private void Start()
     {
-        animator = GetComponent<Animator>();
+        characterAnimator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -48,6 +50,37 @@ public class PlayerMovementController : MonoBehaviour
             if (Input.GetKey(KeyCode.W))
             {
                 moveV = 1f * Time.deltaTime * speedV;
+                if (!gun.isShooting && !GetComponent<PlayerLookController>().isAiming)
+                {
+                    // if player not grounded, play cam move animation
+                    if (isGrounded)
+                    {
+                        camAnimator.SetBool("isMoving", true);
+
+                        // sprite cam
+                        if (Input.GetKey(KeyCode.LeftShift))
+                        {
+                            isSpriting = true;
+                            moveV *= Config.MODIFIER_SPRITE;
+                            camAnimator.SetBool("isSpriting", true);
+                        }
+                        else
+                        {
+                            isSpriting = false;
+                            camAnimator.SetBool("isSpriting", false);
+                        }
+                    }
+                    else
+                    {
+                        camAnimator.SetBool("isMoving", false);
+                        camAnimator.SetBool("isSpriting", false);
+                    }
+                }
+                else
+                {
+                    camAnimator.SetBool("isMoving", false);
+                    isSpriting = false;
+                }
             }
             else if (Input.GetKey(KeyCode.S))
             {
@@ -56,6 +89,7 @@ public class PlayerMovementController : MonoBehaviour
             else
             {
                 moveV = 0f;
+                camAnimator.SetBool("isMoving", false);
             }
 
             // set move H
@@ -108,7 +142,7 @@ public class PlayerMovementController : MonoBehaviour
                 isMoving = true;
                 if (!gun.isShooting)
                 {
-                    gun.GunMove();
+                    gun.GunMove(isSpriting);
                 }
             }
             else
@@ -146,7 +180,7 @@ public class PlayerMovementController : MonoBehaviour
             // set animator and audio
             if (Mathf.Abs(moveH) > 0.01f || Mathf.Abs(moveV) > 0.01f)
             {
-                animator.SetBool("isMoving", true);
+                characterAnimator.SetBool("isMoving", true);
                 if (!footstepSound.isPlaying)
                 {
                     footstepSound.Play();
@@ -154,7 +188,7 @@ public class PlayerMovementController : MonoBehaviour
             }
             else
             {
-                animator.SetBool("isMoving", false);
+                characterAnimator.SetBool("isMoving", false);
                 footstepSound.Stop();
             }
         }

@@ -11,8 +11,8 @@ public class PlayerWeaponController : MonoBehaviour
 
     // values
     public bool isReloading;
-    private int[] ClipRemains;
-    private int[] totalAmmoRemains;
+    public int[] ClipRemains;
+    public int[] totalAmmoRemains;
     private IEnumerator coroutineBuffer_clip;
     private IEnumerator coroutineBuffer_totalAmmo;
 
@@ -151,28 +151,35 @@ public class PlayerWeaponController : MonoBehaviour
     // load ammo from total to the current clip
     public bool Reload(int whichWeapon)
     {
-        isReloading = true;
+        if (!isReloading)
+        {
+            isReloading = true;
 
-        // identify the load amount
-        int loadAmount = Config.DEFAULT_MAX_ONE_CLIP[whichWeapon];
-        if (ClipRemains[whichWeapon] > 0 && ClipRemains[whichWeapon] <= Config.DEFAULT_MAX_ONE_CLIP[whichWeapon])
-        {
-            loadAmount -= ClipRemains[whichWeapon];
-        }
-        if (loadAmount > totalAmmoRemains[whichWeapon])
-        {
-            loadAmount = totalAmmoRemains[whichWeapon];
-        }
+            // identify the load amount
+            int loadAmount = Config.DEFAULT_MAX_ONE_CLIP[whichWeapon];
+            if (ClipRemains[whichWeapon] > 0 && ClipRemains[whichWeapon] <= Config.DEFAULT_MAX_ONE_CLIP[whichWeapon])
+            {
+                loadAmount -= ClipRemains[whichWeapon];
+            }
+            if (loadAmount > totalAmmoRemains[whichWeapon])
+            {
+                loadAmount = totalAmmoRemains[whichWeapon];
+            }
 
-        // reload ammo from pool to clip
-        if (loadAmount > 0)
-        {
-            StartCoroutine(ReloadProcess(whichWeapon, loadAmount));
-            return true;
+            // reload ammo from pool to clip
+            if (loadAmount > 0)
+            {
+                StartCoroutine(ReloadProcess(whichWeapon, loadAmount));
+                return true;
+            }
+            else
+            {
+                isReloading = false;
+                return false;
+            }
         }
         else
         {
-            isReloading = false;
             return false;
         }
     }

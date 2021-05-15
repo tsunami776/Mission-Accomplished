@@ -97,6 +97,13 @@ public class PlayerInteractionController : MonoBehaviour
             gun.GunDisAim_FPS();
         }
 
+        // reload
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            gun.GunReload();
+        }
+
+
         // switch gun in
         if (Input.GetKey(KeyCode.Alpha2))
         {

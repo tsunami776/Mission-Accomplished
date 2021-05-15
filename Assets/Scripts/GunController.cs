@@ -44,6 +44,7 @@ public class GunController : MonoBehaviour
             // shoot ammo from clip, if empty, do nothing but play the empty audio
             if (!PWC.SubtractClipRemain(0, 1))
             {
+                // if clip empty
                 // try reload the ammo
                 if (!PWC.Reload(0))
                 {
@@ -130,15 +131,26 @@ public class GunController : MonoBehaviour
     }
 
     // gun moving animation 
-    public void GunMove()
+    public void GunMove(bool isSpriting)
     {
         if (!isShooting && !PLC.isAiming)
         {
             gunPartsAnimator.SetBool("isMoving", true);
+
+            // sprite
+            if (isSpriting)
+            {
+                gunPartsAnimator.SetBool("isSpriting", true);
+            }
+            else
+            {
+                gunPartsAnimator.SetBool("isSpriting", false);
+            }
         }
         else
         {
             gunPartsAnimator.SetBool("isMoving", false);
+            gunPartsAnimator.SetBool("isSpriting", false);
         }
     }
 
@@ -166,6 +178,33 @@ public class GunController : MonoBehaviour
             PLC.Aiming(false);
             GetComponent<Animator>().SetBool("isAiming", false);
         }
+    }
+
+    // gun reload
+    public void GunReload()
+    {
+        // check if already full
+        if (PWC.ClipRemains[0] <= Config.DEFAULT_MAX_ONE_CLIP[0])
+        {
+            // try reload the ammo
+            if (!PWC.Reload(0))
+            {
+                // if empty, do nothing but play the empty audio
+                emptyAudio.Play();
+                StartCoroutine(WaitGunEmptyInterval());
+            }
+            else
+            {
+                // if not empty, play the reload animation and audio
+                gunPartsAnimator.SetTrigger("isReloading");
+                reloadAudio.Play();
+            }
+        }
+    }
+
+    IEnumerator WaitGunEmptyInterval()
+    {
+        yield return new WaitForSecondsRealtime(Config.TIME_GUN_EMPTY_INTERVAL);
     }
 
     // switch gun in animation

@@ -22,6 +22,7 @@ public class Config
 
     // Modifier
     public const float MODIFIER_TIMER = 1f;
+    public const float MODIFIER_SPRITE = 1.5f;
     public const float MODIFIER_ROTATION_SPEED_SMOOTH = 3f;
     public const float MODIFIER_CONSTRUCTION_1 = 0.0002f;
     public const float MODIFIER_CONSTRUCTION_2 = 0.0003f;
