@@ -326,6 +326,7 @@ GameObject:
   - component: {fileID: 1453922680773076966}
   - component: {fileID: 2293292939571992156}
   - component: {fileID: 5457760835460882902}
+  - component: {fileID: 8213560019685336790}
   m_Layer: 5
   m_Name: CountText
   m_TagString: Untagged
@@ -395,6 +396,19 @@ MonoBehaviour:
   m_Text: '25
 
 '
+--- !u!114 &8213560019685336790
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2437883842523296893}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 83a774727b825af4ebc59a49804ac955, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  whichResource: 1
 --- !u!1 &2858428606196945878
 GameObject:
   m_ObjectHideFlags: 0
@@ -584,6 +598,7 @@ GameObject:
   - component: {fileID: 559179307129957446}
   - component: {fileID: 142509193339551215}
   - component: {fileID: 2683687736485797882}
+  - component: {fileID: 4070670437826435091}
   m_Layer: 5
   m_Name: CountText
   m_TagString: Untagged
@@ -651,6 +666,19 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: 500
+--- !u!114 &4070670437826435091
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3569638150230952091}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 83a774727b825af4ebc59a49804ac955, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  whichResource: 3
 --- !u!1 &4518986284490055913
 GameObject:
   m_ObjectHideFlags: 0
@@ -662,7 +690,7 @@ GameObject:
   - component: {fileID: 7068520396684263837}
   - component: {fileID: 2888480774029455158}
   - component: {fileID: 7909981038809638164}
-  - component: {fileID: 2573819709687698760}
+  - component: {fileID: 821933520586428230}
   m_Layer: 5
   m_Name: GrowthText
   m_TagString: Untagged
@@ -732,7 +760,7 @@ MonoBehaviour:
   m_Text: '(+15)
 
 '
---- !u!114 &2573819709687698760
+--- !u!114 &821933520586428230
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -741,7 +769,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 4518986284490055913}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 83a774727b825af4ebc59a49804ac955, type: 3}
+  m_Script: {fileID: 11500000, guid: dd3138b9d299ab34199477cf51ff1d42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   whichResource: 1
@@ -833,7 +861,7 @@ GameObject:
   - component: {fileID: 245911017701001627}
   - component: {fileID: 1862230599980139995}
   - component: {fileID: 8591772615167095873}
-  - component: {fileID: 3564745722203271190}
+  - component: {fileID: 4287342183590350860}
   m_Layer: 5
   m_Name: GrowthText
   m_TagString: Untagged
@@ -903,7 +931,7 @@ MonoBehaviour:
   m_Text: '(+500)
 
 '
---- !u!114 &3564745722203271190
+--- !u!114 &4287342183590350860
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -912,7 +940,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 5888458992148853960}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 83a774727b825af4ebc59a49804ac955, type: 3}
+  m_Script: {fileID: 11500000, guid: dd3138b9d299ab34199477cf51ff1d42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   whichResource: 2
@@ -927,7 +955,7 @@ GameObject:
   - component: {fileID: 7390906674092667985}
   - component: {fileID: 3187303151061497970}
   - component: {fileID: 5100935303728018646}
-  - component: {fileID: 2373590197893697563}
+  - component: {fileID: 6757803796670495081}
   m_Layer: 5
   m_Name: GrowthText
   m_TagString: Untagged
@@ -997,7 +1025,7 @@ MonoBehaviour:
   m_Text: '(+100)
 
 '
---- !u!114 &2373590197893697563
+--- !u!114 &6757803796670495081
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1006,7 +1034,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 6826873863117633510}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 83a774727b825af4ebc59a49804ac955, type: 3}
+  m_Script: {fileID: 11500000, guid: dd3138b9d299ab34199477cf51ff1d42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   whichResource: 3
@@ -1021,6 +1049,7 @@ GameObject:
   - component: {fileID: 2456288885907270155}
   - component: {fileID: 1374558405155634270}
   - component: {fileID: 2827816926350107677}
+  - component: {fileID: 1016735546038493699}
   m_Layer: 5
   m_Name: CountText
   m_TagString: Untagged
@@ -1090,6 +1119,19 @@ MonoBehaviour:
   m_Text: '10
 
 '
+--- !u!114 &1016735546038493699
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6928712027045813519}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 83a774727b825af4ebc59a49804ac955, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  whichResource: 0
 --- !u!1 &7217794502499859572
 GameObject:
   m_ObjectHideFlags: 0
@@ -1258,6 +1300,7 @@ GameObject:
   - component: {fileID: 6907358614011266764}
   - component: {fileID: 151969845795286082}
   - component: {fileID: 151039268268075459}
+  - component: {fileID: 569350598255856990}
   m_Layer: 5
   m_Name: CountText
   m_TagString: Untagged
@@ -1327,6 +1370,19 @@ MonoBehaviour:
   m_Text: '1000
 
 '
+--- !u!114 &569350598255856990
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8421543633411840999}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 83a774727b825af4ebc59a49804ac955, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  whichResource: 2
 --- !u!1 &8669512579133002051
 GameObject:
   m_ObjectHideFlags: 0
@@ -1495,7 +1551,7 @@ GameObject:
   - component: {fileID: 5918878479691729779}
   - component: {fileID: 2608841371617626656}
   - component: {fileID: 5507613762074137124}
-  - component: {fileID: 4979657682760700609}
+  - component: {fileID: 6901450386341898936}
   m_Layer: 5
   m_Name: GrowthText
   m_TagString: Untagged
@@ -1565,7 +1621,7 @@ MonoBehaviour:
   m_Text: '(+5)
 
 '
---- !u!114 &4979657682760700609
+--- !u!114 &6901450386341898936
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1574,7 +1630,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 9173595991980280730}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 83a774727b825af4ebc59a49804ac955, type: 3}
+  m_Script: {fileID: 11500000, guid: dd3138b9d299ab34199477cf51ff1d42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   whichResource: 0

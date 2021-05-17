@@ -21,7 +21,7 @@ public class Config
     public const int LAYER_INDEX_INTERACTABLE = 8;
 
     // Modifier
-    public const float MODIFIER_TIMER = 1f;
+    public const float MODIFIER_TIMER = 10f;
     public const float MODIFIER_SPRITE = 1.5f;
     public const float MODIFIER_ROTATION_SPEED_SMOOTH = 3f;
     public const float MODIFIER_CONSTRUCTION_1 = 0.0002f;
@@ -78,23 +78,23 @@ public class Config
 
     // String
     public const string STRING_CONSTRUCTION_NAME_1 = "Water Treatment";
-    public const string STRING_CONSTRUCTION_REWARD_1 = "Water Growth Rate +5";
     public const string STRING_CONSTRUCTION_NAME_2 = "Transportation Construction";
-    public const string STRING_CONSTRUCTION_REWARD_2 = "Food Growth Rate +5   Fund Growth Rate +200";
     public const string STRING_CONSTRUCTION_NAME_3 = "Housing Repair";
+    public const string STRING_CONSTRUCTION_REWARD_1 = "Water Growth Rate +5";
+    public const string STRING_CONSTRUCTION_REWARD_2 = "Food Growth Rate +5   Fund Growth Rate +200";
     public const string STRING_CONSTRUCTION_REWARD_3 = "Troop Growth Rate +50";
     public const string STRING_MISSION_NAME_1 = "Bandit Rush";
-    public const string STRING_MISSION_COST_1 = "Food +5";
-    public const string STRING_MISSION_REWARD_1 = "Food +5";
     public const string STRING_MISSION_NAME_2 = "Hospital";
-    public const string STRING_MISSION_REWARD_2 = "Water Growth Rate +5";
-    public const string STRING_MISSION_COST_2 = "Food +5";
     public const string STRING_MISSION_NAME_3 = "Vender";
-    public const string STRING_MISSION_REWARD_3 = "Water Growth Rate +5";
-    public const string STRING_MISSION_COST_3 = "Food +5";
     public const string STRING_MISSION_NAME_4 = "Mom's Concern";
-    public const string STRING_MISSION_REWARD_4 = "Water Growth Rate +5";
-    public const string STRING_MISSION_COST_4 = "Food +5";
+    public const string STRING_MISSION_COST_1 = "Troop -50";
+    public const string STRING_MISSION_COST_2 = "Food -5  Fund -200";
+    public const string STRING_MISSION_COST_3 = "Food -5  Water -5";
+    public const string STRING_MISSION_COST_4 = "Water -5  Fund -100";
+    public const string STRING_MISSION_REWARD_1 = "Food +2  Water +2  Fund +100";
+    public const string STRING_MISSION_REWARD_2 = "Water +5  Troop +150";
+    public const string STRING_MISSION_REWARD_3 = "Fund +250";
+    public const string STRING_MISSION_REWARD_4 = "Food +5  Troop +50";
 
     // Default Setting
     public const float DEFAULT_INTI_MAIN_CAM_VIEW = 60;
@@ -110,6 +110,14 @@ public class Config
     public const float DEFAULT_REWARD_FOOD_PROJECT_2 = 5;
     public const float DEFAULT_REWARD_FUND_PROJECT_2 = 200;
     public const float DEFAULT_REWARD_TROOP_PROJECT_3 = 50;
+    public static float[] DEFAULT_MISSION_COST_1 = new float[] { 0, 0, 0, 50 }; // { Food, Water, Fund, Troop } 
+    public static float[] DEFAULT_MISSION_COST_2 = new float[] { 5, 0, 200, 0 };
+    public static float[] DEFAULT_MISSION_COST_3 = new float[] { 5, 5, 0, 0 };
+    public static float[] DEFAULT_MISSION_COST_4 = new float[] { 0, 5, 100, 0 };
+    public static float[] DEFAULT_MISSION_REWARD_1 = new float[] { 2, 2, 100, 0 };
+    public static float[] DEFAULT_MISSION_REWARD_2 = new float[] { 0, 5, 0, 150 };
+    public static float[] DEFAULT_MISSION_REWARD_3 = new float[] { 0, 0, 250, 0 };
+    public static float[] DEFAULT_MISSION_REWARD_4 = new float[] { 5, 0, 0, 50 };
     public static int[] DEFAULT_MAX_ONE_CLIP = new int[] { 30 };
     public static int[] DEFAULT_MAX_TOTAL_AMMO = new int[] { 300 };
 }

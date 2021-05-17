@@ -45,7 +45,7 @@ public class TransitionPlayer : MonoBehaviour
 
         // unlock the timer for the new day
         GameController.GC.timer.Unlock();
-        GameController.GC.UpdateTopBarResources();
+        GameController.GC.UpdateTopBarDate();
         gameObject.SetActive(false);
     }
 }

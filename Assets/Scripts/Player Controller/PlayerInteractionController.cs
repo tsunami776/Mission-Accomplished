@@ -54,10 +54,15 @@ public class PlayerInteractionController : MonoBehaviour
                     // if it is Mission Obj: open the mission view
                     if (interactableObj.CompareTag("MissionObj"))
                     {
-                        GameController.GC.UpdateMissionState_Player();
                         missionView.SetActive(true);
                         GetComponent<PlayerMovementController>().Lock();
                         GetComponent<PlayerLookController>().Lock();
+                    }
+
+                    // if it is an NPC
+                    if (interactableObj.CompareTag("NPC"))
+                    {
+                        GameController.GC.UpdateMissionState_Player();
                     }
                 }
             }
@@ -79,59 +84,116 @@ public class PlayerInteractionController : MonoBehaviour
             }
         }
 
-        // shoot
-        if (Input.GetMouseButton(0))
+        // check if during the day
+        if (!GameController.GC.timer.clockLock)
         {
-            gun.GunShoot();
-        }
-
-        // mid aim
-        if (Input.GetMouseButton(1))
-        {
-            crossHair.gameObject.SetActive(false);
-            gun.GunAim_FPS();
-        }
-        else 
-        {
-            crossHair.gameObject.SetActive(true);
-            gun.GunDisAim_FPS();
-        }
-
-        // reload
-        if (Input.GetKeyDown(KeyCode.R))
-        {
-            gun.GunReload();
-        }
-
-
-        // switch gun in
-        if (Input.GetKey(KeyCode.Alpha2))
-        {
-            toolSlots[1].SetActive(true);
-            for (int i = 0; i < toolSlots.Length; i++)
+            // shoot
+            if (Input.GetMouseButton(0))
             {
-                if (i == 1)
-                {
-                    continue;
-                }
-                toolSlots[i].SetActive(false);
+                gun.GunShoot();
             }
-            gun.GunSwitchIn();
-        }
 
-        // switch gun out
-        if (Input.GetKey(KeyCode.Alpha1))
-        {
-            toolSlots[0].SetActive(true);
-            for (int i = 0; i < toolSlots.Length; i++)
+            // mid aim
+            if (Input.GetMouseButton(1))
             {
-                if (i == 0)
-                {
-                    continue;
-                }
-                toolSlots[i].SetActive(false);
+                crossHair.gameObject.SetActive(false);
+                gun.GunAim_FPS();
             }
-            gun.GunSwitchOut();
+            else
+            {
+                crossHair.gameObject.SetActive(true);
+                gun.GunDisAim_FPS();
+            }
+
+            // reload
+            if (Input.GetKeyDown(KeyCode.R))
+            {
+                gun.GunReload();
+            }
+
+
+            // switch gun in
+            if (Input.GetKey(KeyCode.Alpha2))
+            {
+                toolSlots[1].SetActive(true);
+                for (int i = 0; i < toolSlots.Length; i++)
+                {
+                    if (i == 1)
+                    {
+                        continue;
+                    }
+                    toolSlots[i].SetActive(false);
+                }
+                gun.GunSwitchIn();
+            }
+
+            // switch gun out
+            if (Input.GetKey(KeyCode.Alpha1))
+            {
+                toolSlots[0].SetActive(true);
+                for (int i = 0; i < toolSlots.Length; i++)
+                {
+                    if (i == 0)
+                    {
+                        continue;
+                    }
+                    toolSlots[i].SetActive(false);
+                }
+                gun.GunSwitchOut();
+            }// shoot
+            if (Input.GetMouseButton(0))
+            {
+                gun.GunShoot();
+            }
+
+            // mid aim
+            if (Input.GetMouseButton(1))
+            {
+                crossHair.gameObject.SetActive(false);
+                gun.GunAim_FPS();
+            }
+            else
+            {
+                crossHair.gameObject.SetActive(true);
+                gun.GunDisAim_FPS();
+            }
+
+            // reload
+            if (Input.GetKeyDown(KeyCode.R))
+            {
+                gun.GunReload();
+            }
+
+
+            // switch gun in
+            if (Input.GetKey(KeyCode.Alpha2))
+            {
+                toolSlots[1].SetActive(true);
+                for (int i = 0; i < toolSlots.Length; i++)
+                {
+                    if (i == 1)
+                    {
+                        continue;
+                    }
+                    toolSlots[i].SetActive(false);
+                }
+                gun.GunSwitchIn();
+            }
+
+            // switch gun out
+            if (Input.GetKey(KeyCode.Alpha1))
+            {
+                toolSlots[0].SetActive(true);
+                for (int i = 0; i < toolSlots.Length; i++)
+                {
+                    if (i == 0)
+                    {
+                        continue;
+                    }
+                    toolSlots[i].SetActive(false);
+                }
+                gun.GunSwitchOut();
+            }
         }
     }
 }

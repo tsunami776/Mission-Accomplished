@@ -73,6 +73,7 @@ public class PlayerLookController : MonoBehaviour
                 {
                     playerCam.transform.localPosition = new Vector3(initialPosition.x + Config.OFFSET_CAM_FPS_TO_TPS_X, initialPosition.y + Config.OFFSET_CAM_FPS_TO_TPS_Y, initialPosition.z + Config.OFFSET_CAM_FPS_TO_TPS_Z);
                     GetComponent<PlayerInteractionController>().interactionRange = Config.INTERACTION_RANGE_TPS;
+                    playerCam.GetComponent<Animator>().SetBool("isTPS", true);
                     isTPS = true;
 
                     // disable gun
@@ -83,6 +84,7 @@ public class PlayerLookController : MonoBehaviour
                 {
                     playerCam.transform.localPosition = initialPosition;
                     GetComponent<PlayerInteractionController>().interactionRange = Config.INTERACTION_RANGE_FPS;
+                    playerCam.GetComponent<Animator>().SetBool("isTPS", false);
                     isTPS = false;
 
                     // enable gun
