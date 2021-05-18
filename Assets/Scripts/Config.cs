@@ -21,7 +21,7 @@ public class Config
     public const int LAYER_INDEX_INTERACTABLE = 8;
 
     // Modifier
-    public const float MODIFIER_TIMER = 10f;
+    public const float MODIFIER_TIMER = 1f;
     public const float MODIFIER_SPRITE = 1.5f;
     public const float MODIFIER_ROTATION_SPEED_SMOOTH = 3f;
     public const float MODIFIER_CONSTRUCTION_1 = 0.0002f;
@@ -64,7 +64,7 @@ public class Config
     public const float TIME_ANIMATION_TRANSCAM = 5f;
     public const float TIME_ANIMATION_MISSION_COMPLETE_POPUP = 1f;
     public const float TIME_SUSTAIN_MISSION_COMPLETE_POPUP = 2f;
-    public const float TIME_MISSION_TIME_1 = 20f;
+    public const float TIME_MISSION_TIME_1 = 120f;
     public const float TIME_MISSION_TIME_2 = 160f;
     public const float TIME_MISSION_TIME_3 = 260f;
     public const float TIME_MISSION_TIME_4 = 150f;

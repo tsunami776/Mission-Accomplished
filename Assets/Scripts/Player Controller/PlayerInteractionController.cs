@@ -113,7 +113,7 @@ public class PlayerInteractionController : MonoBehaviour
 
 
             // switch gun in
-            if (Input.GetKey(KeyCode.Alpha2))
+            if (Input.GetKey(KeyCode.Alpha2) && !GetComponent<PlayerLookController>().isTPS)
             {
                 toolSlots[1].SetActive(true);
                 for (int i = 0; i < toolSlots.Length; i++)
@@ -128,60 +128,7 @@ public class PlayerInteractionController : MonoBehaviour
             }
 
             // switch gun out
-            if (Input.GetKey(KeyCode.Alpha1))
-            {
-                toolSlots[0].SetActive(true);
-                for (int i = 0; i < toolSlots.Length; i++)
-                {
-                    if (i == 0)
-                    {
-                        continue;
-                    }
-                    toolSlots[i].SetActive(false);
-                }
-                gun.GunSwitchOut();
-            }// shoot
-            if (Input.GetMouseButton(0))
-            {
-                gun.GunShoot();
-            }
-
-            // mid aim
-            if (Input.GetMouseButton(1))
-            {
-                crossHair.gameObject.SetActive(false);
-                gun.GunAim_FPS();
-            }
-            else
-            {
-                crossHair.gameObject.SetActive(true);
-                gun.GunDisAim_FPS();
-            }
-
-            // reload
-            if (Input.GetKeyDown(KeyCode.R))
-            {
-                gun.GunReload();
-            }
-
-
-            // switch gun in
-            if (Input.GetKey(KeyCode.Alpha2))
-            {
-                toolSlots[1].SetActive(true);
-                for (int i = 0; i < toolSlots.Length; i++)
-                {
-                    if (i == 1)
-                    {
-                        continue;
-                    }
-                    toolSlots[i].SetActive(false);
-                }
-                gun.GunSwitchIn();
-            }
-
-            // switch gun out
-            if (Input.GetKey(KeyCode.Alpha1))
+            if (Input.GetKey(KeyCode.Alpha1) && !GetComponent<PlayerLookController>().isTPS)
             {
                 toolSlots[0].SetActive(true);
                 for (int i = 0; i < toolSlots.Length; i++)

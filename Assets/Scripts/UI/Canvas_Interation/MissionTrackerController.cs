@@ -11,33 +11,40 @@ public class MissionTrackerController : MonoBehaviour
     [SerializeField] private Image gridImg;
     [SerializeField] private Image missionProgress;
 
-    
+    // values
+    [HideInInspector] public int missionIndex;
     private float countDown;
 
     // start a new mission
     public void NewMission(int whichMission)
     {
+        print(1);
+
         // modify the template
         string missionName = "";
         switch (whichMission)
         {
             case 1:
                 {
+                    missionIndex = 1;
                     missionName = Config.STRING_MISSION_NAME_1;
                     break;
                 }
             case 2:
                 {
+                    missionIndex = 2;
                     missionName = Config.STRING_MISSION_NAME_2;
                     break;
                 }
             case 3:
                 {
+                    missionIndex = 3;
                     missionName = Config.STRING_MISSION_NAME_3;
                     break;
                 }
             case 4:
                 {
+                    missionIndex = 4;
                     missionName = Config.STRING_MISSION_NAME_4;
                     break;
                 }
@@ -123,6 +130,9 @@ public class MissionTrackerController : MonoBehaviour
                 }
         }
 
+        // lock the quest
+        GameController.GC.allQuest[whichMission - 1].Activate();
+
         // count down
         while (countDown < time)
         {
@@ -145,6 +155,9 @@ public class MissionTrackerController : MonoBehaviour
 
         // once finished
         popUp.MissionCompletePopUp(missionName, missionRewardText);
+
+        // unlock the quest
+        GameController.GC.allQuest[whichMission - 1].Deactivate();
 
         // Grant the Reward
         GameController.GC.foodCount += reward[0];

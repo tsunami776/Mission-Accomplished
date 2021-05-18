@@ -31,6 +31,9 @@ public class GameController : MonoBehaviour
     // mission states
     public List<GameObject> allMissions;
 
+    // mission quests list
+    public QuestManager[] allQuest;
+
     // construction projects
     [HideInInspector] public float constructionProgress1;
     [HideInInspector] public float constructionProgress2;
