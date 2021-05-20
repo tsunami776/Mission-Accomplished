@@ -65,6 +65,7 @@ public class GameController : MonoBehaviour
             GC = this;
         }
         allMissions = new List<GameObject>();
+        DisableCursor();
     }
 
     // start
@@ -136,6 +137,20 @@ public class GameController : MonoBehaviour
     public void UseItem(/* which item */)
     {
         
+    }
+
+    // disable mouse cursor
+    public void DisableCursor()
+    {
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
+    }
+
+    // enable mouse cursor
+    public void EnableCursor()
+    {
+        Cursor.lockState = CursorLockMode.Confined;
+        Cursor.visible = true;
     }
 }
 

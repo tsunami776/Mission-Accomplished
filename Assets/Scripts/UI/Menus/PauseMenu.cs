@@ -27,6 +27,7 @@ public class PauseMenu : MonoBehaviour
         pauseMenuUI.SetActive(false);
         Time.timeScale = 1f;
         GameIsPaused = false;
+        GameController.GC.DisableCursor();
     }
 
     void Pause()
@@ -34,7 +35,7 @@ public class PauseMenu : MonoBehaviour
         pauseMenuUI.SetActive(true);
         Time.timeScale = 0f;
         GameIsPaused = true;
-
+        GameController.GC.EnableCursor();
     }
 
     public void LoadMenu()
