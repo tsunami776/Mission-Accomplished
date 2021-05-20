@@ -26,16 +26,14 @@ public class GameController : MonoBehaviour
 
     // all missions & NPCs
     public int missionTotalNumber;
-    public List<GameObject> allMissions;
     public GameObject[] allNPCs;
-    public MissionViewController MVC;
 
     // mission states
-    private List<int> missionUnlocked;
-    private List<int> missionOngoing;
-    private List<int> missionComplete;
-    private List<int> missionSuccessful;
-    private List<int> missionFailed;
+    public List<GameObject> allMissions;
+
+    // mission quests list
+    public int currentQuest;
+    public QuestManager[] allQuest;
 
     // construction projects
     [HideInInspector] public float constructionProgress1;
@@ -49,14 +47,6 @@ public class GameController : MonoBehaviour
     [HideInInspector] public bool isConstruction3Completed;
 
     // all items/resources
-    [SerializeField] private Text foodCountText;
-    [SerializeField] private Text waterCountText;
-    [SerializeField] private Text fundCountText;
-    [SerializeField] private Text troopCountText;
-    [SerializeField] private Text foodGrowthText;
-    [SerializeField] private Text waterGrowthText;
-    [SerializeField] private Text fundGrowthText;
-    [SerializeField] private Text troopGrowthText;
     [HideInInspector] public float foodCount;
     [HideInInspector] public float waterCount;
     [HideInInspector] public float fundCount;
@@ -74,6 +64,7 @@ public class GameController : MonoBehaviour
         {
             GC = this;
         }
+        allMissions = new List<GameObject>();
     }
 
     // start
@@ -100,16 +91,11 @@ public class GameController : MonoBehaviour
         constructionProgress1 = 0f;
         constructionProgress2 = 0f;
         constructionProgress3 = 0f;
-        allMissions = new List<GameObject>();
         allNPCs = GameObject.FindGameObjectsWithTag("NPC");
-        missionUnlocked = new List<int>();
-        missionOngoing = new List<int>();
-        missionComplete = new List<int>();
-        missionSuccessful = new List<int>();
-        missionFailed = new List<int>();
+        currentQuest = -1;
 
         // update topbar info UI
-        UpdateTopBarResources();
+        UpdateTopBarDate();
     }
 
     // go to the next day and calculate new resources
@@ -123,83 +109,21 @@ public class GameController : MonoBehaviour
     }
 
     // update top bar info
-    public void UpdateTopBarResources()
+    public void UpdateTopBarDate()
     {
         // update date
         TopBar_Date.text = "Date: " + currentDate.ToShortDateString();
-
-        // update resource count
-        foodCountText.text = foodCount.ToString();
-        waterCountText.text = waterCount.ToString();
-        fundCountText.text = fundCount.ToString();
-        troopCountText.text = troopCount.ToString();
     }
-
-    // lock a mission
-    public void LockMission(int whichMission)
-    {
-        missionUnlocked.Remove(whichMission);
-        UpdateMissionState_NPC();
-        UpdateMissionState_Player();
-    }
-
-    // unlock a mission
-    public void UnlockMission(int whichMission)
-    {
-        missionUnlocked.Add(whichMission);
-        UpdateMissionState_NPC();
-        UpdateMissionState_Player();
-    }
-
-    // set a mission ongoing
-    public void OngoingMission(int whichMission)
-    {
-        missionOngoing.Add(whichMission);
-        missionComplete.Remove(whichMission);
-        UpdateMissionState_NPC();
-        UpdateMissionState_Player();
-    }
-
-
-    // complete a mission
-    public void CompleteMission(int whichMission)
-    {
-        missionOngoing.Remove(whichMission);
-        missionComplete.Add(whichMission);
-        UpdateMissionState_NPC();
-        UpdateMissionState_Player();
-    }
-
-    // succeed a mission
-    public void SucceedMission(int whichMission)
-    {
-        missionSuccessful.Add(whichMission);
-        CompleteMission(whichMission);
-    }
-
-    // fail a mission
-    public void FailMission(int whichMission)
-    {
-        missionFailed.Add(whichMission);
-        CompleteMission(whichMission);
-    }
-
 
     // tell the player the changes of the mission states
-    public void UpdateMissionState_Player(/* parameter: whichNPCs */)
+    public void UpdateMissionState_Player()
     {
-        // tell player to update the mission view and dynamic mission tracker
-        MVC.UpdateMissionView();
-        Debug.Log("NPC Mission States Updated");
-    }
-
-    // tell the corresponding NPCs the changes of the mission states
-    public void UpdateMissionState_NPC(/* parameter: whichNPCs */)
-    {
-        // tell NPCs which yarn shall be loaded according to their corresponding missions states\
-        Debug.Log("NPC Mission States Updated");
-
-        // send mission2: [0][0][0][0] => NPCs(1,3,5)
+        if (currentQuest != -1)
+        {
+            // tell player to update the mission view and dynamic mission tracker
+            Debug.Log("NPC Mission States Updated");
+            allQuest[currentQuest].gameObject.SetActive(true);
+        }
     }
 
     //

@@ -5,12 +5,16 @@ using UnityEngine.UI;
 
 public class PlayerInteractionController : MonoBehaviour
 {
+    [SerializeField] private GunController gun;
+    [SerializeField] private GameObject gunParts;
+    [SerializeField] private GameObject[] toolSlots;
+
     [HideInInspector] public float interactionRange;
     public Transform playerCam;
     public RawImage crossHair;
     public GameObject interactableObj;
     public GameObject missionView;
-
+    
     // Only detect interactable objects in layer 8:"Interactable"
     private int layerMask = 1 << Config.LAYER_INDEX_INTERACTABLE;
 
@@ -26,7 +30,7 @@ public class PlayerInteractionController : MonoBehaviour
         RaycastHit hit;
         //Debug.DrawRay(playerCam.position, playerCam.forward * interactionRange, Color.yellow);
 
-
+        // detect and interact with objs
         if (Physics.Raycast(playerCam.position, playerCam.forward, out hit, interactionRange, layerMask))
         {
             // Highlight Crosshair color
@@ -50,10 +54,15 @@ public class PlayerInteractionController : MonoBehaviour
                     // if it is Mission Obj: open the mission view
                     if (interactableObj.CompareTag("MissionObj"))
                     {
-                        GameController.GC.UpdateMissionState_Player();
                         missionView.SetActive(true);
                         GetComponent<PlayerMovementController>().Lock();
                         GetComponent<PlayerLookController>().Lock();
+                    }
+
+                    // if it is an NPC
+                    if (interactableObj.CompareTag("NPC"))
+                    {
+                        GameController.GC.UpdateMissionState_Player();
                     }
                 }
             }
@@ -72,6 +81,64 @@ public class PlayerInteractionController : MonoBehaviour
                     interactableObj.GetComponent<ShowNotification>().HideText();
                 }
                 interactableObj = null;
+            }
+        }
+
+        // check if during the day
+        if (!GameController.GC.timer.clockLock)
+        {
+            // shoot
+            if (Input.GetMouseButton(0))
+            {
+                gun.GunShoot();
+            }
+
+            // mid aim
+            if (Input.GetMouseButton(1))
+            {
+                crossHair.gameObject.SetActive(false);
+                gun.GunAim_FPS();
+            }
+            else
+            {
+                crossHair.gameObject.SetActive(true);
+                gun.GunDisAim_FPS();
+            }
+
+            // reload
+            if (Input.GetKeyDown(KeyCode.R))
+            {
+                gun.GunReload();
+            }
+
+            // switch gun in
+            if (Input.GetKey(KeyCode.Alpha2) && !GetComponent<PlayerLookController>().isTPS)
+            {
+                toolSlots[1].SetActive(true);
+                for (int i = 0; i < toolSlots.Length; i++)
+                {
+                    if (i == 1)
+                    {
+                        continue;
+                    }
+                    toolSlots[i].SetActive(false);
+                }
+                gun.GunSwitchIn();
+            }
+
+            // switch gun out
+            if (Input.GetKey(KeyCode.Alpha1) && !GetComponent<PlayerLookController>().isTPS)
+            {
+                toolSlots[0].SetActive(true);
+                for (int i = 0; i < toolSlots.Length; i++)
+                {
+                    if (i == 0)
+                    {
+                        continue;
+                    }
+                    toolSlots[i].SetActive(false);
+                }
+                gun.GunSwitchOut();
             }
         }
     }

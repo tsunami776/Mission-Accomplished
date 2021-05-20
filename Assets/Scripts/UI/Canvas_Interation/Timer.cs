@@ -7,7 +7,7 @@ public class Timer : MonoBehaviour
 
     private RectTransform RectTF;
     private bool updateLock;
-    private bool clockLock;
+    public bool clockLock;
 
     private LightingManager LM;
 
@@ -85,10 +85,9 @@ public class Timer : MonoBehaviour
                     popUp.MissionCompletePopUp(Config.STRING_CONSTRUCTION_NAME_3, Config.STRING_CONSTRUCTION_REWARD_3);
                 }
             }
-            
         }
         
-        // update date per round
+        // clock goes 1 round
         if (RectTF.rotation.eulerAngles.z % 360f >= -0.001f && RectTF.rotation.eulerAngles.z % 360f <= 0.001f && !updateLock)
         {
             //Debug.Log("Go Next Day");

@@ -9,7 +9,7 @@ namespace Yarn.Unity.Example
     public class PlayerDialogueController : MonoBehaviour
     {
 
-        public float interactionRadius = 2.0f;
+        public float interactionRadius;
 
         /// Update is called once per frame
         void Update()
