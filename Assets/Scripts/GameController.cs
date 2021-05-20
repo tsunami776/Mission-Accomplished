@@ -32,6 +32,7 @@ public class GameController : MonoBehaviour
     public List<GameObject> allMissions;
 
     // mission quests list
+    public int currentQuest;
     public QuestManager[] allQuest;
 
     // construction projects
@@ -91,6 +92,7 @@ public class GameController : MonoBehaviour
         constructionProgress2 = 0f;
         constructionProgress3 = 0f;
         allNPCs = GameObject.FindGameObjectsWithTag("NPC");
+        currentQuest = -1;
 
         // update topbar info UI
         UpdateTopBarDate();
@@ -113,70 +115,15 @@ public class GameController : MonoBehaviour
         TopBar_Date.text = "Date: " + currentDate.ToShortDateString();
     }
 
-    /*    // lock a mission
-        public void LockMission(int whichMission)
-        {
-            missionUnlocked.Remove(whichMission);
-            UpdateMissionState_NPC();
-            UpdateMissionState_Player();
-        }
-
-        // unlock a mission
-        public void UnlockMission(int whichMission)
-        {
-            missionUnlocked.Add(whichMission);
-            UpdateMissionState_NPC();
-            UpdateMissionState_Player();
-        }
-
-        // set a mission ongoing
-        public void OngoingMission(int whichMission)
-        {
-            missionOngoing.Add(whichMission);
-            missionComplete.Remove(whichMission);
-            UpdateMissionState_NPC();
-            UpdateMissionState_Player();
-        }
-
-
-        // complete a mission
-        public void CompleteMission(int whichMission)
-        {
-            missionOngoing.Remove(whichMission);
-            missionComplete.Add(whichMission);
-            UpdateMissionState_NPC();
-            UpdateMissionState_Player();
-        }
-
-        // succeed a mission
-        public void SucceedMission(int whichMission)
-        {
-            missionSuccessful.Add(whichMission);
-            CompleteMission(whichMission);
-        }
-
-        // fail a mission
-        public void FailMission(int whichMission)
-        {
-            missionFailed.Add(whichMission);
-            CompleteMission(whichMission);
-        }*/
-
-
     // tell the player the changes of the mission states
-    public void UpdateMissionState_Player(/* parameter: whichNPCs */)
+    public void UpdateMissionState_Player()
     {
-        // tell player to update the mission view and dynamic mission tracker
-        Debug.Log("NPC Mission States Updated");
-    }
-
-    // tell the corresponding NPCs the changes of the mission states
-    public void UpdateMissionState_NPC(/* parameter: whichNPCs */)
-    {
-        // tell NPCs which yarn shall be loaded according to their corresponding missions states\
-        Debug.Log("NPC Mission States Updated");
-
-        // send mission2: [0][0][0][0] => NPCs(1,3,5)
+        if (currentQuest != -1)
+        {
+            // tell player to update the mission view and dynamic mission tracker
+            Debug.Log("NPC Mission States Updated");
+            allQuest[currentQuest].gameObject.SetActive(true);
+        }
     }
 
     //

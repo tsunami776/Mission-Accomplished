@@ -2,34 +2,25 @@ using UnityEngine;
 
 public class PlayerMovementController : MonoBehaviour
 {
-    // gun controller
-    [SerializeField] GunController gun;
-
-    // animator
-    private Animator characterAnimator;
+    // references
+    [SerializeField] private GameObject avatar;
+    [SerializeField] private Transform lookTarget;
+    [SerializeField] private GunController gun;
+    [SerializeField] private AudioSource footstepSound;
     [SerializeField] private Animator camAnimator;
+    private Animator characterAnimator;
 
-    // movement
+    // values
     public float speedV;
     public float speedH;
-
-    // jump
-    public float accJump;
-    public float gravity;
-
-    // flags
     public bool isMoving;
     public bool isSpriting;
     public bool isGrounded;
     public bool isJumping;
+    public float accJump;
+    public float gravity;
     private bool isLocked;
 
-    // moving audio
-    [SerializeField] private AudioSource footstepSound;
-
-    // avatar
-    [SerializeField] private GameObject avatar;
-    [SerializeField] private Transform lookTarget;
 
     private void Start()
     {

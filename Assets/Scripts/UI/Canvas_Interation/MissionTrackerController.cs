@@ -10,59 +10,106 @@ public class MissionTrackerController : MonoBehaviour
     [SerializeField] private Text missionTrackerText;
     [SerializeField] private Image gridImg;
     [SerializeField] private Image missionProgress;
+    [SerializeField] private GameObject insuffientResourceWindow;
 
     // values
     [HideInInspector] public int missionIndex;
     private float countDown;
+    private bool insufficientResource;
 
     // start a new mission
     public void NewMission(int whichMission)
     {
-        print(1);
-
         // modify the template
         string missionName = "";
         switch (whichMission)
         {
             case 1:
                 {
-                    missionIndex = 1;
-                    missionName = Config.STRING_MISSION_NAME_1;
+                    if (GameController.GC.foodCount >= Config.DEFAULT_MISSION_COST_1[0] && GameController.GC.waterCount >= Config.DEFAULT_MISSION_COST_1[1] &&
+                        GameController.GC.fundCount >= Config.DEFAULT_MISSION_COST_1[2] && GameController.GC.troopCount >= Config.DEFAULT_MISSION_COST_1[3])
+                    {
+                        missionIndex = 1;
+                        missionName = Config.STRING_MISSION_NAME_1;
+                    }
+                    else
+                    {
+                        insufficientResource = true;
+                    }
                     break;
                 }
             case 2:
                 {
-                    missionIndex = 2;
-                    missionName = Config.STRING_MISSION_NAME_2;
+                    if (GameController.GC.foodCount >= Config.DEFAULT_MISSION_COST_2[0] && GameController.GC.waterCount >= Config.DEFAULT_MISSION_COST_2[1] &&
+                        GameController.GC.fundCount >= Config.DEFAULT_MISSION_COST_2[2] && GameController.GC.troopCount >= Config.DEFAULT_MISSION_COST_2[3])
+                    {
+                        missionIndex = 2;
+                        missionName = Config.STRING_MISSION_NAME_2;
+                    }
+                    else
+                    {
+                        insufficientResource = true;
+                    }
                     break;
                 }
             case 3:
                 {
-                    missionIndex = 3;
-                    missionName = Config.STRING_MISSION_NAME_3;
+                    if (GameController.GC.foodCount >= Config.DEFAULT_MISSION_COST_3[0] && GameController.GC.waterCount >= Config.DEFAULT_MISSION_COST_3[1] &&
+                        GameController.GC.fundCount >= Config.DEFAULT_MISSION_COST_3[2] && GameController.GC.troopCount >= Config.DEFAULT_MISSION_COST_3[3])
+                    {
+                        missionIndex = 3;
+                        missionName = Config.STRING_MISSION_NAME_3;
+                    }
+                    else
+                    {
+                        insufficientResource = true;
+                    }
                     break;
                 }
             case 4:
                 {
-                    missionIndex = 4;
-                    missionName = Config.STRING_MISSION_NAME_4;
+                    if (GameController.GC.foodCount >= Config.DEFAULT_MISSION_COST_4[0] && GameController.GC.waterCount >= Config.DEFAULT_MISSION_COST_4[1] &&
+                        GameController.GC.fundCount >= Config.DEFAULT_MISSION_COST_4[2] && GameController.GC.troopCount >= Config.DEFAULT_MISSION_COST_4[3])
+                    {
+                        missionIndex = 4;
+                        missionName = Config.STRING_MISSION_NAME_4;
+                    }
+                    else
+                    {
+                        insufficientResource = true;
+                    }
                     break;
                 }
         }
-        missionTrackerText.text = missionName;
 
-        // instantiate
-        var newMission = Instantiate(gameObject, transform.parent);
-        newMission.SetActive(true);
-        GameController.GC.allMissions.Add(newMission);
+        // if has enough resources
+        if (!insufficientResource)
+        {
+            missionTrackerText.text = missionName;
 
-        // change its transform by index
-        Vector3 tempPos = GetComponent<RectTransform>().localPosition;
-        Vector3 newPos = new Vector3(tempPos.x, tempPos.y + (GameController.GC.allMissions.Count - 1) * (-55f), tempPos.z);
-        newMission.GetComponent<RectTransform>().localPosition = newPos;
+            // instantiate
+            var newMission = Instantiate(gameObject, transform.parent);
+            newMission.SetActive(true);
+            GameController.GC.allMissions.Add(newMission);
 
-        // start countdown
-        newMission.GetComponent<MissionTrackerController>().StartTracking(whichMission, missionName);
+
+            // Debug: same index mission OVERLAP
+
+
+            // change its transform by index
+            Vector3 tempPos = GetComponent<RectTransform>().localPosition;
+            Vector3 newPos = new Vector3(tempPos.x, tempPos.y + (GameController.GC.allMissions.Count - 1) * (-55f), tempPos.z);
+            newMission.GetComponent<RectTransform>().localPosition = newPos;
+
+            // start countdown
+            newMission.GetComponent<MissionTrackerController>().StartTracking(whichMission, missionName);
+        }
+        else
+        {
+            insuffientResourceWindow.SetActive(true);
+            insufficientResource = false;
+        }
+        
     }
 
     // start tracking

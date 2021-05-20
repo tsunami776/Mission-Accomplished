@@ -111,7 +111,6 @@ public class PlayerInteractionController : MonoBehaviour
                 gun.GunReload();
             }
 
-
             // switch gun in
             if (Input.GetKey(KeyCode.Alpha2) && !GetComponent<PlayerLookController>().isTPS)
             {

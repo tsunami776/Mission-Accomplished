@@ -98,14 +98,14 @@ public class Config
 
     // Default Setting
     public const float DEFAULT_INTI_MAIN_CAM_VIEW = 60;
-    public const float DEFAULT_INTI_FOOD = 10;
+    public const float DEFAULT_INTI_FOOD = 5;
     public const float DEFAULT_INTI_WATER = 5;
-    public const float DEFAULT_INTI_FUND = 1000;
-    public const float DEFAULT_INTI_TROOP = 200;
-    public const float DEFAULT_GROWTH_FOOD = 10;
-    public const float DEFAULT_GROWTH_WATER = 5;
-    public const float DEFAULT_GROWTH_FUND = 500;
-    public const float DEFAULT_GROWTH_TROOP = 100;
+    public const float DEFAULT_INTI_FUND = 100;
+    public const float DEFAULT_INTI_TROOP = 50;
+    public const float DEFAULT_GROWTH_FOOD = 2;
+    public const float DEFAULT_GROWTH_WATER = 2;
+    public const float DEFAULT_GROWTH_FUND = 100;
+    public const float DEFAULT_GROWTH_TROOP = 20;
     public const float DEFAULT_REWARD_WATER_PROJECT_1 = 5;
     public const float DEFAULT_REWARD_FOOD_PROJECT_2 = 5;
     public const float DEFAULT_REWARD_FUND_PROJECT_2 = 200;
