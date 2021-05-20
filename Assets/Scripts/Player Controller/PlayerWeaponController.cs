@@ -11,6 +11,7 @@ public class PlayerWeaponController : MonoBehaviour
 
     // values
     public bool isReloading;
+    public bool isSuppling;
     public int[] ClipRemains;
     public int[] totalAmmoRemains;
     private IEnumerator coroutineBuffer_clip;
@@ -81,24 +82,20 @@ public class PlayerWeaponController : MonoBehaviour
     // add ammo to the total ammo remain
     public bool AddTotalAmmoRemain(int whichWeapon, int changeAmount)
     {
-        // return false if the clip exceeds the max
-        if (totalAmmoRemains[whichWeapon] + changeAmount > Config.DEFAULT_MAX_TOTAL_AMMO[whichWeapon])
+        if (!isSuppling)
         {
-            return false;
-        }
-        else
-        {
-            totalAmmoRemains[whichWeapon] += changeAmount;
-
-            // only 1 color change coroutine is running at 1 time
-            if (coroutineBuffer_totalAmmo != null)
+            // return false if the clip exceeds the max
+            if (totalAmmoRemains[whichWeapon] + changeAmount > Config.DEFAULT_MAX_TOTAL_AMMO[whichWeapon])
             {
-                StopCoroutine(coroutineBuffer_totalAmmo);
+                return false;
             }
-            coroutineBuffer_totalAmmo = ColorDecrease(totalAmmoTexts[whichWeapon], Config.MISSION_COLOR_UNLOCKED);
-            StartCoroutine(coroutineBuffer_totalAmmo);
-            return true;
+            else
+            {
+                StartCoroutine(AmmoSupply(whichWeapon, changeAmount));
+                return true;
+            }
         }
+        return false;
     }
 
     // take ammo out from the total ammo remain
@@ -190,5 +187,24 @@ public class PlayerWeaponController : MonoBehaviour
         SubtractTotalAmmoRemain(whichWeapon, loadAmount);
         AddClipRemain(whichWeapon, loadAmount);
         isReloading = false;
+    }
+
+    // resupply total ammo
+    IEnumerator AmmoSupply(int whichWeapon, int changeAmount)
+    {
+        isSuppling = true;
+
+        totalAmmoRemains[whichWeapon] += changeAmount;
+
+        // only 1 color change coroutine is running at 1 time
+        if (coroutineBuffer_totalAmmo != null)
+        {
+            StopCoroutine(coroutineBuffer_totalAmmo);
+        }
+        coroutineBuffer_totalAmmo = ColorDecrease(totalAmmoTexts[whichWeapon], Config.MISSION_COLOR_UNLOCKED);
+        StartCoroutine(coroutineBuffer_totalAmmo);
+        yield return new WaitForSecondsRealtime(Config.TIME_GUN_SUPPLY);
+
+        isSuppling = false;
     }
 }

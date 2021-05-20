@@ -71,6 +71,7 @@ public class Config
     public const float TIME_GUN_SHOOT_INTERVAL = 0.1f;
     public const float TIME_GUN_EMPTY_INTERVAL = 0.3f;
     public const float TIME_GUN_RELOAD = 3f;
+    public const float TIME_GUN_SUPPLY = 1f;
     public const float TIME_CAM_SHOOT_RECOIL_TIMESTEP = 5f;
     public const float TIME_SHELL_LAST = 3f;
     public const float TIME_FPS_MID_AIM_ZOOM_TIMESTEP = 0.1f;
@@ -119,5 +120,5 @@ public class Config
     public static float[] DEFAULT_MISSION_REWARD_3 = new float[] { 0, 0, 250, 0 };
     public static float[] DEFAULT_MISSION_REWARD_4 = new float[] { 5, 0, 0, 50 };
     public static int[] DEFAULT_MAX_ONE_CLIP = new int[] { 30 };
-    public static int[] DEFAULT_MAX_TOTAL_AMMO = new int[] { 300 };
+    public static int[] DEFAULT_MAX_TOTAL_AMMO = new int[] { 90 };
 }

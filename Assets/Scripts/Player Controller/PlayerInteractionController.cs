@@ -5,9 +5,9 @@ using UnityEngine.UI;
 
 public class PlayerInteractionController : MonoBehaviour
 {
-    [SerializeField] private GunController gun;
-    [SerializeField] private GameObject gunParts;
-    [SerializeField] private GameObject[] toolSlots;
+    public GunController gun;
+    public GameObject gunParts;
+    public GameObject[] toolSlots;
 
     [HideInInspector] public float interactionRange;
     public Transform playerCam;
@@ -64,6 +64,25 @@ public class PlayerInteractionController : MonoBehaviour
                     {
                         GameController.GC.UpdateMissionState_Player();
                     }
+
+                    // if it is a portal
+                    if (interactableObj.CompareTag("Portal"))
+                    {
+                        interactableObj.GetComponent<HelicopterPortal>().Teleport();
+                    }
+
+                    // if it is a portal
+                    if (interactableObj.CompareTag("AmmoSupply") && GetComponent<PlayerWeaponController>().totalAmmoRemains[0] < Config.DEFAULT_MAX_TOTAL_AMMO[0])
+                    {
+                        var loadAmout = Config.DEFAULT_MAX_ONE_CLIP[0];
+                        if (Config.DEFAULT_MAX_TOTAL_AMMO[0] - GetComponent<PlayerWeaponController>().totalAmmoRemains[0] < Config.DEFAULT_MAX_ONE_CLIP[0])
+                        {
+                            loadAmout = Config.DEFAULT_MAX_TOTAL_AMMO[0] - GetComponent<PlayerWeaponController>().totalAmmoRemains[0];
+
+                        }
+                        GetComponent<PlayerWeaponController>().AddTotalAmmoRemain(0, loadAmout);
+                        interactableObj.GetComponent<AudioSource>().Play();
+                    }
                 }
             }
         }
@@ -111,7 +130,7 @@ public class PlayerInteractionController : MonoBehaviour
                 gun.GunReload();
             }
 
-            // switch gun in
+            /*// switch gun in
             if (Input.GetKey(KeyCode.Alpha2) && !GetComponent<PlayerLookController>().isTPS)
             {
                 toolSlots[1].SetActive(true);
@@ -139,7 +158,7 @@ public class PlayerInteractionController : MonoBehaviour
                     toolSlots[i].SetActive(false);
                 }
                 gun.GunSwitchOut();
-            }
+            }*/
         }
     }
 }
