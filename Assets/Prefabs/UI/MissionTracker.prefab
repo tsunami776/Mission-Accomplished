@@ -212,6 +212,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a27b652a74844e84bae23ca3744bf7f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  template: {fileID: 4588241710062445884}
   popUp: {fileID: 0}
   missionTrackerText: {fileID: 7483471660804735812}
   gridImg: {fileID: 4856996776600463738}

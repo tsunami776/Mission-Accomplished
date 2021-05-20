@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class MissionTrackerController : MonoBehaviour
 {
     // tracker info
+    [SerializeField] private GameObject template;
     [SerializeField] private MissionPopUpOnCompletion popUp;
     [SerializeField] private Text missionTrackerText;
     [SerializeField] private Image gridImg;
@@ -16,6 +17,12 @@ public class MissionTrackerController : MonoBehaviour
     [HideInInspector] public int missionIndex;
     private float countDown;
     private bool insufficientResource;
+    //private 
+
+    /*private void Start()
+    {
+        tempPos 
+    }*/
 
     // start a new mission
     public void NewMission(int whichMission)
@@ -92,13 +99,9 @@ public class MissionTrackerController : MonoBehaviour
             newMission.SetActive(true);
             GameController.GC.allMissions.Add(newMission);
 
-
-            // Debug: same index mission OVERLAP
-
-
             // change its transform by index
-            Vector3 tempPos = GetComponent<RectTransform>().localPosition;
-            Vector3 newPos = new Vector3(tempPos.x, tempPos.y + (GameController.GC.allMissions.Count - 1) * (-55f), tempPos.z);
+            Vector3 tempPos = template.GetComponent<RectTransform>().localPosition;
+            Vector3 newPos = new Vector3(tempPos.x, tempPos.y + (GameController.GC.allMissions.Count - 1) * (Config.OFFSET_GAP_SPAWN_MISSION_TRACKER), tempPos.z);
             newMission.GetComponent<RectTransform>().localPosition = newPos;
 
             // start countdown
@@ -214,6 +217,13 @@ public class MissionTrackerController : MonoBehaviour
 
         // Destroy the Tracker
         GameController.GC.allMissions.Remove(gameObject);
+        for (int i = 0; i < GameController.GC.allMissions.Count; i++)
+        {
+            // update all remaining mission trackers
+            Vector3 tempPos = template.GetComponent<RectTransform>().localPosition;
+            Vector3 newPos = new Vector3(tempPos.x, tempPos.y + i * (Config.OFFSET_GAP_SPAWN_MISSION_TRACKER), tempPos.z);
+            GameController.GC.allMissions[i].GetComponent<RectTransform>().localPosition = newPos;
+        }
         Destroy(gameObject);
     }
 }

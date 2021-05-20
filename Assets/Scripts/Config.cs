@@ -24,9 +24,9 @@ public class Config
     public const float MODIFIER_TIMER = 1f;
     public const float MODIFIER_SPRITE = 1.5f;
     public const float MODIFIER_ROTATION_SPEED_SMOOTH = 3f;
-    public const float MODIFIER_CONSTRUCTION_1 = 0.0002f;
-    public const float MODIFIER_CONSTRUCTION_2 = 0.0003f;
-    public const float MODIFIER_CONSTRUCTION_3 = 0.0005f;
+    public const float MODIFIER_CONSTRUCTION_1 = 0.0006f;
+    public const float MODIFIER_CONSTRUCTION_2 = 0.0009f;
+    public const float MODIFIER_CONSTRUCTION_3 = 0.0015f;
     public const float MODIFIER_AMPLIFIER_FUND_1 = 1f;
     public const float MODIFIER_AMPLIFIER_FUND_2 = 0.4f;
     public const float MODIFIER_AMPLIFIER_FUND_3 = 0.5f;
@@ -38,6 +38,7 @@ public class Config
     public const float MODIFIER_GUN_AIM_SLOWDOWN = 0.5f;
 
     // Offset
+    public const float OFFSET_GAP_SPAWN_MISSION_TRACKER = -55f;
     public const float OFFSET_CAM_FPS_TO_TPS_X = -0.8f;
     public const float OFFSET_CAM_FPS_TO_TPS_Y = 0.8f;
     public const float OFFSET_CAM_FPS_TO_TPS_Z = -5f;
@@ -49,6 +50,7 @@ public class Config
     public const float OFFSET_FPS_MID_AIM_Y = 0.033f;
     public const float OFFSET_FPS_MID_AIM_Z = -0.167f;
     public const float OFFSET_FPS_MID_AIM_ZOOM = 20f;
+    public const float OFFSET_SUNRISE_ANGLE = 15f;
 
     // Physics
     public const float PHYSICS_SHELL_BOUNCE_FORCE = 3f;
@@ -58,7 +60,7 @@ public class Config
     // Time
     public const float TIME_ONEDAY = 360f;
     public const float TIME_DAY_UPDATE_DELAY = 1f;
-    public const float TIME_DAY_TRANSITION_OFFSET = -25f;
+    public const float TIME_DAY_TRANSITION_OFFSET = -5f;
     public const float TIME_ANIMATION_TRANSITION_FRAME = 0.02f;
     public const float TIME_ANIMATION_TRANSITION_DELAY = 1f;
     public const float TIME_ANIMATION_TRANSCAM = 5f;
@@ -66,7 +68,7 @@ public class Config
     public const float TIME_SUSTAIN_MISSION_COMPLETE_POPUP = 2f;
     public const float TIME_MISSION_TIME_1 = 120f;
     public const float TIME_MISSION_TIME_2 = 160f;
-    public const float TIME_MISSION_TIME_3 = 260f;
+    public const float TIME_MISSION_TIME_3 = 160f;
     public const float TIME_MISSION_TIME_4 = 150f;
     public const float TIME_GUN_SHOOT_INTERVAL = 0.1f;
     public const float TIME_GUN_EMPTY_INTERVAL = 0.3f;
