@@ -14,7 +14,7 @@ OcclusionCullingSettings:
 RenderSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 9
-  m_Fog: 1
+  m_Fog: 0
   m_FogColor: {r: 0.254717, g: 0.23250067, b: 0.17061232, a: 1}
   m_FogMode: 3
   m_FogDensity: 0.0037
@@ -1079,7 +1079,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 24773407}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -68, y: 16.4, z: -36}
+  m_LocalPosition: {x: -68, y: 6, z: -36}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -107029,7 +107029,7 @@ PrefabInstance:
         type: 3}
       propertyPath: characterController
       value: 
-      objectReference: {fileID: 7422256219478035049}
+      objectReference: {fileID: 0}
     - target: {fileID: 5732535225932148968, guid: e6d2b7322309c0d4287f184652e7ff25,
         type: 3}
       propertyPath: m_RootOrder
@@ -107090,6 +107090,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: MyCharacter
       objectReference: {fileID: 0}
+    - target: {fileID: 6822954540116933865, guid: e6d2b7322309c0d4287f184652e7ff25,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8724125241493692031, guid: e6d2b7322309c0d4287f184652e7ff25,
         type: 3}
       propertyPath: m_LocalPosition.z
@@ -107109,24 +107114,6 @@ Rigidbody:
     type: 3}
   m_PrefabInstance: {fileID: 7422256219478035036}
   m_PrefabAsset: {fileID: 0}
---- !u!143 &7422256219478035049
-CharacterController:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7422256219478035037}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Height: 2
-  m_Radius: 0.5
-  m_SlopeLimit: 45
-  m_StepOffset: 0.3
-  m_SkinWidth: 0.08
-  m_MinMoveDistance: 0.001
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &7480671724333152799
 MonoBehaviour:
   m_ObjectHideFlags: 0
