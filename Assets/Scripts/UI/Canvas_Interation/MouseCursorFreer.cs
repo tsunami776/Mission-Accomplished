@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DialogueWindowController : MonoBehaviour
+public class MouseCursorFreer : MonoBehaviour
 {
     //[SerializeField] private GameObject closeButton;
 
