@@ -11,6 +11,8 @@ public class HelicopterPortal : MonoBehaviour
 
     private PlayerInteractionController PIC;
     private PlayerLookController PLC;
+    private IEnumerator GunSwitchInCo;
+    private IEnumerator GunSwitchOutCo;
 
     private void Start()
     {
@@ -27,19 +29,27 @@ public class HelicopterPortal : MonoBehaviour
             GameController.GC.player.transform.position = exitPos.position;
 
             // switch gun in
-            if (!PLC.GetComponent<PlayerLookController>().isTPS)
+            if (PLC.GetComponent<PlayerLookController>().isTPS)
             {
-                PIC.toolSlots[1].SetActive(true);
-                for (int i = 0; i < PIC.toolSlots.Length; i++)
-                {
-                    if (i == 1)
-                    {
-                        continue;
-                    }
-                    PIC.toolSlots[i].SetActive(false);
-                }
-                PIC.gun.GunSwitchIn();
+                PLC.GetComponent<PlayerLookController>().isManuallyViewSwitching = true;
             }
+
+            PIC.toolSlots[1].SetActive(true);
+            for (int i = 0; i < PIC.toolSlots.Length; i++)
+            {
+                if (i == 1)
+                {
+                    continue;
+                }
+                PIC.toolSlots[i].SetActive(false);
+            }
+
+            if (GunSwitchInCo == null)
+            {
+                GunSwitchInCo = SwitchGunIn();
+                GunSwitchOutCo = null;
+            }
+            StartCoroutine(GunSwitchInCo);
         }
 
         // to the city
@@ -49,19 +59,47 @@ public class HelicopterPortal : MonoBehaviour
             GameController.GC.player.transform.position = entryPos.position;
 
             // switch gun out
-            if (!PLC.GetComponent<PlayerLookController>().isTPS)
+            if (PLC.GetComponent<PlayerLookController>().isTPS)
             {
-                PIC.toolSlots[0].SetActive(true);
-                for (int i = 0; i < PIC.toolSlots.Length; i++)
-                {
-                    if (i == 0)
-                    {
-                        continue;
-                    }
-                    PIC.toolSlots[i].SetActive(false);
-                }
-                PIC.gun.GunSwitchOut();
+                PLC.GetComponent<PlayerLookController>().isManuallyViewSwitching = true;
             }
+
+            PIC.toolSlots[0].SetActive(true);
+            for (int i = 0; i < PIC.toolSlots.Length; i++)
+            {
+                if (i == 0)
+                {
+                    continue;
+                }
+                PIC.toolSlots[i].SetActive(false);
+            }
+
+            if (GunSwitchOutCo == null)
+            {
+                GunSwitchOutCo = SwitchGunOut();
+                GunSwitchInCo = null;
+            }
+            StartCoroutine(GunSwitchOutCo);
         }
+    }
+
+    IEnumerator SwitchGunIn()
+    {
+        while (PLC.GetComponent<PlayerLookController>().isTPS)
+        {
+            yield return null;
+        }
+        PIC.gun.GunSwitchIn();
+        GunSwitchInCo = null;
+    }
+
+    IEnumerator SwitchGunOut()
+    {
+        while (PLC.GetComponent<PlayerLookController>().isTPS)
+        {
+            yield return null;
+        }
+        PIC.gun.GunSwitchOut();
+        GunSwitchOutCo = null;
     }
 }

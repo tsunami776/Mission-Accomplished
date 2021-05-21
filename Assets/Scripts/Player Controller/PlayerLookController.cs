@@ -21,6 +21,7 @@ public class PlayerLookController : MonoBehaviour
     private bool isLocked;
     public bool isAiming;
     public bool isTPS;
+    public bool isManuallyViewSwitching;
 
     // Start is called before the first frame update
     void Start()
@@ -67,8 +68,10 @@ public class PlayerLookController : MonoBehaviour
             }
 
             // Press T to switch between FPS / TPS
-            if (Input.GetKeyDown(KeyCode.T))
+            if (Input.GetKeyDown(KeyCode.T) || isManuallyViewSwitching)
             {
+                isManuallyViewSwitching = false;
+
                 if (!isTPS)
                 {
                     playerCam.transform.localPosition = new Vector3(initialPosition.x + Config.OFFSET_CAM_FPS_TO_TPS_X, initialPosition.y + Config.OFFSET_CAM_FPS_TO_TPS_Y, initialPosition.z + Config.OFFSET_CAM_FPS_TO_TPS_Z);

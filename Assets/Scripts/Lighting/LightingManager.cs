@@ -90,6 +90,9 @@ public class LightingManager : MonoBehaviour
         playerCam_Main.SetActive(true);
         playerCam_MiniMap.SetActive(true);
 
+        // switch the gun out when a new day comes
+        GameController.GC.player.GetComponent<PlayerLookController>().Unlock();
+
         // respawn the player
         GameController.GC.player.transform.position = GameController.GC.spawn.position;
         GameController.GC.player.transform.rotation= GameController.GC.spawn.rotation;
