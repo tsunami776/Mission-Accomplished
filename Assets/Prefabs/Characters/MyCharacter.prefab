@@ -865,6 +865,7 @@ MonoBehaviour:
   crossHair: {fileID: 99817539525189729}
   isAiming: 0
   isTPS: 0
+  isManuallyViewSwitching: 0
 --- !u!114 &5427225681375088120
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1095,6 +1096,36 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4414700645779582536, guid: 0d10bdbce1879f04d9f1639fd2e6bced,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4414700645779582536, guid: 0d10bdbce1879f04d9f1639fd2e6bced,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4414700645779582536, guid: 0d10bdbce1879f04d9f1639fd2e6bced,
+        type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4414700645779582536, guid: 0d10bdbce1879f04d9f1639fd2e6bced,
+        type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4414700645779582536, guid: 0d10bdbce1879f04d9f1639fd2e6bced,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: -1684
+      objectReference: {fileID: 0}
+    - target: {fileID: 4414700645779582536, guid: 0d10bdbce1879f04d9f1639fd2e6bced,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: -712
       objectReference: {fileID: 0}
     - target: {fileID: 7195556804685803873, guid: 0d10bdbce1879f04d9f1639fd2e6bced,
         type: 3}

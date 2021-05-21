@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class HelicopterPortal : MonoBehaviour
 {
-    enum Portal { Entry, Exit }
-    [SerializeField] private Portal portal;
+    public enum Portal { Entry, Exit }
+    public Portal portal;
     [SerializeField] private Transform entryPos;
     [SerializeField] private Transform exitPos;
 

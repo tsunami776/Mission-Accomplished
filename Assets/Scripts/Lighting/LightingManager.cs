@@ -13,6 +13,7 @@ public class LightingManager : MonoBehaviour
     [SerializeField] private GameObject playerCam_Main;
     [SerializeField] private GameObject playerCam_MiniMap;
     [SerializeField] private GameObject[] transitionCams;
+    [SerializeField] private HelicopterPortal portal;
 
     // Variables
     [SerializeField, Range(0, 24)] private float TimeOfDay;
@@ -57,6 +58,18 @@ public class LightingManager : MonoBehaviour
 
     IEnumerator transCams()
     {
+        // switch the gun out
+        GameController.GC.player.GetComponent<PlayerInteractionController>().toolSlots[0].SetActive(true);
+        for (int i = 0; i < GameController.GC.player.GetComponent<PlayerInteractionController>().toolSlots.Length; i++)
+        {
+            if (i == 0)
+            {
+                continue;
+            }
+            GameController.GC.player.GetComponent<PlayerInteractionController>().toolSlots[i].SetActive(false);
+        }
+        GameController.GC.player.GetComponent<PlayerInteractionController>().gun.GunSwitchOut();
+
         // freeze the character
         GameController.GC.player.GetComponent<PlayerMovementController>().Lock();
         GameController.GC.player.GetComponent<PlayerLookController>().Lock();
